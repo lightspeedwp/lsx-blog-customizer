@@ -1,0 +1,101 @@
+@mixin customizer-blog-link-colour ($color: #418AD0, $hover: #F7AE00) {
+	&,
+	&:active,
+	&:visited {
+		color: $color;
+	}
+
+	&:hover,
+	&:hover:active,
+	&:focus {
+		color: $hover;
+	}
+}
+
+@mixin customizer-blog-body-colours($breaker: #DADDDF, $color: #4A4A4A, $link: #418AD0, $hover: #F7AE00, $small: #919191) {
+	.widget.lsx-blog-customizer-posts {
+		.lsx-blog-customizer-posts-archive-link {
+			&:before,
+			&:after {
+				background-color: $breaker;
+			}
+		}
+	}
+
+	.widget.lsx-blog-customizer-terms {
+		.lsx-blog-customizer-terms-archive-link {
+			&:before,
+			&:after {
+				background-color: $breaker;
+			}
+		}
+	}
+
+	.lsx-blog-customizer-posts-wrapper {
+		.post-slot {
+			.post-title > a:not(.btn) {
+				@include customizer-blog-link-colour($color, $hover);
+			}
+
+			.post-meta,
+			.post-info { color: $small; }
+
+			.post-info a,
+			.post-meta a {
+				@include customizer-blog-link-colour($small, $hover);
+			}
+		}
+	}
+
+	.lsx-blog-customizer-terms-wrapper {
+		.term-slot {
+			.term-title > a:not(.btn) {
+				@include customizer-blog-link-colour($color, $hover);
+			}
+
+			.term-content {
+				a.moretag {
+					background-color: $link;
+					color: #FFF;
+
+					&:hover {
+						background-color: $hover;
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+
+	#categories-slider,
+	.lsx-blog-customizer-posts-slider,
+	.lsx-blog-customizer-terms-slider {
+		.slick-dots {
+			& > li {
+				& > button { border-color: $color; }
+
+				&.slick-active > button { background-color: $color; }
+			}
+		}
+
+		.slick-arrow {
+			border-color: $color;
+			color: $color;
+
+			&:hover {
+				border-color: $hover;
+				color: $hover;
+			}
+
+			&.slick-disabled {
+				border-color: $breaker;
+				color: $breaker;
+			}
+		}
+	}
+
+	.lsx-layout-switcher-option {
+		&:hover { color: $hover; }
+		&.active { color: $hover; }
+	}
+}

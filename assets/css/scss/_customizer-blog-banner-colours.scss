@@ -1,0 +1,12 @@
+@mixin customizer-blog-banner-colours($color-image: #FFF) {
+	.lsx-layout-switcher-label { color: $color-image; }
+	.lsx-layout-switcher-option { color: $color-image; }
+
+	#categories-slider {
+		.item {
+			& > a {
+				& > span { color: $color-image; }
+			}
+		}
+	}
+}
