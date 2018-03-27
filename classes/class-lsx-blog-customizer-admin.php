@@ -150,8 +150,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Admin' ) ) {
 		 *
 		 * @since 1.1.0
 		 */
-		public function placeholder_field()
-        {
+		public function placeholder_field() {
 			?>
 			<tr class="form-field">
 				<th scope="row">

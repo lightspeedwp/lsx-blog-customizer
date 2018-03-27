@@ -135,7 +135,11 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 						}
 					);
 				} else {
-					add_filter( 'lsx_blog_layout', function( $layout ) { return 'default'; } );
+					add_filter( 'lsx_blog_layout',
+						function( $layout ) {
+							return 'default';
+						}
+					);
 				}
 			}
 
