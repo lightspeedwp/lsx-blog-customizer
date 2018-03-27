@@ -123,9 +123,17 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 
 			if ( $is_archive ) {
 				if ( 'grid' === $archive_layout ) {
-					add_filter( 'lsx_blog_layout', function( $layout ) { return 'grid'; } );
+					add_filter( 'lsx_blog_layout',
+						function( $layout ) {
+							return 'grid';
+						}
+					);
 				} elseif ( 'list' === $archive_layout ) {
-					add_filter( 'lsx_blog_layout', function( $layout ) { return 'list'; } );
+					add_filter( 'lsx_blog_layout',
+						function( $layout ) {
+							return 'list';
+						}
+					);
 				} else {
 					add_filter( 'lsx_blog_layout', function( $layout ) { return 'default'; } );
 				}

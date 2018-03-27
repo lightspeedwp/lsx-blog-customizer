@@ -22,7 +22,7 @@
 	?>
 
 	<div class="item" style="background-image: url(<?php echo esc_url( $category->image ); ?>)">
-		<a href="<?php echo get_category_link( $category->term_id ); ?>">
+		<a href="<?php echo esc_attr( get_category_link( $category->term_id ) ); ?>">
 			<span><?php echo esc_html( $category->name ); ?></span>
 		</a>
 	</div>
