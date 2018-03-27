@@ -8,7 +8,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 	 * @author    LightSpeed
 	 * @license   GPL3
 	 * @link
-	 * @copyright 2016 LightSpeed
+	 * @copyright 2018 LightSpeed
 	 */
 	class LSX_Blog_Customizer_Frontend extends LSX_Blog_Customizer {
 
