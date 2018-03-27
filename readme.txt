@@ -1,7 +1,7 @@
 === Blog Customizer ===
 Contributors: feedmymedia
 Donate link: https://www.lsdev.biz/product/lsx-blog-customizer/
-Tags: blog customizer, color customizing, front-end, Wordpress Customizer
+Tags: LSX, LSX Theme, Blog Customizer, WordPress Customizer, WordPress Blog
 Requires at least: 4.3
 Tested up to: 4.9.4
 Requires PHP: 7.0
