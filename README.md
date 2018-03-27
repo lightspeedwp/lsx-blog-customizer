@@ -2,11 +2,6 @@
 
 This extension gives you complete control over the appearance of your LSX-powered WordPress blog.
 
-## Changelog
-
-### 1.0.0 - 26/01/17
-* First Version
-
 ## Setup
 
 ### 1: Install NPM
@@ -32,3 +27,8 @@ Wait for the terminal to finish and test by running
 `gulp compile-sass`
 `gulp compile-js`
 `gulp wordpress-lang`
+
+## Changelog
+
+### 1.0.0 - 26/01/17
+* First Version
