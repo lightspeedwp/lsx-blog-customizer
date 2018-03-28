@@ -48,5 +48,12 @@ Yes you can! Join in on our [GitHub repository](https://github.com/lightspeeddev
 
 == Screenshots ==
 
-1. The Customiser Settings 
-2. The Colour Options
+1. Blog Customiser Menu
+
+2. Customiser Blog Archive Options
+
+3. General Options
+
+4. Main Blog Page Options
+
+5. Single Post Options
