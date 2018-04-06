@@ -1,6 +1,9 @@
 ## Changelog
 
-### 1.1.2
+### 1.2.1
+* Dev - Removed the Deprecated "create_function" methods
+
+### 1.2
 * Fix - Added jquery-ui-tooltip to the list of dependencies for the frontend scripts.
 * Dev - Added in a conditional so the tooltips wont try initiate if the library has not loaded.
 

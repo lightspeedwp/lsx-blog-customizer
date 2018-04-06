@@ -275,6 +275,14 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Terms' ) ) {
 
 	}
 
-	add_action( 'widgets_init', create_function( '', 'return register_widget( "LSX_Blog_Customizer_Widget_Terms" );' ) );
+	/**
+	 * Registers the Widget
+	 */
+	function lsx_blog_customizer_widget_terms() {
+		register_widget( "LSX_Blog_Customizer_Widget_Terms" );
+	}
+
+	add_action( 'widgets_init', 'lsx_blog_customizer_widget_terms' );
 
 }
+
