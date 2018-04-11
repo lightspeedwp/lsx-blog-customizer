@@ -8,7 +8,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 	 * @author    LightSpeed
 	 * @license   GPL3
 	 * @link
-	 * @copyright 2018 LightSpeed
+	 * @copyright 2016 LightSpeed
 	 */
 	class LSX_Blog_Customizer_Posts extends LSX_Blog_Customizer {
 
@@ -74,6 +74,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 		 */
 		public function output( $atts ) {
 			extract( shortcode_atts( array(
+				'taxonomy' => 'category',
 				'columns' => 3,
 				'orderby' => 'name',
 				'order' => 'ASC',
@@ -99,6 +100,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				$include = explode( ',', $include );
 
 				$args = array(
+					'taxonomy' => 'category',
 					'post_type' => 'post',
 					'posts_per_page' => $limit,
 					'post__in' => $include,
@@ -125,6 +127,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				);
 			} else {
 				$args = array(
+					'taxonomy' => 'category',
 					'post_type' => 'post',
 					'posts_per_page' => $limit,
 					'orderby' => $orderby,
@@ -150,9 +153,14 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				);
 			}
 
-			$posts = new \WP_Query( $args );
+			$cat = "cat=" . $taxonomy;
 
-			if ( $posts->have_posts() ) {
+			$posts = new WP_Query( $cat );
+
+			//$catquery = new WP_Query( $cat ); ?>
+
+			<?php
+			if ( $posts->have_posts()  ) {
 				global $post, $post_display, $post_image;
 
 				$post_display = $display;

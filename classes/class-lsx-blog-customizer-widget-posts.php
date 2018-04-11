@@ -8,7 +8,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 	 * @author    LightSpeed
 	 * @license   GPL3
 	 * @link
-	 * @copyright 2018 LightSpeed
+	 * @copyright 2016 LightSpeed
 	 */
 	class LSX_Blog_Customizer_Widget_Posts extends WP_Widget {
 
@@ -23,6 +23,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 		function widget( $args, $instance ) {
 			extract( $args );
 
+			$taxonomy = $instance['taxonomy'];
 			$title = $instance['title'];
 			$title_link = $instance['title_link'];
 			$tagline = $instance['tagline'];
@@ -91,6 +92,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 			}
 
 			lsx_blog_customizer_posts( array(
+				'taxonomy' => $taxonomy,
 				'columns' => $columns,
 				'orderby' => $orderby,
 				'order' => $order,
@@ -113,6 +115,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 		function update( $new_instance, $old_instance ) {
 			$instance = $old_instance;
 
+			$instance['taxonomy'] = strip_tags( $new_instance['taxonomy'] );
 			$instance['title'] = wp_kses_post( force_balance_tags( $new_instance['title'] ) );
 			$instance['title_link'] = strip_tags( $new_instance['title_link'] );
 			$instance['tagline'] = wp_kses_post( force_balance_tags( $new_instance['tagline'] ) );
@@ -133,6 +136,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 
 		function form( $instance ) {
 			$defaults = array(
+				'taxonomy' => 'category',
 				'title' => 'Posts',
 				'title_link' => '',
 				'tagline' => '',
@@ -151,6 +155,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 
 			$instance = wp_parse_args( (array) $instance, $defaults );
 
+			$taxonomy       = esc_attr( $instance['taxonomy'] );
 			$title          = esc_attr( $instance['title'] );
 			$title_link     = esc_attr( $instance['title_link'] );
 			$tagline        = esc_attr( $instance['tagline'] );
@@ -166,6 +171,19 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 			$show_image     = esc_attr( $instance['show_image'] );
 			$carousel       = esc_attr( $instance['carousel'] );
 			?>
+			<p>
+				<label>
+				<?php esc_html_e( 'Category', 'lsx-blog-customizer' ); ?>:
+				<?php
+					wp_dropdown_categories( array(
+						'show_option_all' => __( 'All categories', 'lsx-blog-customizer' ),
+						'hide_empty'      => 0,
+						'name'            => $this->get_field_name( 'taxonomy' ),
+						'selected'        => $instance['taxonomy'],
+					) );
+				?>
+			</label>
+			</p>
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'lsx-blog-customizer' ); ?></label>
 				<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
@@ -278,11 +296,6 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 
 	}
 
-	/**
-	 * Registers the Widget
-	 */
-	function lsx_blog_customizer_widget_posts() {
-		register_widget( "LSX_Blog_Customizer_Widget_Posts" );
-	}
-	add_action( 'widgets_init', 'lsx_blog_customizer_widget_posts' );
+	add_action( 'widgets_init', create_function( '', 'return register_widget( "LSX_Blog_Customizer_Widget_Posts" );' ) );
+
 }
