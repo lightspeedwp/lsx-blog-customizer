@@ -1,4 +1,4 @@
-=== Blog Customizer ===
+=== LSX Blog Customizer ===
 Contributors: feedmymedia
 Donate link: https://www.lsdev.biz/product/lsx-blog-customizer/
 Tags: LSX, LSX Theme, Blog Customizer, WordPress Customizer, WordPress Blog
