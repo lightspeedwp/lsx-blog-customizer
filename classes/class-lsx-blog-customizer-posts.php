@@ -153,14 +153,14 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				);
 			}
 
-			$cat = "cat=" . $taxonomy;
+			$cat = 'cat=' . $taxonomy;
 
 			$posts = new WP_Query( $cat );
 
 			//$catquery = new WP_Query( $cat ); ?>
 
 			<?php
-			if ( $posts->have_posts()  ) {
+			if ( $posts->have_posts() ) {
 				global $post, $post_display, $post_image;
 
 				$post_display = $display;
