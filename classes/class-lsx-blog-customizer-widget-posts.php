@@ -296,6 +296,9 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 
 	}
 
-	add_action( 'widgets_init', create_function( '', 'return register_widget( "LSX_Blog_Customizer_Widget_Posts" );' ) );
+	//add_action( 'widgets_init', create_function( '', 'return register_widget( "LSX_Blog_Customizer_Widget_Posts" );' ) );
 
+	add_action( 'widgets_init', function() {
+		return register_widget( 'LSX_Blog_Customizer_Widget_Posts' );
+	} );
 }
