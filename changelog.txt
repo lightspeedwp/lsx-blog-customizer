@@ -1,5 +1,8 @@
 ## Changelog
 
+###
+* Fixing deprecated notices
+
 ### 1.2.1
 * Dev - Removed the Deprecated "create_function" methods
 
