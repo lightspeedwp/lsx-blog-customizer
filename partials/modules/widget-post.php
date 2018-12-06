@@ -41,10 +41,12 @@ global $post, $post_display, $post_image;
 	</h5>
 
 	<div class="post-content"><?php
-		if ( 'full' === $post_display ) {
-			the_content();
+		if ( 'full' === $post_display ) { 
+			$stripped_content = wp_strip_all_tags( get_the_content() );
+			echo esc_html( $stripped_content );
 		} elseif ( 'excerpt' === $post_display ) {
-			the_excerpt();
+			$stripped_excerpt = wp_strip_all_tags( get_the_excerpt() );
+			echo esc_html( $stripped_excerpt );
 		}
 	?></div>
 
