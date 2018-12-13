@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.2.3
+* Fixing deprecated notices
+
 ### 1.2.2
 * Fixing deprecated notices
 

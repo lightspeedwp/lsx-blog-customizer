@@ -3,9 +3,9 @@ Contributors: feedmymedia
 Donate link: https://www.lsdev.biz/product/lsx-blog-customizer/
 Tags: LSX, LSX Theme, Blog Customizer, WordPress Customizer, WordPress Blog
 Requires at least: 4.3
-Tested up to: 4.9.4
+Tested up to: 5.0
 Requires PHP: 7.0
-Stable tag: 1.2.1
+Stable tag: 1.2.3
 License: GPLv3
 
 The LSX Blog Customizer plugin The LSX Blog Customizer extension adds the “Blog Customizer” post type, which you can display front-and-centre on your site.
