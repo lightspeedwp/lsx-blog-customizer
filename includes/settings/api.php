@@ -35,12 +35,7 @@
 
 				<p class="info"><?php echo wp_kses_post( $message ); ?></p>
 
-				<?php
-					$api_keys_content = false;
-					ob_start();
-					do_action( 'lsx_framework_api_tab_content', 'api' );
-					$api_keys_content = ob_end_clean();
-				?>
+				<?php do_action( 'lsx_framework_api_tab_content', 'api' ); ?>
 			</tbody>
 		</table>
 	</div>
