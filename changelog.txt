@@ -1,5 +1,8 @@
 ## Changelog
 
+###
+* Dev - Added in a filter to overwrite the Main Blog Description - 'lsx_blog_customizer_main_blog_page_description'
+
 ### 1.2.3
 * Fixing deprecated notices
 
