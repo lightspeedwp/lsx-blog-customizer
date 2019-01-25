@@ -2,6 +2,7 @@
 
 ###
 * Dev - Added in a filter to overwrite the Main Blog Description - 'lsx_blog_customizer_main_blog_page_description'
+* Dev - Added in a CSS class "lsx-slick-slider" which allows plugins to use the styling this plugin.
 
 ### 1.2.3
 * Fixing deprecated notices
