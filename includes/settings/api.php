@@ -9,7 +9,7 @@
 
 	<ul class="ui-tab-nav">
 		<?php if ( false !== $display_settings_page ) { ?><li><a href="#ui-settings" class="active"><?php esc_html_e( 'Settings', 'lsx-blog-customizer' ); ?></a></li><?php } ?>
-		<li><a href="#ui-keys" <?php if ( false === $display_settings_page ) { ?>class="active"<?php } ?>><?php esc_html_e( 'License Keys123', 'lsx-blog-customizer' ); ?></a></li>
+		<li><a href="#ui-keys" <?php if ( false === $display_settings_page ) { ?>class="active"<?php } ?>><?php esc_html_e( 'License Keys', 'lsx-blog-customizer' ); ?></a></li>
 	</ul>
 
 	<?php if ( false !== $display_settings_page ) { ?>
