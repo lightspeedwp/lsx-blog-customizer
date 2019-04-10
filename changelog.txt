@@ -1,5 +1,16 @@
 ## Changelog
 
+### 1.2.4
+* Dev - Added in a filter to overwrite the Main Blog Description - 'lsx_blog_customizer_main_blog_page_description'
+* Dev - Added in a CSS class "lsx-slick-slider" which allows plugins to use the styling this plugin.
+* Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
+
+### 1.2.3
+* Fixing deprecated notices
+
+### 1.2.2
+* Fixing deprecated notices
+
 ### 1.2.1
 * Dev - Removed the Deprecated "create_function" methods
 

@@ -447,6 +447,8 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			if ( in_array( 'blog', $body_classes ) ) {
 				$description = get_theme_mod( 'lsx_blog_customizer_main_blog_page_description', true );
 
+				$description = apply_filters( 'lsx_blog_customizer_main_blog_page_description', $description );
+
 				if ( ! empty( $description ) ) {
 					if ( empty( locate_template( array( 'lsx-blog-customizer/partials/modules/main-blog-description.php' ) ) ) ) {
 						include LSX_BLOG_CUSTOMIZER_PATH . 'partials/modules/main-blog-description.php';
