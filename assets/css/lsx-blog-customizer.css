@@ -161,8 +161,6 @@
 
 .lsx-hide-post-author .post-meta > .post-meta-avatar, .lsx-hide-post-author .post-meta > .post-meta-author { display: none; }
 
-.lsx-hide-post-author.lsx-hide-post-date.single-post .entry-meta > .post-meta.post-meta-top { display: none; }
-
 .lsx-hide-post-author.lsx-hide-post-date.single-post .archive-title { margin-top: 0; }
 
 .lsx-hide-post-author.lsx-hide-post-date.blog .entry-header .entry-meta, .lsx-hide-post-author.lsx-hide-post-date.archive .entry-header .entry-meta, .lsx-hide-post-author.lsx-hide-post-date.search-results .entry-header .entry-meta { display: none; }

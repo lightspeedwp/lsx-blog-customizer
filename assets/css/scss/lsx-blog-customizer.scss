@@ -479,9 +479,9 @@
 
 .lsx-hide-post-author.lsx-hide-post-date {
 	&.single-post {
-		.entry-meta {
-			& > .post-meta.post-meta-top { display: none; }
-		}
+		// .entry-meta {
+		// 	& > .post-meta.post-meta-top { display: none; }
+		// }
 
 		.archive-title { margin-top: 0; }
 	}
