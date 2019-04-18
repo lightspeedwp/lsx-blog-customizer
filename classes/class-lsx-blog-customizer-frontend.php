@@ -99,12 +99,13 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 
 			if ( $is_archive_or_single_post && false == $general_date ) {
 				remove_action( 'lsx_content_post_meta', 'lsx_post_meta_date', 10 );
-				remove_action( 'lsx_entry_top', 'lsx_add_entry_meta', 0 );
+				remove_action( 'lsx_post_meta_top', 'lsx_post_meta_date', 10 );
 			}
 
 			if ( $is_archive_or_single_post && false == $general_author ) {
 				remove_action( 'lsx_content_post_meta', 'lsx_post_meta_author', 20 );
-				remove_action( 'lsx_entry_top', 'lsx_add_entry_meta', 0 );
+				remove_action( 'lsx_post_meta_top', 'lsx_post_meta_author', 10 );
+				remove_action( 'lsx_post_meta_top', 'lsx_post_meta_avatar', 10 );
 			}
 
 			if ( $is_archive_or_single_post && false == $general_category ) {
