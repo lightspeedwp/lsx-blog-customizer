@@ -447,7 +447,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		public function main_blog_page_description() {
 			$body_classes = get_body_class();
 
-			if ( in_array( 'blog', $body_classes ) ) {
+			if ( in_array( 'blog', $body_classes ) && ! is_search() ) {
 				$description = get_theme_mod( 'lsx_blog_customizer_main_blog_page_description', true );
 
 				$description = apply_filters( 'lsx_blog_customizer_main_blog_page_description', $description );
