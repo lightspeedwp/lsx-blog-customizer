@@ -4,7 +4,14 @@
 * Dev - Added in a filter to overwrite the Main Blog Description - 'lsx_blog_customizer_main_blog_page_description'
 * Dev - Added in a CSS class "lsx-slick-slider" which allows plugins to use the styling this plugin.
 * Fix - Updated the uix-core.js to remove the Cyclic error when saving the theme options
+<<<<<<< HEAD
 * Dev - Added in the WP Trim Excerpt Function
+=======
+* Dev - Added in a `lsx-search-enabled` body class which shows when a page has facets.
+* Dev - Fixing the display settings conditional
+* Fix - Search styling updates & mobile fixes 
+
+>>>>>>> 07ed6d321ca301e6e91a7bc8aca9b99adc5efee6
 
 ### 1.2.3
 * Fixing deprecated notices

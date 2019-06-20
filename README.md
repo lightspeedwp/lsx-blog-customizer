@@ -1,56 +1,36 @@
-# LSX Blog Customizer
+<p align="center"><a target="_blank" href="https://lsx.lsdev.biz/"><img width="100px;" src="https://lsx.lsdev.biz/wp-content/uploads/2019/03/Blog-Customizer.svg" alt="LSX Blog Customizer"></a>
+</p>
+<h1 align="center">LSX Blog Customizer</h1>
 
-## Description
+<p align="center">
+    <a href="http://gulpjs.com/"><img src="https://img.shields.io/badge/built%20with-gulp.js-green.svg" alt="Built with gulp.js"></a> 
+    <a href="https://travis-ci.org/lightspeeddevelopment/lsx-blog-customizer"><img src="https://travis-ci.org/lightspeeddevelopment/lsx-blog-customizer.svg?branch=master" alt="Build Status"></a>
+    <a href="https://lsx.lsdev.biz/"><img src="https://lsx.lsdev.biz/wp-content/uploads/2019/06/Designed-for-LSX-Theme-blue.png" alt="Made for LSX"></a>
+</p>
 
-Often you just need the blog of your website customized, and not the entire site, which is why we built [the Blog Customizer](https://lsx.lsdev.biz/extensions/blog-customizer/) extension for LSX. It allows you it to customize various aspects of the the appearance of your blog, posts widgets, archive pages and single posts so they looks exactly how you want.
+Often you just need the blog of your website customized, and not the entire site, which is why we built the [Blog Customizer extension](https://lsx.lsdev.biz/extensions/blog-customizer/) for LSX. 
+
+It allows you it to customize various aspects of the the appearance of your blog, posts widgets, archive pages and single posts so they looks exactly how you want.
 
 ## Works with the LSX Theme
-We've also made a fantastic [theme](https://lsx.lsdev.biz/) that work well with the [LSX Blog Customizer](https://lsx.lsdev.biz/extensions/blog-customizer/) plugin.
+Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with the Blog Customizer, improving internal linking, website SEO and user experience! 
 
-## Gutenberg Compatible
-Have you updated to the new WordPress Gutenberg editor? We've got you covered! [The LSX Theme](https://lsx.lsdev.biz/) and all of its extensions have been optimised to work perfectly with the new Gutenberg update. 
+## Gutenberg Compatible Plugin
+Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Blog Customizer Plugin has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
 
 ## It's free, and always will be.
-We’re firm believers in open source - that’s why we’re releasing the [LSX Blog Customizer](https://lsx.lsdev.biz/extensions/blog-customizer/) plugin for free, forever.
+We’re firm believers in open source - that’s why the [LSX Blog Customizer](https://lsx.lsdev.biz/extensions/lsx-blog-customizer/) is free, and that won't change. We are constantly maintaining and updating our extension so you have the latest and greatest abilities on your LSX Theme powered site. 
 
-## Support
-We offer premium support for this plugin. Premium support that can be purchased via [lsdev.biz](https://www.lsdev.biz/services/support/).
+## LSX Blog Customizer Documentation
 
-## Installation
-You can also download and install the extension directly from the backend of your website:
+We have created extensive documentation on all of the LSX Blog Customizer Plugin functionality. This means a hassle free installation and setup with no code requirements. Go to the [LSX Blog Customizer Documentation](https://lsx.lsdev.biz/documentation/lsx-blog-customizer/).
 
-1. Login to the backend of your website.
-2. Navigate to the “Plugins” dashboard item.
-3. Select the “Add New” option on the plugins page.
-4. Search for “LSX Blog Customizer” in the plugin search bar.
-5. Download and activate the plugin.
+## LSX Blog Customizer Help & Support
 
-## Frequently Asked Questions
+We offer premium support for this plugin. Premium support that can be purchased [via our website](https://www.lsdev.biz/services/support/).
 
-### Where can I find LSX Blog Customizer plugin documentation and user guides?
-For help setting up and configuring [the Blog Customizer](https://lsx.lsdev.biz/extensions/blog-customizer/) plugin please refer to our [user guide](https://www.lsdev.biz/documentation/lsx/blog-customizer-extension/)
+If you are experiencing issues with the LSX Blog Customizer Plugin & have experience with Github, please log any bug issues you are having on the [LSX Blog Customizer Github Issues](https://github.com/lightspeeddevelopment/lsx-blog-customizer/issues/) page.
 
-### Where can I get support or talk to other users
-For help with premium add-ons from LightSpeed, use [our contact page](https://www.lsdev.biz/contact-us/)
+## Contributing to the LSX Blog Customizer Plugin
 
-### Will the LSX Blog Customizer plugin work with my theme?
-No; the LSX Projects plugin requires some styling and functionality only available for the [The LSX Theme](http://lsx.lsdev.biz/). You need to install the [The LSX Theme](http://lsx.lsdev.biz/) for this extension to work properly.
-
-### Where can I report bugs or contribute to the project?
-Bugs can be reported on the [LSX Blog Customizer GitHub repository](https://github.com/lightspeeddevelopment/lsx/issues).
-
-### The LSX Blog Customizer plugin is awesome! Can I contribute?
-Yes you can! Join in on our [GitHub repository](https://github.com/lightspeeddevelopment/lsx-blog-customizer) :)
-
-
-## Changelog
-
-### 1.2.3
-* Dev -  Updated the UI to include the Metabox scripts.
-* Dev - Cleaning files, fixing travis errors.
-* Dev - LSX Blog Customizer Widget - adding the filter by category.
-
-## Upgrade Notice
-
-### 1.2.3
-Updated the UI to include the Metabox scripts, file cleaning and widget filter addition. 
+If you're a developer who's spotted a bug issue and have a fix, or simply have functionality you think would extend our core theme, we are always happy to accept your contribution! Visit the [LSX Blog Customizer Plugin on Github](https://github.com/lightspeeddevelopment/lsx-blog-customizer/) and submit a Pull Request with your updates.
