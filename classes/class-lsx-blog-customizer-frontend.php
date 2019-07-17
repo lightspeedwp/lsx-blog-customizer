@@ -29,6 +29,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 
 			add_action( 'lsx_content_top',    array( $this, 'main_blog_page_description' ), 120 );
 			add_action( 'lsx_content_top',    array( $this, 'main_blog_page_carousel' ),    130 );
+			add_action( 'lsx_content_top',    array( $this, 'category_blog_page_title' ),    130 );
 
 			add_action( 'lsx_content_after',   array( $this, 'single_blog_page_related_posts' ), 20 );
 
@@ -168,19 +169,17 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		 * @since 1.0.0
 		 */
 		public function body_class( $body_classes ) {
-			$is_archive                 = in_array( 'blog', $body_classes ) || is_post_type_archive( 'post' ) || is_category() || is_tag() || is_date() || is_search();
-			$is_single_post             = is_singular( 'post' );
-			$is_archive_or_single_post  = $is_archive || $is_single_post;
-
-			$general_date               = get_theme_mod( 'lsx_blog_customizer_general_date', true );
-			$general_author             = get_theme_mod( 'lsx_blog_customizer_general_author', true );
-			$general_category           = get_theme_mod( 'lsx_blog_customizer_general_category', true );
-
-			$archive_full_width         = get_theme_mod( 'lsx_blog_customizer_archive_full_width', false );
-			$archive_layout             = $this->get_layout_value_from_cookie();
-
-			$single_full_width          = get_theme_mod( 'lsx_blog_customizer_single_full_width', false );
-			$single_posts_navigation    = get_theme_mod( 'lsx_blog_customizer_single_posts_navigation', true );
+			$is_archive                = in_array( 'blog', $body_classes ) || is_post_type_archive( 'post' ) || is_category() || is_tag() || is_date() || is_search();
+			$is_author                 = in_array( 'author', $body_classes );
+			$is_single_post            = is_singular( 'post' );
+			$is_archive_or_single_post = $is_archive || $is_single_post;
+			$general_date              = get_theme_mod( 'lsx_blog_customizer_general_date', true );
+			$general_author            = get_theme_mod( 'lsx_blog_customizer_general_author', true );
+			$general_category          = get_theme_mod( 'lsx_blog_customizer_general_category', true );
+			$archive_full_width        = get_theme_mod( 'lsx_blog_customizer_archive_full_width', false );
+			$archive_layout            = $this->get_layout_value_from_cookie();
+			$single_full_width         = get_theme_mod( 'lsx_blog_customizer_single_full_width', false );
+			$single_posts_navigation   = get_theme_mod( 'lsx_blog_customizer_single_posts_navigation', true );
 
 			if ( $is_archive_or_single_post && false == $general_date ) {
 				$body_classes[] = 'lsx-hide-post-date';
@@ -198,7 +197,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				$body_classes[] = 'lsx-body-full-width';
 			}
 
-			if ( $is_archive ) {
+			if ( $is_archive || $is_author ) {
 				if ( 'grid' === $archive_layout ) {
 					$body_classes[] = 'lsx-body-grid-layout';
 				} elseif ( 'list' === $archive_layout ) {
@@ -296,6 +295,24 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				} else {
 					include locate_template( array( 'lsx-blog-customizer/partials/modules/archive-layout-switcher.php' ) );
 				}
+			}
+		}
+
+		/**
+		 * Display (or not) the categories carousel on main blog page
+		 *
+		 * @since 1.0.0
+		 */
+		public function category_blog_page_title() {
+			$body_classes = get_body_class();
+
+			if ( in_array( 'category', $body_classes ) ) {
+				?>
+				<div class="archive-category-title">
+					<a class="back-to-blog" href="<?php echo ( esc_url( get_post_type_archive_link( 'post' ) ) ); ?>"><?php echo esc_html__( 'Back To Blog', 'lsx' ); ?></a>
+					<h2><?php single_cat_title(); ?></h2>
+				</div>
+				<?php
 			}
 		}
 
