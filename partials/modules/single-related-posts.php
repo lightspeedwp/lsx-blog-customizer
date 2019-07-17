@@ -18,7 +18,7 @@ $related_query = get_transient( 'lsx_related_query_WP_Query_' . get_the_ID() );
 			<?php
 				while ( $related_query->have_posts() ) {
 					$related_query->the_post();
-					get_template_part( 'partials/content', get_post_format() );
+					get_template_part( 'partials/content-related', get_post_format() );
 				}
 				wp_reset_postdata();
 			?>
