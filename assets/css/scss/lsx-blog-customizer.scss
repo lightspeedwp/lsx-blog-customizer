@@ -393,7 +393,7 @@
 	color: #9b9b9b;
 }
 #categories-slider {
-	margin-bottom: 4.25rem;
+	margin-bottom: 8.25rem;
 
 	@include media('>=tablet') {
 		margin-left: auto;
@@ -697,7 +697,7 @@
 	article.post,
 	article.page,
 	article.lsx-slot {
-		margin: 8.5rem 0 0;
+		margin: 4.25rem 0 0;
 
 		@include media('>=phone') {
 			padding-left: 15px;
@@ -708,9 +708,14 @@
 			.entry-title,
 			.entry-summary,
 			.entry-content,
-			.post-tags-wrapper {
+			.post-meta-categories {
 				padding-left: 2rem;
 				padding-right: 2rem;
+			}
+
+			.post-tags-wrapper {
+				margin-left: 20px;
+				margin-right: 20px;
 			}
 		}
 
