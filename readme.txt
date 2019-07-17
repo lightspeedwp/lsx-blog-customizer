@@ -1,8 +1,8 @@
 === LSX Blog Customizer ===
 Contributors: feedmymedia
 Donate link: https://donate.lsdev.biz/
-Tags: LSX Theme, Gutenberg, Blog Customizer, WordPress Customizer, WordPress Blog
-Requires at least: 4.7
+Tags: lsx, Gutenberg, Blog Customizer, WordPress Customizer, WordPress Blog
+Requires at least: 4.9
 Tested up to: 5.2.2
 Requires PHP: 7.0
 Stable tag: 1.2.4
