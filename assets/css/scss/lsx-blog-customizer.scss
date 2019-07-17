@@ -536,9 +536,16 @@
 		.entry-title,
 		.entry-summary,
 		.entry-content,
-		.post-tags-wrapper {
+		.post-meta-categories {
 			padding-left: 3rem;
 			padding-right: 3rem;
+		}
+		.post-tags-wrapper {
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: 3rem;
+			margin-right: 3rem;
+			padding-top: 10px;
 		}
 
 		.entry-meta .post-meta,
@@ -551,6 +558,7 @@
 					align-items: stretch;
 					display: flex;
 					flex-flow: row nowrap;
+					flex-direction: row-reverse;
 					justify-content: flex-start;
 					padding-bottom: 0;
 
