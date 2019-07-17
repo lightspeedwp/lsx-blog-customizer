@@ -4,10 +4,11 @@
  */
 
 ?>
-
+<h2 class="text-center categories-slider-title"><?php echo esc_html__( 'Browse By Category', 'lsx-blog-customizer' ); ?></h2>
 <div id="categories-slider">
-	<?php foreach ( $categories_selected as $category ) :
-		$image = 'https://placeholdit.imgix.net/~text?txtsize=23&amp;txt=' . esc_attr( $category->name ) . '&amp;w=300&amp;h=200';
+	<?php
+	foreach ( $categories_selected as $category ) :
+		$image    = 'https://placeholdit.imgix.net/~text?txtsize=23&amp;txt=' . esc_attr( $category->name ) . '&amp;w=300&amp;h=200';
 		$image_id = get_term_meta( $category->term_id, 'thumbnail', true );
 
 		if ( ! empty( $image_id ) ) {
