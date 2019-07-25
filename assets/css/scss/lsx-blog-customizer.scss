@@ -668,7 +668,8 @@
 .archive.category {
 	.lsx-layout-switcher {
 		@include media('>=tablet') {
-			right: 15vw;	
+			right: 12vw;
+			bottom: 100px;	
 		}
 	}
 }
