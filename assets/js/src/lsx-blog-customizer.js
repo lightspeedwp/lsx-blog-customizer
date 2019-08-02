@@ -4,7 +4,13 @@
 var LSX_Blog_Customizer = {
 
 	initSlickSlider: function () {
-		var $sliders = jQuery('.lsx-blog-customizer-posts-slider, .lsx-blog-customizer-terms-slider');
+		var isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
+
+		if (isMobile) {
+			var $sliders = jQuery('.lsx-blog-customizer-posts-slider, .lsx-blog-customizer-terms-slider, .lsx-related-posts-wrapper');
+		} else {
+			var $sliders = jQuery('.lsx-blog-customizer-posts-slider, .lsx-blog-customizer-terms-slider');
+		}
 
 		$sliders.on('init', function (event, slick) {
 			if (slick.options.arrows && slick.slideCount > slick.options.slidesToShow)

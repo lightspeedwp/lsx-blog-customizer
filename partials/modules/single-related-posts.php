@@ -8,7 +8,7 @@ $related_query = get_transient( 'lsx_related_query_WP_Query_' . get_the_ID() );
 
 <div class="row lsx-related-posts lsx-related-posts-title">
 	<div class="col-xs-12">
-		<h2 class="lsx-related-posts-headline"><?php esc_html_e( 'Related Posts', 'lsx-blog-customizer' ); ?></h2>
+		<h2 class="lsx-title lsx-related-posts-headline"><?php esc_html_e( 'Related Posts', 'lsx-blog-customizer' ); ?></h2>
 	</div>
 </div>
 

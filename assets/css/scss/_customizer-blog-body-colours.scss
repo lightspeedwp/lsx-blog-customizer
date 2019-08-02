@@ -33,8 +33,10 @@
 
 	.lsx-blog-customizer-posts-wrapper {
 		.post-slot {
-			.post-title > a:not(.btn) {
-				@include customizer-blog-link-colour($color, $hover);
+			.post-info {
+				.post-title > a:not(.btn) {
+					@include customizer-blog-link-colour($link, $hover);
+				}
 			}
 
 			.post-meta,
@@ -69,7 +71,8 @@
 
 	#categories-slider,
 	.lsx-blog-customizer-posts-slider,
-	.lsx-blog-customizer-terms-slider {
+	.lsx-blog-customizer-terms-slider,
+	.lsx-related-posts-wrapper {
 		.slick-dots {
 			& > li {
 				& > button { border-color: $color; }
