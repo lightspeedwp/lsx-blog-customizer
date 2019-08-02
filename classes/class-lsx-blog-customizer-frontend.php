@@ -310,7 +310,6 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				?>
 				<div class="archive-category-title">
 					<a class="back-to-blog" href="<?php echo ( esc_url( get_post_type_archive_link( 'post' ) ) ); ?>"><?php echo esc_html__( 'Back To Blog', 'lsx' ); ?></a>
-					<h2><?php single_cat_title(); ?></h2>
 				</div>
 				<?php
 			}
