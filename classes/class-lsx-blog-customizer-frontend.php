@@ -18,7 +18,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		 * @since 1.0.0
 		 */
 		public function __construct() {
-			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ), 5 );
+			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ), 6 );
 			add_action( 'wp',                 array( $this, 'layout' ), 999 );
 
 			add_filter( 'body_class',         array( $this, 'body_class' ), 10 );
