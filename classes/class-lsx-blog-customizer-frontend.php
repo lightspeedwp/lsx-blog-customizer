@@ -306,7 +306,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		public function category_blog_page_title() {
 			$body_classes = get_body_class();
 
-			if ( in_array( 'category', $body_classes ) ) {
+			if ( in_array( 'category', $body_classes ) || in_array( 'tag', $body_classes ) ) {
 				?>
 				<div class="archive-category-title">
 					<a class="back-to-blog" href="<?php echo ( esc_url( get_post_type_archive_link( 'post' ) ) ); ?>"><?php echo esc_html__( 'Back To Blog', 'lsx' ); ?></a>

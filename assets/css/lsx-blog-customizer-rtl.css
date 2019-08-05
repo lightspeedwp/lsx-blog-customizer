@@ -241,13 +241,13 @@
 
 .single-post .lsx-related-posts .lsx-related-posts-wrapper article.post .entry-title, .single-post .lsx-related-posts .lsx-related-posts-wrapper article.page .entry-title, .single-post .lsx-related-posts .lsx-related-posts-wrapper article.lsx-slot .entry-title { font-size: 22px; }
 
-.archive.category .archive-category-title { margin-bottom: 6rem; }
+.archive.category .archive-category-title, .archive.tag .archive-category-title { margin-bottom: 6rem; }
 
-.archive.category .archive-category-title h2 { margin-top: 5px; }
+.archive.category .archive-category-title h2, .archive.tag .archive-category-title h2 { margin-top: 5px; }
 
-.archive.category .archive-category-title a.back-to-blog { text-transform: uppercase; }
+.archive.category .archive-category-title a.back-to-blog, .archive.tag .archive-category-title a.back-to-blog { text-transform: uppercase; }
 
-.archive.category .archive-category-title a.back-to-blog:before { content: '\f177'; display: inline-block; font-family: 'FontAwesome'; font-size: inherit; margin-left: 5px; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.archive.category .archive-category-title a.back-to-blog:before, .archive.tag .archive-category-title a.back-to-blog:before { content: '\f177'; display: inline-block; font-family: 'FontAwesome'; font-size: inherit; margin-left: 5px; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .widget.lsx-blog-customizer-posts .lsx-blog-customizer-posts-archive-link:before, .widget.lsx-blog-customizer-posts .lsx-blog-customizer-posts-archive-link:after { background-color: #DADDDF; }
 

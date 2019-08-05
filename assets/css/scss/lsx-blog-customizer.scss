@@ -743,7 +743,7 @@
 }
 
 .archive {
-	&.category {
+	&.category, &.tag {
 		.archive-category-title {
 			margin-bottom: 6rem;
 			h2 {
