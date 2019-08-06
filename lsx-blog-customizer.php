@@ -3,7 +3,7 @@
  * Plugin Name: LSX Blog Customizer
  * Plugin URI:  https://lsx.lsdev.biz/extensions/blog-customizer/
  * Description:	This extension gives you complete control over the appearance of your LSX-powered WordPress blog
- * Version:     1.2.4
+ * Version:     1.3.0
  * Author:      LightSpeed
  * Author URI:  https://www.lsdev.biz/
  * License:     GPL3

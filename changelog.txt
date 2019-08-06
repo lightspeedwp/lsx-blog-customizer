@@ -1,7 +1,8 @@
 ## Changelog
 
-### 1.2.5
+### 1.3.0
 * Fix - Updated the assets and removed the Owl Slider
+* Dev - Added improvements to the general look and feel of the blog archive, single and pages and the related section.
 
 ### 1.2.4
 * Dev - Added in a filter to overwrite the Main Blog Description - 'lsx_blog_customizer_main_blog_page_description'

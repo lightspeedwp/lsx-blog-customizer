@@ -2,10 +2,10 @@
 Contributors: feedmymedia
 Donate link: https://donate.lsdev.biz/
 Tags: lsx, Gutenberg, Blog Customizer, WordPress Customizer, WordPress Blog
-Requires at least: 4.9
+Requires at least: 5.0
 Tested up to: 5.2.2
 Requires PHP: 7.0
-Stable tag: 1.2.4
+Stable tag: 1.3.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -46,5 +46,5 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 == Upgrade Notice ==
 
-= 1.2.4 =
-Fixes for search styling, added in a filter to overwrite the main blog description, new css classes for slick slider and update of the UIX!
+= 1.3.0 =
+Added improvements to the general look and feel of the blog archive, single and pages and the related section.
