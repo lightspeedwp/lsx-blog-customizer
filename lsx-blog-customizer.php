@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'LSX_BLOG_CUSTOMIZER_PATH', plugin_dir_path( __FILE__ ) );
 define( 'LSX_BLOG_CUSTOMIZER_CORE', __FILE__ );
 define( 'LSX_BLOG_CUSTOMIZER_URL', plugin_dir_url( __FILE__ ) );
-define( 'LSX_BLOG_CUSTOMIZER_VER', '1.2.3' );
+define( 'LSX_BLOG_CUSTOMIZER_VER', '1.3.0' );
 
 
 /* ======================= Below is the Plugin Class init ========================= */

@@ -31,6 +31,8 @@ We offer premium support for this plugin. Premium support that can be purchased 
 
 If you are experiencing issues with the LSX Blog Customizer Plugin & have experience with Github, please log any bug issues you are having on the [LSX Blog Customizer Github Issues](https://github.com/lightspeeddevelopment/lsx-blog-customizer/issues/) page.
 
+You can also send an email to our Support Team at [support@lsdev.biz](support@lsdev.biz) if you have a request for the LightSpeed Development team.
+
 ## Contributing to the LSX Blog Customizer Plugin
 
 If you're a developer who's spotted a bug issue and have a fix, or simply have functionality you think would extend our core theme, we are always happy to accept your contribution! Visit the [LSX Blog Customizer Plugin on Github](https://github.com/lightspeeddevelopment/lsx-blog-customizer/) and submit a Pull Request with your updates.
