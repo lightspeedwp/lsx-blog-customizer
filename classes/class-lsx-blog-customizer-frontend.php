@@ -255,7 +255,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		public function main_blog_page_carousel() {
 			$body_classes = get_body_class();
 
-			if ( in_array( 'blog', $body_classes ) ) {
+			if ( in_array( 'blog', $body_classes ) && ( ! in_array( 'search', $body_classes ) ) ) {
 				$categories          = get_categories();
 				$categories_selected = array();
 
