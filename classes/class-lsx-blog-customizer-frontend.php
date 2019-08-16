@@ -65,7 +65,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				$prefix = '';
 				$suffix = '.min';
 			}
-			wp_enqueue_script( 'lsx_blog_customizer', LSX_BLOG_CUSTOMIZER_URL . 'assets/js/' . $prefix . 'lsx-blog-customizer' . $suffix . '.js', array( 'jquery', 'slick', 'jquery-ui-tooltip' ), LSX_BLOG_CUSTOMIZER_VER, true );
+			wp_enqueue_script( 'lsx_blog_customizer', LSX_BLOG_CUSTOMIZER_URL . 'assets/js/' . $prefix . 'lsx-blog-customizer' . $suffix . '.js', array( 'jquery', 'slick' ), LSX_BLOG_CUSTOMIZER_VER, true );
 
 			$params = apply_filters( 'lsx_blog_customizer_js_params', array(
 				'ajax_url' => admin_url( 'admin-ajax.php' ),
