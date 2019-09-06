@@ -12,6 +12,13 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 	 */
 	class LSX_Blog_Customizer_Widget_Posts extends WP_Widget {
 
+		/**
+		 * Holds the widget args
+		 *
+		 * @var array
+		 */
+		public $args = array();
+
 		public function __construct() {
 			$widget_ops = array(
 				'classname' => 'lsx-blog-customizer-posts',
@@ -21,6 +28,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 		}
 
 		function widget( $args, $instance ) {
+			$this->args = $args;
 			extract( $args );
 
 			$taxonomy = $instance['taxonomy'];
@@ -91,7 +99,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 				echo '<p class="tagline text-center">' . esc_html( $tagline ) . '</p>';
 			}
 
-			lsx_blog_customizer_posts( array(
+			$shotcode_atts = array(
 				'taxonomy' => $taxonomy,
 				'columns' => $columns,
 				'orderby' => $orderby,
@@ -103,7 +111,11 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 				'responsive' => $responsive,
 				'show_image' => $show_image,
 				'carousel' => $carousel,
-			) );
+			);
+			if ( isset( $this->args ) && isset( $this->args['lsx_mm'] ) ) {
+				$shotcode_atts['lsx_mm'] = true;
+			}
+			lsx_blog_customizer_posts( $shotcode_atts );
 
 			if ( $button_text && $title_link ) {
 				echo wp_kses_post( '<p class="text-center lsx-blog-customizer-posts-archive-link-wrap"><span class="lsx-blog-customizer-posts-archive-link">' . $link_btn_open . $button_text . ' <i class="fa fa-angle-right"></i>' . $link_btn_close . '</span></p>' );

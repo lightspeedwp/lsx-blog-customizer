@@ -37,6 +37,13 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 		public $options;
 
 		/**
+		 * Holds the shortcode attributes
+		 *
+		 * @var array
+		 */
+		public $atts;
+
+		/**
 		 * Constructor.
 		 *
 		 * @since 1.1.0
@@ -92,8 +99,8 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 			} else {
 				$responsive = '';
 			}
-
-			$this->columns = $columns;
+			$this->atts       = $atts;
+			$this->columns    = $columns;
 			$this->responsive = $responsive;
 
 			if ( ! empty( $include ) ) {
@@ -153,13 +160,9 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				);
 			}
 
-			$cat = 'cat=' . $taxonomy;
+			$cat   = 'cat=' . $taxonomy;
+			$posts = new WP_Query( $args );
 
-			$posts = new WP_Query( $cat );
-
-			//$catquery = new WP_Query( $cat ); ?>
-
-			<?php
 			if ( $posts->have_posts() ) {
 				global $post, $post_display, $post_image;
 
@@ -283,9 +286,17 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 			}
 
 			$original_name = $template;
+			$path          = get_stylesheet_directory() . '/lsx-blog-customizer/';
+			$path          = apply_filters( 'lsx_blog_customizer_widget_path', $path, $this->atts );
+			$template      = apply_filters( 'lsx_blog_customizer_widget_template', $template, $this->atts );
 
-			if ( file_exists( get_stylesheet_directory() . '/lsx-blog-customizer/' . $template ) ) {
-				$template = get_stylesheet_directory() . '/lsx-blog-customizer/' . $template;
+			print_r('<pre>');
+			print_r($template);
+			print_r($path);
+			print_r('</pre>');
+
+			if ( file_exists( $path . $template ) ) {
+				$template = $path . $template;
 			} elseif ( file_exists( LSX_BLOG_CUSTOMIZER_PATH . 'partials/modules/' . $template ) ) {
 				$template = LSX_BLOG_CUSTOMIZER_PATH . 'partials/modules/' . $template;
 			} else {
