@@ -290,11 +290,6 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 			$path          = apply_filters( 'lsx_blog_customizer_widget_path', $path, $this->atts );
 			$template      = apply_filters( 'lsx_blog_customizer_widget_template', $template, $this->atts );
 
-			print_r('<pre>');
-			print_r($template);
-			print_r($path);
-			print_r('</pre>');
-
 			if ( file_exists( $path . $template ) ) {
 				$template = $path . $template;
 			} elseif ( file_exists( LSX_BLOG_CUSTOMIZER_PATH . 'partials/modules/' . $template ) ) {
