@@ -176,6 +176,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			$general_date              = get_theme_mod( 'lsx_blog_customizer_general_date', true );
 			$general_author            = get_theme_mod( 'lsx_blog_customizer_general_author', true );
 			$general_category          = get_theme_mod( 'lsx_blog_customizer_general_category', true );
+			$general_tags          	   = get_theme_mod( 'lsx_blog_customizer_general_tags', true );
 			$archive_full_width        = get_theme_mod( 'lsx_blog_customizer_archive_full_width', false );
 			$archive_layout            = $this->get_layout_value_from_cookie();
 			$single_full_width         = get_theme_mod( 'lsx_blog_customizer_single_full_width', false );
@@ -192,6 +193,10 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			if ( $is_archive_or_single_post && false == $general_category ) {
 				$body_classes[] = 'lsx-hide-post-category';
 			}
+
+			if ( $is_archive_or_single_post && false == $general_tags ) {
+				$body_classes[] = 'lsx-hide-post-tags';
+			}			
 
 			if ( $is_archive && true == $archive_full_width ) {
 				$body_classes[] = 'lsx-body-full-width';

@@ -95,13 +95,15 @@
 
 .lsx-hide-post-date .post-meta > .post-meta-time { display: none; }
 
+.lsx-hide-post-tags .post-tags-wrapper { display: none; }
+
 .lsx-hide-post-author .post-meta > .post-meta-avatar, .lsx-hide-post-author .post-meta > .post-meta-author { display: none; }
 
 .lsx-hide-post-author.lsx-hide-post-date.single-post .archive-title { margin-top: 0; }
 .lsx-hide-post-author.lsx-hide-post-date.blog .entry-header .entry-meta, .lsx-hide-post-author.lsx-hide-post-date.archive .entry-header .entry-meta, .lsx-hide-post-author.lsx-hide-post-date.search-results .entry-header .entry-meta { display: none; }
 .lsx-hide-post-author.lsx-hide-post-date.blog .entry-header .entry-title, .lsx-hide-post-author.lsx-hide-post-date.archive .entry-header .entry-title, .lsx-hide-post-author.lsx-hide-post-date.search-results .entry-header .entry-title { margin-top: 2.4rem; }
 
-.lsx-hide-post-category article.lsx-slot .post-meta-categories, .lsx-hide-post-category.blog .post-meta-categories, .lsx-hide-post-category.archive .post-meta-categories, .lsx-hide-post-category.search-results .post-meta-categories, .lsx-hide-post-category.single-post .post-meta-categories { display: none; }
+.lsx-hide-post-category article.lsx-slot .entry-layout .post-tags-wrapper, .lsx-hide-post-category.blog .entry-layout .post-tags-wrapper, .lsx-hide-post-category.archive .entry-layout .post-tags-wrapper, .lsx-hide-post-category.search-results .entry-layout .post-tags-wrapper, .lsx-hide-post-category.single-post .entry-layout .post-tags-wrapper { display: none; }
 .lsx-hide-post-category article.lsx-slot .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.blog .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.archive .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.search-results .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.single-post .entry-layout .post-tags-wrapper > .post-meta-categories { display: none; }
 .lsx-hide-post-category article.lsx-slot .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.blog .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.archive .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.search-results .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.single-post .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before { display: none; }
 .lsx-hide-post-category article.lsx-slot .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.blog .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.archive .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.search-results .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.single-post .entry-layout .post-tags-wrapper > .post-tags:before { display: none; }
@@ -186,16 +188,3 @@
 .lsx-layout-switcher-option { color: #FFF; }
 
 #categories-slider .item > a > span { color: #FFF; }
-
-.lsx-hide-post-category article.lsx-slot .post-meta-categories, .lsx-hide-post-category.blog .post-meta-categories, .lsx-hide-post-category.archive .post-meta-categories, .lsx-hide-post-category.search-results .post-meta-categories, .lsx-hide-post-category.single-post .post-meta-categories {
-  display: none;
-}
-.lsx-hide-post-category article.lsx-slot .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.blog .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.archive .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.search-results .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.single-post .entry-layout .post-tags-wrapper > .post-meta-categories {
-  display: none;
-}
-.lsx-hide-post-category article.lsx-slot .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.blog .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.archive .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.search-results .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.single-post .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before {
-  display: none;
-}
-.lsx-hide-post-category article.lsx-slot .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.blog .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.archive .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.search-results .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.single-post .entry-layout .post-tags-wrapper > .post-tags:before {
-  display: none;
-}

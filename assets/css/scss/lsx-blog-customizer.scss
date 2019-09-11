@@ -481,6 +481,10 @@
 	.post-meta > .post-meta-time { display: none; }
 }
 
+.lsx-hide-post-tags {
+	.post-tags-wrapper {display: none;}
+}
+
 .lsx-hide-post-author {
 	.post-meta {
 		& > .post-meta-avatar,
@@ -516,8 +520,7 @@
 	&.archive,
 	&.search-results,
 	&.single-post {
-		.post-meta-categories { display: none; }
-
+		.entry-layout .post-tags-wrapper {display:none;}
 		.entry-layout .post-tags-wrapper {
 			& > .post-meta-categories {
 				display: none;
