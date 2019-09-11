@@ -511,6 +511,7 @@
 }
 
 .lsx-hide-post-category {
+	& article.lsx-slot,
 	&.blog,
 	&.archive,
 	&.search-results,
