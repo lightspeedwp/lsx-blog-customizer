@@ -196,7 +196,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 
 			if ( $is_archive_or_single_post && false == $general_tags ) {
 				$body_classes[] = 'lsx-hide-post-tags';
-			}			
+			}
 
 			if ( $is_archive && true == $archive_full_width ) {
 				$body_classes[] = 'lsx-body-full-width';
