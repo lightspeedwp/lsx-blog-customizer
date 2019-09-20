@@ -288,7 +288,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Terms' ) ) {
 		 */
 		public function lazyload_slider_images( $img, $post_thumbnail_id, $size, $srcset, $image_url ) {
 			$lazyload = true;
-			if ( get_theme_mod( 'lsx_lazyload_status', '1' ) === false || ! apply_filters( 'lsx_lazyload_is_enabled', true ) ) {
+			if ( ! apply_filters( 'lsx_lazyload_is_enabled', true ) ) {
 				$lazyload = false;
 			}
 			$lazy_img = '';
