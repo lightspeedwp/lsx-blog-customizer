@@ -623,7 +623,6 @@
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: flex-start;
-			margin-top: -7rem;
 
 			@include media('>=phone') {
 				margin-left: -15px;
@@ -773,3 +772,16 @@
 
 @include customizer-blog-body-colours(#DADDDF, #4A4A4A, #418AD0, #F7AE00, #919191);
 @include customizer-blog-banner-colours(#FFF);
+
+.lsx-hide-post-category article.lsx-slot .post-meta-categories, .lsx-hide-post-category.blog .post-meta-categories, .lsx-hide-post-category.archive .post-meta-categories, .lsx-hide-post-category.search-results .post-meta-categories, .lsx-hide-post-category.single-post .post-meta-categories {
+	display: none;
+  }
+  .lsx-hide-post-category article.lsx-slot .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.blog .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.archive .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.search-results .entry-layout .post-tags-wrapper > .post-meta-categories, .lsx-hide-post-category.single-post .entry-layout .post-tags-wrapper > .post-meta-categories {
+	display: none;
+  }
+  .lsx-hide-post-category article.lsx-slot .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.blog .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.archive .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.search-results .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before, .lsx-hide-post-category.single-post .entry-layout .post-tags-wrapper > .post-meta-categories + .post-comments:before {
+	display: none;
+  }
+  .lsx-hide-post-category article.lsx-slot .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.blog .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.archive .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.search-results .entry-layout .post-tags-wrapper > .post-tags:before, .lsx-hide-post-category.single-post .entry-layout .post-tags-wrapper > .post-tags:before {
+	display: none;
+  }
