@@ -5,7 +5,7 @@ Tags: lsx, Gutenberg, Blog Customizer, WordPress Customizer, WordPress Blog
 Requires at least: 4.9
 Tested up to: 5.2.2
 Requires PHP: 7.0
-Stable tag: 1.3.0
+Stable tag: 1.3.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -46,5 +46,5 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 == Upgrade Notice ==
 
-= 1.3.0 =
+= 1.3.3 =
 Added improvements to the general look and feel of the blog archive, single and pages and the related section.
