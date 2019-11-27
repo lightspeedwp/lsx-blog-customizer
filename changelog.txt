@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.3.4
+* Fix - Fixes for the blog default layout.
+
 ### 1.3.3 - 13 November 2019
 * Dev - Added in the lazyloading for the slick slider widgets.
 * Dev - Removing the reliance on the lazyloading customizer option.
