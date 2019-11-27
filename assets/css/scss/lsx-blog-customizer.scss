@@ -610,6 +610,9 @@
 				}
 			}
 		}
+		.entry-title {
+			font-size: 22px;
+		}
 	}
 }
 
@@ -652,6 +655,32 @@
 				}
 
 				.entry-title { font-size: 22px; }
+			}
+		}
+	}
+}
+
+.lsx-body-default-layout {
+	&.blog,
+	&.archive,
+	&.search-results {
+		.post-wrapper {
+			& > .post,
+			& > .page,
+			& > .lsx-slot {
+				.entry-meta,
+				.entry-title,
+				.entry-summary,
+				.entry-content {
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+				}
+				.entry-title {
+					font-size: 22px;
+				}
+				.entry-meta {
+					padding-top: 0;
+				}
 			}
 		}
 	}
