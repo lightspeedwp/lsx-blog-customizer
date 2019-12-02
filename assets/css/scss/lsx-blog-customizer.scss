@@ -539,8 +539,10 @@
 .lsx-body-list-layout {
 	&.blog,
 	&.archive {
-		.post-wrapper {
-			margin-top: -3.3rem;
+		#categories-slider {
+			+ .post-wrapper {
+				margin-top: -3.3rem;
+			}
 		}
 	}
 	
@@ -620,6 +622,11 @@
 	&.blog,
 	&.archive,
 	&.search-results {
+		#categories-slider {
+			+ .post-wrapper {
+				margin-top: -6.3rem;
+			}
+		}
 		.post-wrapper {
 			align-items: flex-start;
 			display: flex;
@@ -664,6 +671,11 @@
 	&.blog,
 	&.archive,
 	&.search-results {
+		#categories-slider {
+			+ .post-wrapper {
+				margin-top: -3.3rem;
+			}
+		}
 		.post-wrapper {
 			& > .post,
 			& > .page,
@@ -674,6 +686,9 @@
 				.entry-content {
 					padding-left: 1.5rem;
 					padding-right: 1.5rem;
+				}
+				.post-tags-wrapper {
+					
 				}
 				.entry-title {
 					font-size: 22px;
