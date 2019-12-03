@@ -692,12 +692,14 @@
 				.entry-meta,
 				.entry-title,
 				.entry-summary,
-				.entry-content {
-					padding-left: 1.5rem;
-					padding-right: 1.5rem;
+				.entry-content,
+				.post-meta-categories {
+					padding-left: 30px;
+					padding-right: 30px;
 				}
 				.post-tags-wrapper {
-					
+					margin-left: 30px;
+					margin-right: 30px;
 				}
 				.entry-title {
 					font-size: 22px;
