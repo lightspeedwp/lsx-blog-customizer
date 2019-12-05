@@ -171,7 +171,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				$count = 0;
 				$count_global = 0;
 
-				if ( 'true' === $carousel || true === $carousel ) : ?>
+				if ( ( 'true' === $carousel || true === $carousel ) && 1 < $posts->post_count ) : ?>
 					<div class="lsx-blog-customizer-posts-slider lsx-blog-customizer-posts-wrapper" data-slick='{ "slidesToShow": <?php echo esc_attr( $columns ); ?>, "slidesToScroll": <?php echo esc_attr( $columns ); ?> }'>
 				<?php else : ?>
 					<div class="lsx-blog-customizer-posts-wrapper"><div class="row">
@@ -216,7 +216,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 						$post_image = '';
 					}
 
-					if ( 'true' === $carousel || true === $carousel ) {
+					if ( ( 'true' === $carousel || true === $carousel ) && 1 < $posts->post_count ) {
 						$this->content_part( 'widget', 'post' );
 					} elseif ( $columns >= 1 && $columns <= 4 ) {
 						$md_col_width = 12 / $columns;
@@ -238,7 +238,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 					wp_reset_postdata();
 				}
 
-				if ( 'true' !== $carousel && true !== $carousel ) {
+				if ( ( 'true' === $carousel || true === $carousel ) && 1 < $posts->post_count ) {
 					?></div><?php
 				}
 

@@ -472,11 +472,9 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			$body_classes = get_body_class();
 
 			if ( in_array( 'blog', $body_classes ) && ! is_search() ) {
-				$description = get_theme_mod( 'lsx_blog_customizer_main_blog_page_description', true );
-
+				$description = get_theme_mod( 'lsx_blog_customizer_main_blog_page_description', false );
 				$description = apply_filters( 'lsx_blog_customizer_main_blog_page_description', $description );
-
-				if ( ! empty( $description ) ) {
+				if ( false !== $description && '' !== $description && '0' !== $description ) {
 					if ( empty( locate_template( array( 'lsx-blog-customizer/partials/modules/main-blog-description.php' ) ) ) ) {
 						include LSX_BLOG_CUSTOMIZER_PATH . 'partials/modules/main-blog-description.php';
 					} else {
