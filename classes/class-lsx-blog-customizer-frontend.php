@@ -207,6 +207,8 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 					$body_classes[] = 'lsx-body-grid-layout';
 				} elseif ( 'list' === $archive_layout ) {
 					$body_classes[] = 'lsx-body-list-layout';
+				} else {
+					$body_classes[] = 'lsx-body-default-layout';
 				}
 			}
 
