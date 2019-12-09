@@ -5,7 +5,7 @@ Tags: lsx, Gutenberg, Blog Customizer, WordPress Customizer, WordPress Blog
 Requires at least: 4.9
 Tested up to: 5.3
 Requires PHP: 7.0
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -17,7 +17,7 @@ It allows you it to customize various aspects of the the appearance of your blog
 Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with the Blog Customizer, improving internal linking, website SEO and user experience! 
 
 == Gutenberg Compatible Plugin ==
-Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Blog Customizer Plugin has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
+Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Blog Customizer Plugin has been optimized for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
 
 == It's free, and always will be. ==
 We’re firm believers in open source - that’s why the [LSX Blog Customizer](https://lsx.lsdev.biz/extensions/lsx-blog-customizer/) is free, and that won't change. We are constantly maintaining and updating our extension so you have the latest and greatest abilities on your LSX Theme powered site. 
@@ -38,13 +38,13 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 == Screenshots ==
 
-1. Blog Customiser Menu
-2. Customiser Blog Archive Options
+1. Blog Customizer Menu
+2. Customizer Blog Archive Options
 3. General Options
 4. Main Blog Page Options
 5. Single Post Options
 
 == Upgrade Notice ==
 
-= 1.3.3 =
+= 1.3.4 =
 Added improvements to the general look and feel of the blog archive, single and pages and the related section.
