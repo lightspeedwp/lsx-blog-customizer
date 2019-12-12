@@ -612,6 +612,19 @@
 				}
 			}
 		}
+		&.no-thumb {
+			.lsx-label-post-type {
+				right: 10px;
+				left: auto;
+			}
+			.entry-layout {
+				@include media('>=phone') {
+					& > .entry-layout-content {
+						padding-bottom: 15px;
+					}
+				}
+			}
+		}
 		.entry-title {
 			font-size: 22px;
 		}

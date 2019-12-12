@@ -203,6 +203,10 @@
   .lsx-body-list-layout article.post:not(.no-thumb) .entry-layout > .entry-image > .thumbnail, .lsx-body-list-layout article.page:not(.no-thumb) .entry-layout > .entry-image > .thumbnail, .lsx-body-list-layout article.lsx-slot:not(.no-thumb) .entry-layout > .entry-image > .thumbnail { background: no-repeat center center transparent; background-size: cover; display: block; height: 100%; right: 0; position: absolute; top: 0; width: 100%; }
   .lsx-body-list-layout article.post:not(.no-thumb) .entry-layout > .entry-image > .thumbnail > img, .lsx-body-list-layout article.page:not(.no-thumb) .entry-layout > .entry-image > .thumbnail > img, .lsx-body-list-layout article.lsx-slot:not(.no-thumb) .entry-layout > .entry-image > .thumbnail > img { display: none; } }
 
+.lsx-body-list-layout article.post.no-thumb .lsx-label-post-type, .lsx-body-list-layout article.page.no-thumb .lsx-label-post-type, .lsx-body-list-layout article.lsx-slot.no-thumb .lsx-label-post-type { left: 10px; right: auto; }
+
+@media (min-width: 768px) { .lsx-body-list-layout article.post.no-thumb .entry-layout > .entry-layout-content, .lsx-body-list-layout article.page.no-thumb .entry-layout > .entry-layout-content, .lsx-body-list-layout article.lsx-slot.no-thumb .entry-layout > .entry-layout-content { padding-bottom: 15px; } }
+
 .lsx-body-list-layout article.post .entry-title, .lsx-body-list-layout article.page .entry-title, .lsx-body-list-layout article.lsx-slot .entry-title { font-size: 22px; }
 
 .lsx-body-grid-layout.blog #categories-slider + .post-wrapper, .lsx-body-grid-layout.archive #categories-slider + .post-wrapper, .lsx-body-grid-layout.search-results #categories-slider + .post-wrapper { margin-top: -6.3rem; }
