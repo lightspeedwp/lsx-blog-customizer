@@ -203,7 +203,7 @@
   .lsx-body-list-layout article.post:not(.no-thumb) .entry-layout > .entry-image > .thumbnail, .lsx-body-list-layout article.page:not(.no-thumb) .entry-layout > .entry-image > .thumbnail, .lsx-body-list-layout article.lsx-slot:not(.no-thumb) .entry-layout > .entry-image > .thumbnail { background: no-repeat center center transparent; background-size: cover; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
   .lsx-body-list-layout article.post:not(.no-thumb) .entry-layout > .entry-image > .thumbnail > img, .lsx-body-list-layout article.page:not(.no-thumb) .entry-layout > .entry-image > .thumbnail > img, .lsx-body-list-layout article.lsx-slot:not(.no-thumb) .entry-layout > .entry-image > .thumbnail > img { display: none; } }
 
-.lsx-body-list-layout article.post.no-thumb .lsx-label-post-type, .lsx-body-list-layout article.page.no-thumb .lsx-label-post-type, .lsx-body-list-layout article.lsx-slot.no-thumb .lsx-label-post-type { right: 10px; left: auto; }
+.lsx-body-list-layout article.post.no-thumb .label.lsx-label-post-type, .lsx-body-list-layout article.page.no-thumb .label.lsx-label-post-type, .lsx-body-list-layout article.lsx-slot.no-thumb .label.lsx-label-post-type { right: 10px; left: auto; }
 
 @media (min-width: 768px) { .lsx-body-list-layout article.post.no-thumb .entry-layout > .entry-layout-content, .lsx-body-list-layout article.page.no-thumb .entry-layout > .entry-layout-content, .lsx-body-list-layout article.lsx-slot.no-thumb .entry-layout > .entry-layout-content { padding-bottom: 15px; } }
 
