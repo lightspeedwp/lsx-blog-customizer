@@ -4,6 +4,9 @@
 * Fix - Fixes for the blog default layout.
 * Fix - Spacing fixes on blog archive.
 * Fix - Added in the missing closing div to the LSX_Blog_Customizer_Posts output() function
+* Fix - Fix for issue: 'Blog page description outputs a 1 if the description is left blank'.
+* Dev - General testing to ensure compatibility with latest WordPress version (5.3).
+* Dev - Checking compatibility with LSX 2.6 release.
 
 ### 1.3.3 - 13 November 2019
 * Dev - Added in the lazyloading for the slick slider widgets.
@@ -51,7 +54,7 @@
 * Dev - Added compatibility with LSX Videos
 * Dev - Added compatibility with LSX Search
 * Fix - Fixed blog/search results - Custom post type visual
-* Fix - Fixed blog/search results - [moved to LSX] Botttom image only used by LSX Blog Customizer
+* Fix - Fixed blog/search results - [moved to LSX] Bottom image only used by LSX Blog Customizer
 
 ### 1.1.0
 * Added compatibility with LSX 2.0

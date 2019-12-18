@@ -508,8 +508,6 @@
 	&.search-results {
 		.entry-header {
 			.entry-meta { display: none; }
-
-			.entry-title { margin-top: 2.4rem; }
 		}
 	}
 }
@@ -608,6 +606,19 @@
 
 							& > img { display: none; }
 						}
+					}
+				}
+			}
+		}
+		&.no-thumb {
+			.label.lsx-label-post-type {
+				right: 10px;
+				left: auto;
+			}
+			.entry-layout {
+				@include media('>=phone') {
+					& > .entry-layout-content {
+						padding-bottom: 15px;
 					}
 				}
 			}
