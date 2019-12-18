@@ -239,10 +239,15 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				}
 
 				if ( ( 'true' === $carousel || true === $carousel ) && 1 < $posts->post_count ) {
-					?></div><?php
+					?>
+					</div>
+					<?php
+				} else {
+					?>
+					</div>
+				</div>
+					<?php
 				}
-
-				?></div><?php
 			}
 		}
 
