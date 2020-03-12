@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.3.5 - In Development
+* Fix - Fixed issue `PHP Deprecated: dbx_post_advanced is deprecated since version 3.7.0! Use add_meta_boxes instead`.
+
 ### 1.3.4 - 19 December 2019
 * Fix - Fixes for the blog default layout.
 * Fix - Spacing fixes on blog archive.
