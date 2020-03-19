@@ -193,7 +193,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 						}
 
 						if ( ! empty( get_the_post_thumbnail( $post->ID ) ) ) {
-							$post_thumb_id = get_post_thumbnail_id( $post_id );
+							$post_thumb_id = get_post_thumbnail_id( $post->ID );
 							if ( 'lsx-placeholder' === $post_thumb_id ) {
 								$post_image = '<img class="attachment-responsive wp-post-image lsx-responsive" src="https://place-hold.it/750x350/cccccc/969696&amp;text=750x350&amp;bold&amp;fontsize=16">';
 							} else {
