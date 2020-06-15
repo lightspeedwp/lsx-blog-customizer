@@ -135,6 +135,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 							return 'grid';
 						}
 					);
+				} elseif ( 'half-grid' === $archive_layout ) {
+					add_filter( 'lsx_blog_layout',
+						function( $layout ) {
+							return 'half-grid';
+						}
+					);
 				} elseif ( 'list' === $archive_layout ) {
 					add_filter( 'lsx_blog_layout',
 						function( $layout ) {
@@ -205,6 +211,8 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			if ( $is_archive || $is_author ) {
 				if ( 'grid' === $archive_layout ) {
 					$body_classes[] = 'lsx-body-grid-layout';
+				} elseif ( 'half-grid' === $archive_layout ) {
+					$body_classes[] = 'lsx-body-half-grid-layout';
 				} elseif ( 'list' === $archive_layout ) {
 					$body_classes[] = 'lsx-body-list-layout';
 				} else {

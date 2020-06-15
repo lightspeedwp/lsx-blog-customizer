@@ -13,7 +13,11 @@
 			<i class="fa fa-arrows-alt" aria-hidden="true"></i>
 		</a>
 
-		<a href="#" class="lsx-layout-switcher-option <?php echo 'grid' === $archive_layout ? 'active' : ''; ?>" data-layout="grid" data-toggle="tooltip" data-placement="bottom" title="<?php esc_html_e( 'Grid', 'lsx-blog-customizer' ); ?>" aria-label="<?php esc_html_e( 'Grid view', 'lsx-blog-customizer' ); ?>">
+		<a href="#" class="lsx-layout-switcher-option <?php echo 'grid' === $archive_layout ? 'active' : ''; ?>" data-layout="grid" data-toggle="tooltip" data-placement="bottom" title="<?php esc_html_e( 'Grid 3 Columns', 'lsx-blog-customizer' ); ?>" aria-label="<?php esc_html_e( '3 Columns Grid view', 'lsx-blog-customizer' ); ?>">
+			<i class="fa fa fa-th" aria-hidden="true"></i>
+		</a>
+
+		<a href="#" class="lsx-layout-switcher-option <?php echo 'half-grid' === $archive_layout ? 'active' : ''; ?>" data-layout="half-grid" data-toggle="tooltip" data-placement="bottom" title="<?php esc_html_e( 'Grid 2 Columns', 'lsx-blog-customizer' ); ?>" aria-label="<?php esc_html_e( '2 Columns Grid view', 'lsx-blog-customizer' ); ?>">
 			<i class="fa fa-th-large" aria-hidden="true"></i>
 		</a>
 
