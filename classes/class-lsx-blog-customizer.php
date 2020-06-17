@@ -53,9 +53,10 @@ if ( ! class_exists( 'LSX_Blog_Customizer' ) ) {
 		 */
 		public function sanitize_select_layout_switcher( $input ) {
 			$valid = array(
-				'default' => esc_html__( 'Default', 'lsx-blog-customizer' ),
-				'list'    => esc_html__( 'List', 'lsx-blog-customizer' ),
-				'grid'    => esc_html__( 'Grid', 'lsx-blog-customizer' ),
+				'default'   => esc_html__( 'Default', 'lsx-blog-customizer' ),
+				'list'      => esc_html__( 'List', 'lsx-blog-customizer' ),
+				'grid'      => esc_html__( '3 Columns Grid', 'lsx-blog-customizer' ),
+				'half-grid' => esc_html__( '2 Columns Grid', 'lsx-blog-customizer' ),
 			);
 
 			if ( array_key_exists( $input, $valid ) ) {
