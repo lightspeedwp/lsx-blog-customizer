@@ -115,7 +115,6 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Admin' ) ) {
 					$default = false;
 				}
 			}
-
 			return $tabs;
 		}
 

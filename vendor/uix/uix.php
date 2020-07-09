@@ -141,7 +141,6 @@ class uix {
 
 	}
 
-
 	public function render_metabox( $post, $metabox ){
 
 		$uix = $metabox['args'];
