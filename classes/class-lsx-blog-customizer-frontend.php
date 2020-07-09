@@ -19,19 +19,8 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		 */
 		public function __construct() {
 			add_action( 'wp_enqueue_scripts', array( $this, 'assets' ), 6 );
-			add_action( 'wp',                 array( $this, 'layout' ), 999 );
-
-			add_filter( 'body_class',         array( $this, 'body_class' ), 10 );
-			add_filter( 'post_class',         array( $this, 'post_class' ), 10 );
-
-			add_action( 'lsx_banner_inner_bottom', array( $this, 'archive_layout_switcher' ), 90 );
-			add_action( 'lsx_global_header_inner_bottom', array( $this, 'archive_layout_switcher' ), 90 );
-
-			add_action( 'lsx_content_top',    array( $this, 'main_blog_page_description' ), 120 );
-			add_action( 'lsx_content_top',    array( $this, 'main_blog_page_carousel' ),    130 );
-			add_action( 'lsx_content_top',    array( $this, 'category_blog_page_title' ),    130 );
-
-			add_action( 'lsx_content_after',   array( $this, 'single_blog_page_related_posts' ), 20 );
+			add_action( 'wp', array( $this, 'layout' ), 999 );
+			add_action( 'wp_head', array( $this, 'wp_head' ), 10 );
 
 			if ( is_admin() ) {
 				add_filter( 'lsx_customizer_colour_selectors_body', array( $this, 'customizer_body_colours_handler' ), 15, 2 );
@@ -75,6 +64,28 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 
 			wp_enqueue_style( 'lsx-blog-customizer', LSX_BLOG_CUSTOMIZER_URL . 'assets/css/lsx-blog-customizer.css', array(), LSX_BLOG_CUSTOMIZER_VER );
 			wp_style_add_data( 'lsx-blog-customizer', 'rtl', 'replace' );
+		}
+
+		/**
+		 * The function which registers all of the layout actions.
+		 *
+		 * @return void
+		 */
+		public function wp_head() {
+			add_filter( 'body_class', array( $this, 'body_class' ), 10 );
+			add_filter( 'post_class', array( $this, 'post_class' ), 10 );
+
+			add_action( 'lsx_banner_inner_bottom', array( $this, 'archive_layout_switcher' ), 90 );
+			add_action( 'lsx_global_header_inner_bottom', array( $this, 'archive_layout_switcher' ), 90 );
+
+			$top_of_blog_action = apply_filters( 'lsx_blog_customizer_top_of_blog_action', 'lsx_content_top' );
+			if ( false !== $top_of_blog_action && '' !== $top_of_blog_action ) {
+				add_action( $top_of_blog_action, array( $this, 'main_blog_page_description' ), 120 );
+				add_action( $top_of_blog_action, array( $this, 'main_blog_page_carousel' ), 130 );
+				add_action( $top_of_blog_action, array( $this, 'category_blog_page_title' ), 130 );
+			}
+
+			add_action( 'lsx_content_after', array( $this, 'single_blog_page_related_posts' ), 20 );
 		}
 
 		/**
