@@ -114,18 +114,6 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Admin' ) ) {
 
 					$default = false;
 				}
-
-				if ( ! array_key_exists( 'api', $tabs ) ) {
-					$tabs['api'] = array(
-						'page_title'        => '',
-						'page_description'  => '',
-						'menu_title'        => esc_html__( 'API', 'lsx-blog-customizer' ),
-						'template'          => LSX_BLOG_CUSTOMIZER_PATH . 'includes/settings/api.php',
-						'default'           => $default,
-					);
-
-					$default = false;
-				}
 			}
 
 			return $tabs;
