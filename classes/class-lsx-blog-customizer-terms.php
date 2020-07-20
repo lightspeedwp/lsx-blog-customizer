@@ -42,15 +42,6 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Terms' ) ) {
 		 * @since 1.1.0
 		 */
 		public function __construct() {
-			if ( function_exists( 'tour_operator' ) ) {
-				$this->options = get_option( '_lsx-to_settings', false );
-			} else {
-				$this->options = get_option( '_lsx_settings', false );
-				if ( false === $this->options ) {
-					$this->options = get_option( '_lsx_lsx-settings', false );
-				}
-			}
-
 			add_filter( 'wp_kses_allowed_html', array( $this, 'allow_slick_data_params' ), 10, 2 );
 		}
 
@@ -143,14 +134,6 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Terms' ) ) {
 						} else {
 							$image = '';
 						}
-
-						/*if ( empty( $image ) ) {
-							if ( $this->options['display'] && ! empty( $this->options['display']['blog_customizer_posts_placeholder'] ) ) {
-								$image = '<img class="' . $responsive . '" src="' . $this->options['display']['blog_customizer_posts_placeholder'] . '" width="' . $size . '" alt="placeholder" />';
-							} else {
-								$image = '';
-							}
-						}*/
 
 						if ( ! empty( $image ) ) {
 							$image = apply_filters( 'lsx_to_lazyload_filter_images', '<img src="' . $image . '" class="img-responsive">' );

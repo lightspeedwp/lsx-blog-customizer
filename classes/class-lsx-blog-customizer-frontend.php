@@ -29,6 +29,9 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 
 			remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 			add_filter( 'get_the_excerpt', array( $this, 'custom_wp_trim_excerpt' ) );
+
+			add_filter( 'has_post_thumbnail', array( $this, 'has_post_thumbnail_placeholder' ), 20, 3 );
+			add_filter( 'lsx_get_thumbnail_post_placeholder_id', array( $this, 'replace_post_thumbnail_id' ), 10, 2 );
 		}
 
 		/**
@@ -624,6 +627,34 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			}
 
 			return apply_filters( 'lsx_custom_wp_trim_excerpt', $wpse_excerpt, $raw_excerpt );
+		}
+
+		/**
+		 * Makes sure the blog placeholder is know about.
+		 *
+		 * @param     boolean $has_thumbnail
+		 * @param     object $post
+		 * @param     int $thumbnail_id
+		 * @return     boolean
+		 */
+		public function has_post_thumbnail_placeholder( $has_thumbnail, $post, $thumbnail_id ) {
+			if ( 'post' === get_post_type( $post ) && $this->get_placeholder() ) {
+				$has_thumbnail = true;
+			}
+			return $has_thumbnail;
+		}
+		/**
+		 * Makes sure the blog placeholder is know about.
+		 *
+		 * @param     boolean $thumbnail_id
+		 * @param     object $post_id
+		 * @return    boolean
+		 */
+		public function replace_post_thumbnail_id( $thumbnail_id, $post_id ) {
+			if ( 'post' === get_post_type( $post_id ) && $this->get_placeholder_id() ) {
+				$thumbnail_id = $this->get_placeholder_id();
+			}
+			return $thumbnail_id;
 		}
 	}
 	new LSX_Blog_Customizer_Frontend();

@@ -1,9 +1,9 @@
 # Change log
 
-## [[1.4.0]]
+## [[1.4.0]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.0) - Unreleased
 
 ### Added
-
+- Removed the CMB and UIX vendors.
 - Added a 2 columns layout option for the blog.
 - Fixed spacing for the archive layouts.
 - Added in 2 filters to allow themes to change the action the blog description outputs as well as the css class.

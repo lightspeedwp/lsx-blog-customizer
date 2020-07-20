@@ -147,6 +147,26 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 				'priority'      => 30,
 			) ) );
 
+			$wp_customize->add_setting(
+				'lsx_blog_customizer_general_placeholder',
+				array(
+					'default'           => '',
+					'sanitize_callback' => 'wp_kses_post',
+				)
+			);
+			$wp_customize->add_control(
+				new WP_Customize_Image_Control(
+					$wp_customize,
+					'blog_customizer_posts_placeholder',
+					array(
+						'label'    => __( 'Upload a placeholder', 'lsx-blog-customizer' ),
+						'section'  => 'lsx_blog_customizer_general',
+						'settings' => 'lsx_blog_customizer_general_placeholder',
+						'priority' => 40,
+					)
+				)
+			);
+
 			/**
 			 *  Main blog page section: description
 			 */
@@ -346,7 +366,5 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 		}
 
 	}
-
 	new LSX_Blog_Customizer_Blog;
-
 }
