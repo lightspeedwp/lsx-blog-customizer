@@ -75,6 +75,39 @@ if ( ! class_exists( 'LSX_Blog_Customizer' ) ) {
 			return wp_kses_post( $input );
 		}
 
+		/**
+		 * Get the options array from the customizer options.
+		 *
+		 * @return array
+		 */
+		public function get_options() {
+			$options = array();
+			if ( function_exists( 'tour_operator' ) ) {
+				$options = get_option( '_lsx-to_settings', false );
+			} else {
+				$options = get_option( '_lsx_settings', false );
+				if ( false === $options ) {
+					$options = get_option( '_lsx_lsx-settings', false );
+				}
+			}
+			return $options;
+		}
+		/**
+		 * Get the placeholder for the blog posts.
+		 *
+		 * @return string
+		 */
+		public function get_placeholder() {
+			$options     = $this->get_options();
+			$placeholder = '';
+			if ( isset( $options['display'] ) && ! empty( $options['display']['blog_customizer_posts_placeholder'] ) ) {
+				$placeholder = $options['display']['blog_customizer_posts_placeholder'];
+			}
+			if ( get_theme_mod( 'lsx_blog_customizer_general_placeholder' ) ) {
+				$placeholder = get_theme_mod( 'lsx_blog_customizer_general_placeholder' );
+			}
+			return $placeholder;
+		}
 	}
 
 	new LSX_Blog_Customizer();

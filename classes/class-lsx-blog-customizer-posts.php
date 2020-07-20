@@ -29,14 +29,6 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 		public $responsive;
 
 		/**
-		 * LSX options.
-		 *
-		 * @var array
-		 * @since 1.1.0
-		 */
-		public $options;
-
-		/**
 		 * Holds the shortcode attributes
 		 *
 		 * @var array
@@ -49,17 +41,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 		 * @since 1.1.0
 		 */
 		public function __construct() {
-			if ( function_exists( 'tour_operator' ) ) {
-				$this->options = get_option( '_lsx-to_settings', false );
-			} else {
-				$this->options = get_option( '_lsx_settings', false );
-				if ( false === $this->options ) {
-					$this->options = get_option( '_lsx_lsx-settings', false );
-				}
-			}
-
 			add_filter( 'wp_kses_allowed_html', array( $this, 'allow_slick_data_params' ), 10, 2 );
-
 			add_filter( 'excerpt_length', array( $this, 'change_excerpt_length' ) );
 			add_filter( 'excerpt_strip_tags', array( $this, 'change_excerpt_strip_tags' ) );
 		}
@@ -206,8 +188,8 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 						}
 
 						if ( empty( $post_image ) ) {
-							if ( $this->options['display'] && ! empty( $this->options['display']['blog_customizer_posts_placeholder'] ) ) {
-								$post_image = '<img class="' . $responsive . '" src="' . $this->options['display']['blog_customizer_posts_placeholder'] . '" width="' . $size . '" alt="placeholder" />';
+							if ( $this->get_placeholder() ) {
+								$post_image = '<img class="' . $responsive . '" src="' . $this->get_placeholder() . '" width="' . $size . '" alt="placeholder" />';
 							} else {
 								$post_image = '';
 							}
@@ -314,7 +296,5 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				echo wp_kses_post( '<p>No ' . $original_name . ' can be found.</p>' );
 			}
 		}
-
 	}
-
 }
