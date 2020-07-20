@@ -4,11 +4,6 @@
 
 ### Added
 - Removed the CMB and UIX vendors.
-
-## [[1.3.6]]
-
-### Added
-
 - Added a 2 columns layout option for the blog.
 - Fixed spacing for the archive layouts.
 - Added in 2 filters to allow themes to change the action the blog description outputs as well as the css class.
