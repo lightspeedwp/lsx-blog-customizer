@@ -18,15 +18,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Admin' ) ) {
 		 * @since 1.0.0
 		 */
 		public function __construct() {
-			//if ( ! class_exists( 'CMB_Meta_Box' ) ) {
-			//	require_once( LSX_BLOG_CUSTOMIZER_PATH . '/vendor/Custom-Meta-Boxes/custom-meta-boxes.php' );
-			//}
-
 			add_action( 'customize_preview_init', array( $this, 'assets' ), 9999 );
-
-			add_action( 'init', array( $this, 'create_settings_page' ), 100 );
-			add_filter( 'lsx_framework_settings_tabs', array( $this, 'register_tabs' ), 100, 1 );
-
 			add_filter( 'type_url_form_media', array( $this, 'change_attachment_field_button' ), 20, 1 );
 		}
 
@@ -43,93 +35,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Admin' ) ) {
 			));
 
 			wp_localize_script( 'lsx_blog_customizer_admin', 'lsx_blog_customizer_params', $params );
-
 			wp_enqueue_style( 'lsx_blog_customizer_admin', LSX_BLOG_CUSTOMIZER_URL . 'assets/css/lsx-blog-customizer-admin.css', array(), LSX_BLOG_CUSTOMIZER_VER );
-		}
-
-		/**
-		 * Returns the array of settings to the UIX Class.
-		 *
-		 * @since 1.1.0
-		 */
-		public function create_settings_page() {
-			if ( is_admin() ) {
-				if ( ! class_exists( '\lsx\ui\uix' ) && ! function_exists( 'tour_operator' ) ) {
-					include_once LSX_BLOG_CUSTOMIZER_PATH . 'vendor/uix/uix.php';
-					$pages = $this->settings_page_array();
-					$uix = \lsx\ui\uix::get_instance( 'lsx' );
-					$uix->register_pages( $pages );
-				}
-
-				if ( function_exists( 'tour_operator' ) ) {
-					add_action( 'lsx_to_framework_display_tab_content', array( $this, 'display_settings' ), 11 );
-				} else {
-					add_action( 'lsx_framework_display_tab_content', array( $this, 'display_settings' ), 11 );
-				}
-			}
-		}
-
-		/**
-		 * Returns the array of settings to the UIX Class.
-		 *
-		 * @since 1.1.0
-		 */
-		public function settings_page_array() {
-			$tabs = apply_filters( 'lsx_framework_settings_tabs', array() );
-
-			return array(
-				'settings'  => array(
-					'page_title'  => esc_html__( 'Theme Options', 'lsx-blog-customizer' ),
-					'menu_title'  => esc_html__( 'Theme Options', 'lsx-blog-customizer' ),
-					'capability'  => 'manage_options',
-					'icon'        => 'dashicons-book-alt',
-					'parent'      => 'themes.php',
-					'save_button' => esc_html__( 'Save Changes', 'lsx-blog-customizer' ),
-					'tabs'        => $tabs,
-				),
-			);
-		}
-
-		/**
-		 * Register tabs.
-		 *
-		 * @since 1.1.0
-		 */
-		public function register_tabs( $tabs ) {
-			$default = true;
-
-			if ( false !== $tabs && is_array( $tabs ) && count( $tabs ) > 0 ) {
-				$default = false;
-			}
-
-			if ( ! function_exists( 'tour_operator' ) ) {
-				if ( ! array_key_exists( 'display', $tabs ) ) {
-					$tabs['display'] = array(
-						'page_title'        => '',
-						'page_description'  => '',
-						'menu_title'        => esc_html__( 'Display', 'lsx-blog-customizer' ),
-						'template'          => LSX_BLOG_CUSTOMIZER_PATH . 'includes/settings/display.php',
-						'default'           => $default,
-					);
-
-					$default = false;
-				}
-			}
-			return $tabs;
-		}
-
-		/**
-		 * Outputs the display tabs settings.
-		 *
-		 * @since 1.1.0
-		 *
-		 * @param $tab string
-		 * @return null
-		 */
-		public function display_settings( $tab = 'general' ) {
-			if ( 'blog-customizer' === $tab ) {
-				$this->placeholder_field();
-			}
 		}
 
 		/**
