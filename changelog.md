@@ -1,5 +1,10 @@
 # Change log
 
+## [[1.4.0]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.0) - Unreleased
+
+### Added
+- Removed the CMB and UIX vendors.
+
 ## [[1.3.6]]
 
 ### Added
