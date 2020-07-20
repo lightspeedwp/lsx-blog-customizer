@@ -108,6 +108,26 @@ if ( ! class_exists( 'LSX_Blog_Customizer' ) ) {
 			}
 			return $placeholder;
 		}
+
+		/**
+		 * Get the placeholder for the blog posts.
+		 *
+		 * @return string
+		 */
+		public function get_placeholder_id() {
+			$options     = $this->get_options();
+			$placeholder = '';
+			if ( isset( $options['display'] ) && ! empty( $options['display']['blog_customizer_posts_placeholder'] ) ) {
+				$placeholder = $options['display']['blog_customizer_posts_placeholder'];
+			}
+			if ( get_theme_mod( 'lsx_blog_customizer_general_placeholder' ) ) {
+				$placeholder_id = attachment_url_to_postid( get_theme_mod( 'lsx_blog_customizer_general_placeholder' ) );
+				if ( false !== $placeholder_id ) {
+					$placeholder = $placeholder_id;
+				}
+			}
+			return $placeholder;
+		}
 	}
 
 	new LSX_Blog_Customizer();
