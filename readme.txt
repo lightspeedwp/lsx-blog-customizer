@@ -1,5 +1,5 @@
 === LSX Blog Customizer ===
-Contributors: feedmymedia
+Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, virginialsdev, deon80, jaab1985, jacquesvdh, ignusvermaak, garthlsdev
 Donate link: https://donate.lsdev.biz/
 Tags: lsx, Gutenberg, Blog Customizer, WordPress Customizer, WordPress Blog
 Requires at least: 5.1.1
