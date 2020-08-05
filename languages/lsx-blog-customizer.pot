@@ -1,4 +1,4 @@
-# Copyright (C) 2019 lsx-blog-customizer
+# Copyright (C) 2020 lsx-blog-customizer
 # This file is distributed under the same license as the lsx-blog-customizer package.
 msgid ""
 msgstr ""
@@ -14,35 +14,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: classes/class-lsx-blog-customizer-admin.php:82, classes/class-lsx-blog-customizer-admin.php:83
-msgid "Theme Options"
-msgstr ""
-
-#: classes/class-lsx-blog-customizer-admin.php:87
-msgid "Save Changes"
-msgstr ""
-
-#: classes/class-lsx-blog-customizer-admin.php:110
-msgid "Display"
-msgstr ""
-
-#: classes/class-lsx-blog-customizer-admin.php:122
-msgid "API"
-msgstr ""
-
-#: classes/class-lsx-blog-customizer-admin.php:157
-msgid "Placeholder"
-msgstr ""
-
-#: classes/class-lsx-blog-customizer-admin.php:165
-msgid "Choose Image"
-msgstr ""
-
-#: classes/class-lsx-blog-customizer-admin.php:166
-msgid "Delete"
-msgstr ""
-
-#: classes/class-lsx-blog-customizer-admin.php:178
+#: classes/class-lsx-blog-customizer-admin.php:48
 msgid "Select featured image"
 msgstr ""
 
@@ -118,227 +90,235 @@ msgstr ""
 msgid "Display post tags in blog archives and blog post pages."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:159
+#: classes/class-lsx-blog-customizer-blog.php:162
+msgid "Upload a placeholder"
+msgstr ""
+
+#: classes/class-lsx-blog-customizer-blog.php:179
 msgid "Description"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:160
+#: classes/class-lsx-blog-customizer-blog.php:180
 msgid "Description visible before posts list."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:196, classes/class-lsx-blog-customizer-blog.php:286
+#: classes/class-lsx-blog-customizer-blog.php:216, classes/class-lsx-blog-customizer-blog.php:307
 msgid "Full width"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:197
+#: classes/class-lsx-blog-customizer-blog.php:217
 msgid "Display blog archives in a full width layout."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:213
+#: classes/class-lsx-blog-customizer-blog.php:233
 msgid "Excerpt/content"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:214
+#: classes/class-lsx-blog-customizer-blog.php:234
 msgid "Display excerpt/content on blog archives."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:230
+#: classes/class-lsx-blog-customizer-blog.php:250
 msgid "Full content"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:231
+#: classes/class-lsx-blog-customizer-blog.php:251
 msgid "Display full content on blog archives."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:247
+#: classes/class-lsx-blog-customizer-blog.php:267
 msgid "Front-end layout switcher"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:248
+#: classes/class-lsx-blog-customizer-blog.php:268
 msgid "Display layout switcher (list X grid) on front-end."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:264
+#: classes/class-lsx-blog-customizer-blog.php:284
 msgid "Layout"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:265
+#: classes/class-lsx-blog-customizer-blog.php:285
 msgid "Default layout on blog archives."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:271, classes/class-lsx-blog-customizer.php:56, partials/modules/archive-layout-switcher.php:12
+#: classes/class-lsx-blog-customizer-blog.php:291, classes/class-lsx-blog-customizer.php:56, partials/modules/archive-layout-switcher.php:8
 msgid "Default"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:272, classes/class-lsx-blog-customizer.php:57, partials/modules/archive-layout-switcher.php:20
+#: classes/class-lsx-blog-customizer-blog.php:292, classes/class-lsx-blog-customizer.php:57, partials/modules/archive-layout-switcher.php:20
 msgid "List"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:273, classes/class-lsx-blog-customizer.php:58, partials/modules/archive-layout-switcher.php:16
-msgid "Grid"
+#: classes/class-lsx-blog-customizer-blog.php:293, classes/class-lsx-blog-customizer.php:58
+msgid "3 Columns Grid"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:287
+#: classes/class-lsx-blog-customizer-blog.php:294, classes/class-lsx-blog-customizer.php:59
+msgid "2 Columns Grid"
+msgstr ""
+
+#: classes/class-lsx-blog-customizer-blog.php:308
 msgid "Give the single blog post pages a full width layout."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:321
+#: classes/class-lsx-blog-customizer-blog.php:342
 msgid "Display related posts"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:322
+#: classes/class-lsx-blog-customizer-blog.php:343
 msgid "Display related posts in blog post pages."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:338
+#: classes/class-lsx-blog-customizer-blog.php:359
 msgid "Display posts navigation"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-blog.php:339
+#: classes/class-lsx-blog-customizer-blog.php:360
 msgid "Display posts navigation in blog post pages."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-posts.php:226
+#: classes/class-lsx-blog-customizer-posts.php:216
 msgid "Invalid number of columns set. LSX Blog Customizer Posts supports 1 to 4 columns."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-terms.php:169, classes/class-lsx-blog-customizer-terms.php:183
+#: classes/class-lsx-blog-customizer-terms.php:152, classes/class-lsx-blog-customizer-terms.php:166
 msgid "View posts"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-terms.php:197
+#: classes/class-lsx-blog-customizer-terms.php:180
 msgid "Invalid number of columns set. LSX Blog Customizer Taxonomy Terms supports 1 to 4 columns."
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:20
+#: classes/class-lsx-blog-customizer-widget-posts.php:27
 msgid "LSX Posts"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:176, classes/class-lsx-blog-customizer-widget-terms.php:172
+#: classes/class-lsx-blog-customizer-widget-posts.php:193, classes/class-lsx-blog-customizer-widget-terms.php:180
 msgid "Category"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:179
+#: classes/class-lsx-blog-customizer-widget-posts.php:196
 msgid "All categories"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:188, classes/class-lsx-blog-customizer-widget-terms.php:183
+#: classes/class-lsx-blog-customizer-widget-posts.php:205, classes/class-lsx-blog-customizer-widget-terms.php:191
 msgid "Title:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:192, classes/class-lsx-blog-customizer-widget-terms.php:187
+#: classes/class-lsx-blog-customizer-widget-posts.php:209, classes/class-lsx-blog-customizer-widget-terms.php:195
 msgid "Page Link:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:194, classes/class-lsx-blog-customizer-widget-terms.php:189
+#: classes/class-lsx-blog-customizer-widget-posts.php:211, classes/class-lsx-blog-customizer-widget-terms.php:197
 msgid "Link the widget to a page"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:197, classes/class-lsx-blog-customizer-widget-terms.php:192
+#: classes/class-lsx-blog-customizer-widget-posts.php:214, classes/class-lsx-blog-customizer-widget-terms.php:200
 msgid "Tagline:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:199, classes/class-lsx-blog-customizer-widget-terms.php:194
+#: classes/class-lsx-blog-customizer-widget-posts.php:216, classes/class-lsx-blog-customizer-widget-terms.php:202
 msgid "Tagline to display below the widget title"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:202, classes/class-lsx-blog-customizer-widget-terms.php:197
+#: classes/class-lsx-blog-customizer-widget-posts.php:219, classes/class-lsx-blog-customizer-widget-terms.php:205
 msgid "Columns:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:214, classes/class-lsx-blog-customizer-widget-terms.php:209
+#: classes/class-lsx-blog-customizer-widget-posts.php:231, classes/class-lsx-blog-customizer-widget-terms.php:217
 msgid "Order By:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:218
+#: classes/class-lsx-blog-customizer-widget-posts.php:235
 msgid "None"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:219, classes/class-lsx-blog-customizer-widget-terms.php:216
+#: classes/class-lsx-blog-customizer-widget-posts.php:236, classes/class-lsx-blog-customizer-widget-terms.php:224
 msgid "ID"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:220, classes/class-lsx-blog-customizer-widget-terms.php:214
+#: classes/class-lsx-blog-customizer-widget-posts.php:237, classes/class-lsx-blog-customizer-widget-terms.php:222
 msgid "Name"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:221
+#: classes/class-lsx-blog-customizer-widget-posts.php:238
 msgid "Date"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:222
+#: classes/class-lsx-blog-customizer-widget-posts.php:239
 msgid "Modified Date"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:223
+#: classes/class-lsx-blog-customizer-widget-posts.php:240
 msgid "Random"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:224, classes/class-lsx-blog-customizer-widget-terms.php:213
+#: classes/class-lsx-blog-customizer-widget-posts.php:241, classes/class-lsx-blog-customizer-widget-terms.php:221
 msgid "Menu (WP dashboard order)"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:234, classes/class-lsx-blog-customizer-widget-terms.php:228
+#: classes/class-lsx-blog-customizer-widget-posts.php:251, classes/class-lsx-blog-customizer-widget-terms.php:236
 msgid "Order:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:238, classes/class-lsx-blog-customizer-widget-terms.php:232
+#: classes/class-lsx-blog-customizer-widget-posts.php:255, classes/class-lsx-blog-customizer-widget-terms.php:240
 msgid "Ascending"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:239, classes/class-lsx-blog-customizer-widget-terms.php:233
+#: classes/class-lsx-blog-customizer-widget-posts.php:256, classes/class-lsx-blog-customizer-widget-terms.php:241
 msgid "Descending"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:249, classes/class-lsx-blog-customizer-widget-terms.php:243
+#: classes/class-lsx-blog-customizer-widget-posts.php:266, classes/class-lsx-blog-customizer-widget-terms.php:251
 msgid "Maximum amount:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:251, classes/class-lsx-blog-customizer-widget-terms.php:245
+#: classes/class-lsx-blog-customizer-widget-posts.php:268, classes/class-lsx-blog-customizer-widget-terms.php:253
 msgid "Leave empty to display all"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:254
+#: classes/class-lsx-blog-customizer-widget-posts.php:271
 msgid "Specify Posts by ID:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:256, classes/class-lsx-blog-customizer-widget-terms.php:250
+#: classes/class-lsx-blog-customizer-widget-posts.php:273, classes/class-lsx-blog-customizer-widget-terms.php:258
 msgid "Comma separated list, overrides limit and order settings"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:259
+#: classes/class-lsx-blog-customizer-widget-posts.php:276
 msgid "Display:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:263
+#: classes/class-lsx-blog-customizer-widget-posts.php:280
 msgid "Excerpt"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:264
+#: classes/class-lsx-blog-customizer-widget-posts.php:281
 msgid "Full Content"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:274, classes/class-lsx-blog-customizer-widget-terms.php:253
+#: classes/class-lsx-blog-customizer-widget-posts.php:291, classes/class-lsx-blog-customizer-widget-terms.php:261
 msgid "Image size:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:278, classes/class-lsx-blog-customizer-widget-terms.php:257
+#: classes/class-lsx-blog-customizer-widget-posts.php:295, classes/class-lsx-blog-customizer-widget-terms.php:265
 msgid "Button \"view all\" text:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:280, classes/class-lsx-blog-customizer-widget-terms.php:259
+#: classes/class-lsx-blog-customizer-widget-posts.php:297, classes/class-lsx-blog-customizer-widget-terms.php:267
 msgid "Leave empty to not display the button"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:284, classes/class-lsx-blog-customizer-widget-terms.php:263
+#: classes/class-lsx-blog-customizer-widget-posts.php:301, classes/class-lsx-blog-customizer-widget-terms.php:271
 msgid "Display Images"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:288, classes/class-lsx-blog-customizer-widget-terms.php:267
+#: classes/class-lsx-blog-customizer-widget-posts.php:305, classes/class-lsx-blog-customizer-widget-terms.php:275
 msgid "Responsive Images"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-posts.php:292, classes/class-lsx-blog-customizer-widget-terms.php:271
+#: classes/class-lsx-blog-customizer-widget-posts.php:309, classes/class-lsx-blog-customizer-widget-terms.php:279
 msgid "Carousel"
 msgstr ""
 
@@ -346,40 +326,28 @@ msgstr ""
 msgid "LSX Taxonomy Terms"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-terms.php:168
+#: classes/class-lsx-blog-customizer-widget-terms.php:176
 msgid "Taxonomy:"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-terms.php:173
+#: classes/class-lsx-blog-customizer-widget-terms.php:181
 msgid "Tag"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-terms.php:215
+#: classes/class-lsx-blog-customizer-widget-terms.php:223
 msgid "Slug"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-terms.php:217
+#: classes/class-lsx-blog-customizer-widget-terms.php:225
 msgid "Count"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-terms.php:218
+#: classes/class-lsx-blog-customizer-widget-terms.php:226
 msgid "Include"
 msgstr ""
 
-#: classes/class-lsx-blog-customizer-widget-terms.php:248
+#: classes/class-lsx-blog-customizer-widget-terms.php:256
 msgid "Specify Terms by ID:"
-msgstr ""
-
-#: includes/settings/api.php:11
-msgid "Settings"
-msgstr ""
-
-#: includes/settings/api.php:12
-msgid "License Keys"
-msgstr ""
-
-#: includes/settings/api.php:17
-msgid "Please enter your user details (email address, API key, username, etc) below as required for the extensions that you have installed."
 msgstr ""
 
 #: includes/settings/display.php:4
@@ -418,39 +386,39 @@ msgstr ""
 msgid "Videos"
 msgstr ""
 
-#: includes/settings/display.php:49
-msgid "Search"
-msgstr ""
-
-#: partials/modules/archive-layout-switcher.php:9
-msgid "Select view:"
-msgstr ""
-
 #: partials/modules/archive-layout-switcher.php:12
-msgid "Default view"
+msgid "Grid 3 Columns"
 msgstr ""
 
 #: partials/modules/archive-layout-switcher.php:16
-msgid "Grid view"
+msgid "Grid 2 Columns"
 msgstr ""
 
-#: partials/modules/archive-layout-switcher.php:20
-msgid "List view"
+#: partials/modules/archive-layout-switcher.php:28
+msgid "Select view:"
+msgstr ""
+
+#: partials/modules/archive-layout-switcher.php:34
+msgid " view"
+msgstr ""
+
+#: partials/modules/main-blog-categories-slider.php:7
+msgid "Browse By Category"
 msgstr ""
 
 #: partials/modules/single-related-posts.php:11
 msgid "Related Posts"
 msgstr ""
 
-#: partials/modules/widget-post.php:32
-msgid "by"
+#: partials/modules/widget-post.php:23
+msgid "By "
 msgstr ""
 
 #. translators: %s: category name
-#: partials/modules/widget-post.php:61
+#: partials/modules/widget-post.php:49
 msgid "View all posts in %s"
 msgstr ""
 
-#: partials/modules/widget-post.php:65
-msgid "Posted in"
+#: partials/modules/widget-post.php:53
+msgid "Posted in: "
 msgstr ""
