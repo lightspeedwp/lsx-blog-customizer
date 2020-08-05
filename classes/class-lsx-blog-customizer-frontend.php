@@ -357,7 +357,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		 */
 		public function get_layout_value_from_cookie( $page_key = 'blog' ) {
 			$archive_layout = get_theme_mod( 'lsx_blog_customizer_archive_layout', 'default' );
-			apply_filters( 'lsx_layout_switcher_options_default', $archive_layout );
+			$archive_layout = apply_filters( 'lsx_layout_switcher_options_default', $archive_layout );
 
 			if ( isset( $_COOKIE[ 'lsx-' . $page_key . '-layout' ] ) ) {
 				$archive_layout_from_cookie = sanitize_key( $_COOKIE[ 'lsx-' . $page_key . '-layout' ] );
