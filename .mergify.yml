@@ -6,3 +6,42 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+pull_request_rules:
+  - name: automatic merge for Greenkeeper pull requests
+    conditions:
+      - author=greenkeeper[bot]
+      - status-success=Travis CI - Pull Request
+      - status-success=greenkeeper/verify
+    actions:
+      merge:
+        method: merge
+pull_request_rules:
+  - name: automatic merge for Renovate pull requests
+    conditions:
+      - author=renovate[bot]
+      - status-success=Travis CI - Pull Request
+    actions:
+      merge:
+        method: merge
+pull_request_rules:
+  - name: automatic merge for PyUp pull requests
+    conditions:
+      - author=pyup-bot
+      - status-success=Travis CI - Pull Request
+    actions:
+      merge:
+        method: merge
+pull_request_rules:
+  - name: automatic merge for ImgBot pull requests
+    conditions:
+      - author=imgbot[bot]
+      - status-success=Travis CI - Pull Request
+    actions:
+      merge:
+        method: merge
+pull_request_rules:
+  - name: delete head branch after merge
+    conditions:
+      - merged
+    actions:
+      delete_head_branch: {}
