@@ -3,26 +3,43 @@
  * Layout switcher
  */
 
-?>
+$layout_options = array(
+	'default' => array(
+		'label' => __( 'Default', 'lsx-blog-customizer' ),
+		'icon'  => 'fa-arrows-alt',
+	),
+	'grid' => array(
+		'label' => __( 'Grid 3 Columns', 'lsx-blog-customizer' ),
+		'icon'  => 'fa-th',
+	),
+	'half-grid' => array(
+		'label' => __( 'Grid 2 Columns', 'lsx-blog-customizer' ),
+		'icon'  => 'fa-th-large',
+	),
+	'list' => array(
+		'label' => __( 'List', 'lsx-blog-customizer' ),
+		'icon'  => 'fa-bars',
+	),
+);
 
-<div class="lsx-layout-switcher">
-	<span class="lsx-layout-switcher-label"><?php esc_html_e( 'Select view:', 'lsx-blog-customizer' ); ?></span>
+$layout_options = apply_filters( 'lsx_layout_switcher_options', $layout_options );
+if ( ! empty( $layout_options ) ) {
+	?>
+	<div class="lsx-layout-switcher">
+		<span class="lsx-layout-switcher-label"><?php esc_html_e( 'Select view:', 'lsx-blog-customizer' ); ?></span>
 
-	<div class="lsx-layout-switcher-options">
-		<a href="#" class="lsx-layout-switcher-option <?php echo 'default' === $archive_layout ? 'active' : ''; ?>" data-layout="default" data-toggle="tooltip" data-placement="bottom" title="<?php esc_html_e( 'Default', 'lsx-blog-customizer' ); ?>" aria-label="<?php esc_html_e( 'Default view', 'lsx-blog-customizer' ); ?>">
-			<i class="fa fa-arrows-alt" aria-hidden="true"></i>
-		</a>
-
-		<a href="#" class="lsx-layout-switcher-option <?php echo 'grid' === $archive_layout ? 'active' : ''; ?>" data-layout="grid" data-toggle="tooltip" data-placement="bottom" title="<?php esc_html_e( 'Grid 3 Columns', 'lsx-blog-customizer' ); ?>" aria-label="<?php esc_html_e( '3 Columns Grid view', 'lsx-blog-customizer' ); ?>">
-			<i class="fa fa fa-th" aria-hidden="true"></i>
-		</a>
-
-		<a href="#" class="lsx-layout-switcher-option <?php echo 'half-grid' === $archive_layout ? 'active' : ''; ?>" data-layout="half-grid" data-toggle="tooltip" data-placement="bottom" title="<?php esc_html_e( 'Grid 2 Columns', 'lsx-blog-customizer' ); ?>" aria-label="<?php esc_html_e( '2 Columns Grid view', 'lsx-blog-customizer' ); ?>">
-			<i class="fa fa-th-large" aria-hidden="true"></i>
-		</a>
-
-		<a href="#" class="lsx-layout-switcher-option <?php echo 'list' === $archive_layout ? 'active' : ''; ?>" data-layout="list" data-toggle="tooltip" data-placement="bottom" title="<?php esc_html_e( 'List', 'lsx-blog-customizer' ); ?>" aria-label="<?php esc_html_e( 'List view', 'lsx-blog-customizer' ); ?>">
-			<i class="fa fa-bars" aria-hidden="true"></i>
-		</a>
+		<div class="lsx-layout-switcher-options">
+			<?php
+			foreach ( $layout_options as $key => $params ) {
+				?>
+					<a href="#" class="lsx-layout-switcher-option <?php echo $key === $archive_layout ? 'active' : ''; ?>" data-layout="default" data-toggle="tooltip" data-placement="bottom" title="<?php echo esc_attr( $params['label'] ); ?>" aria-label="<?php echo esc_attr( $params['label'] ); ?><?php esc_html_e( ' view', 'lsx-blog-customizer' ); ?>">
+					<i class="fa <?php echo esc_attr( $params['icon'] ); ?>" aria-hidden="true"></i>
+					</a>
+				<?php
+			}
+			?>
+		</div>
 	</div>
-</div>
+	<?php
+}
+?>
