@@ -873,6 +873,20 @@
 	@include media('<=phone') {
 		display: none;
 	}
+
+
+	.lsx-layout-switcher-option {
+		display: inline-block;
+		font-size: 28px;
+		line-height: 1;
+		padding: 0 3px;
+		transition: color 300ms ease;
+		white-space: nowrap;
+
+		.fa {
+			margin-right:0px;
+		}
+	}
 }
 .archive.category {
 	.lsx-layout-switcher {
@@ -889,15 +903,6 @@
 	letter-spacing: 0.5px;
 	line-height: 1.4;
 	margin-bottom: 1rem;
-}
-
-.lsx-layout-switcher-option {
-	display: inline-block;
-	font-size: 28px;
-	line-height: 1;
-	padding: 0 3px;
-	transition: color 300ms ease;
-	white-space: nowrap;
 }
 
 .lsx-hide-posts-navigation {

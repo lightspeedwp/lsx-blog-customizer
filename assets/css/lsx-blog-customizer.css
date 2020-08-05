@@ -247,11 +247,13 @@
 
 @media (max-width: 768px) { .lsx-layout-switcher { display: none; } }
 
+.lsx-layout-switcher .lsx-layout-switcher-option { display: inline-block; font-size: 28px; line-height: 1; padding: 0 3px; transition: color 300ms ease; white-space: nowrap; }
+
+.lsx-layout-switcher .lsx-layout-switcher-option .fa { margin-right: 0px; }
+
 @media (min-width: 992px) { .archive.category .lsx-layout-switcher { right: 12vw; bottom: 100px; } }
 
 .lsx-layout-switcher-label { display: block; font-size: 13px; letter-spacing: 0.5px; line-height: 1.4; margin-bottom: 1rem; }
-
-.lsx-layout-switcher-option { display: inline-block; font-size: 28px; line-height: 1; padding: 0 3px; transition: color 300ms ease; white-space: nowrap; }
 
 .lsx-hide-posts-navigation .post-navigation { display: none; }
 

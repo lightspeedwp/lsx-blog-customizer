@@ -7,6 +7,7 @@
 - Added a 2 columns layout option for the blog.
 - Fixed spacing for the archive layouts.
 - Added in 2 filters to allow themes to change the action the blog description outputs as well as the css class.
+- Added a `lsx_blog_customizer_show_switcher` filter to allow 3rd party plugins to include the switcher on custom post types.
 
 ## [[1.3.5]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.3.5) - 2020-03-30
 

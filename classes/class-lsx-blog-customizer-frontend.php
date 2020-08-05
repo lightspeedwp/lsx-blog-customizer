@@ -312,11 +312,16 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		 * @since 1.0.0
 		 */
 		public function archive_layout_switcher() {
-			$body_classes               = get_body_class();
-			$is_archive                 = in_array( 'blog', $body_classes ) || is_post_type_archive( 'post' ) || is_category() || is_tag() || is_date();
-			$archive_layout_switcher    = get_theme_mod( 'lsx_blog_customizer_archive_layout_switcher', false );
-
+			$body_classes            = get_body_class();
+			$is_archive              = in_array( 'blog', $body_classes ) || is_post_type_archive( 'post' ) || is_category() || is_tag() || is_date();
+			$archive_layout_switcher = get_theme_mod( 'lsx_blog_customizer_archive_layout_switcher', false );
+			$show_switcher           = false;
 			if ( $is_archive && true == $archive_layout_switcher ) {
+				$show_switcher = true;
+			}
+			$show_switcher = apply_filters( 'lsx_blog_customizer_show_switcher', $is_archive );
+
+			if ( true === $show_switcher ) {
 				$archive_layout = $this->get_layout_value_from_cookie();
 
 				if ( empty( locate_template( array( 'lsx-blog-customizer/partials/modules/archive-layout-switcher.php' ) ) ) ) {
