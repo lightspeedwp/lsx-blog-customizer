@@ -161,28 +161,35 @@ var LSX_Blog_Customizer = {
 		if (typeof tooltip !== 'undefined' && $.isFunction(tooltip)) {
 			jQuery('.lsx-layout-switcher-option[data-toggle="tooltip"]').tooltip();
 		}
-
+		
 		jQuery(document).on('click', '.lsx-layout-switcher-option', function(e) {
 			e.preventDefault();
 
 			var _this = jQuery(this),
-				_layout = _this.data('layout');
+				_layout  = _this.data('layout'),
+				_pageKey = _this.parent('.lsx-layout-switcher-options').data('page');
 
 			_this.siblings('.lsx-layout-switcher-option.active').removeClass('active');
 			_this.addClass('active');
 
-			jQuery('body')
-				.removeClass('lsx-body-grid-layout')
-				.removeClass('lsx-body-half-grid-layout')
-				.removeClass('lsx-body-list-layout');
-
-			if ('default' !== _layout) {
-				jQuery('body').addClass('lsx-body-' + _layout + '-layout');
+			if ( jQuery('body').hasClass('.blog') ) {
+				LSX_Blog_Customizer.blogLayoutSwitcher( _layout );
 			}
 
-			LSX_Blog_Customizer.createCookie('lsx-blog-layout', _layout, 30);
+			LSX_Blog_Customizer.createCookie('lsx-' + _pageKey + '-layout', _layout, 30);
 		});
 	},
+
+	blogLayoutSwitcher: function( layout ) {
+		jQuery('body')
+			.removeClass('lsx-body-grid-layout')
+			.removeClass('lsx-body-half-grid-layout')
+			.removeClass('lsx-body-list-layout');
+
+		if ('default' !== layout) {
+			jQuery('body').addClass('lsx-blog-' + layout + '-layout');
+		}
+	}
 };
 
 jQuery(document).ready(function() {

@@ -322,7 +322,8 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			$show_switcher = apply_filters( 'lsx_blog_customizer_show_switcher', $is_archive );
 
 			if ( true === $show_switcher ) {
-				$archive_layout = $this->get_layout_value_from_cookie();
+				$page_key       = apply_filters( 'lsx_layout_switcher_page_key', 'blog' );
+				$archive_layout = $this->get_layout_value_from_cookie( $page_key );
 
 				if ( empty( locate_template( array( 'lsx-blog-customizer/partials/modules/archive-layout-switcher.php' ) ) ) ) {
 					include LSX_BLOG_CUSTOMIZER_PATH . 'partials/modules/archive-layout-switcher.php';
@@ -354,11 +355,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		public function get_layout_value_from_cookie() {
+		public function get_layout_value_from_cookie( $page_key = 'blog' ) {
 			$archive_layout = get_theme_mod( 'lsx_blog_customizer_archive_layout', 'default' );
+			apply_filters( 'lsx_layout_switcher_options_default', $archive_layout );
 
-			if ( isset( $_COOKIE['lsx-blog-layout'] ) ) {
-				$archive_layout_from_cookie = sanitize_key( $_COOKIE['lsx-blog-layout'] );
+			if ( isset( $_COOKIE[ 'lsx-' . $page_key . '-layout' ] ) ) {
+				$archive_layout_from_cookie = sanitize_key( $_COOKIE[ 'lsx-' . $page_key . '-layout' ] );
 				$archive_layout_from_cookie = $this->sanitize_select_layout_switcher( $archive_layout_from_cookie );
 
 				if ( ! empty( $archive_layout_from_cookie ) ) {
