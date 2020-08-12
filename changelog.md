@@ -1,8 +1,15 @@
 # Change log
 
+## 1.4.1 - In development
+
+### Added
+
+- Added default WP 5.5 lazyloading.
+
 ## [[1.4.0]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.0) - Unreleased
 
 ### Added
+
 - Removed the CMB and UIX vendors.
 - Added a 2 columns layout option for the blog.
 - Fixed spacing for the archive layouts.
