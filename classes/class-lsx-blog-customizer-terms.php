@@ -134,10 +134,6 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Terms' ) ) {
 						} else {
 							$image = '';
 						}
-
-						if ( ! empty( $image ) ) {
-							$image = apply_filters( 'lsx_to_lazyload_filter_images', '<img src="' . $image . '" class="img-responsive">' );
-						}
 					} else {
 						$image = '';
 					}
