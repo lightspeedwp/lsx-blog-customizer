@@ -159,7 +159,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 					$wp_customize,
 					'blog_customizer_posts_placeholder',
 					array(
-						'label'    => __( 'Upload a placeholder', 'lsx-blog-customizer' ),
+						'label'    => __( 'Upload a featured image placeholder', 'lsx-blog-customizer' ),
 						'section'  => 'lsx_blog_customizer_general',
 						'settings' => 'lsx_blog_customizer_general_placeholder',
 						'priority' => 40,
