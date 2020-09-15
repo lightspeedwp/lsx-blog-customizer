@@ -251,8 +251,6 @@
 
 .lsx-layout-switcher .lsx-layout-switcher-option .fa { margin-right: 0px; }
 
-@media (min-width: 992px) { .archive.category .lsx-layout-switcher { right: 12vw; bottom: 100px; } }
-
 .lsx-layout-switcher-label { display: block; font-size: 13px; letter-spacing: 0.5px; line-height: 1.4; margin-bottom: 1rem; }
 
 .lsx-hide-posts-navigation .post-navigation { display: none; }
@@ -277,7 +275,7 @@
 
 .archive.category .content-area, .archive.tag .content-area { margin-bottom: 4.25rem; }
 
-.archive.category .archive-category-title, .archive.tag .archive-category-title { margin-bottom: 4.25rem; }
+.archive.category .archive-category-title, .archive.tag .archive-category-title { padding-top: 4.25rem; display: block; clear: both; }
 
 .archive.category .archive-category-title h2, .archive.tag .archive-category-title h2 { margin-top: 5px; }
 

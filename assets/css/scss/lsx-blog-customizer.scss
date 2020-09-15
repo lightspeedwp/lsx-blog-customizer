@@ -889,14 +889,6 @@
 		}
 	}
 }
-.archive.category {
-	.lsx-layout-switcher {
-		@include media('>=tablet') {
-			right: 12vw;
-			bottom: 100px;
-		}
-	}
-}
 
 .lsx-layout-switcher-label {
 	display: block;
@@ -986,7 +978,9 @@
 			margin-bottom: 4.25rem;
 		}
 		.archive-category-title {
-			margin-bottom: 4.25rem;
+			padding-top: 4.25rem;
+			display: block;
+			clear: both;
 			h2 {
 				margin-top: 5px;
 			}
