@@ -3,7 +3,7 @@ Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, virginialsdev, deon8
 Donate link: https://donate.lsdev.biz/
 Tags: lsx, Gutenberg, Blog Customizer, WordPress Customizer, WordPress Blog
 Requires at least: 5.3
-Tested up to: 5.5
+Tested up to: 5.5.1
 Requires PHP: 7.2
 Stable tag: 1.4.0
 License: GPLv3
