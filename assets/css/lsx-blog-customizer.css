@@ -163,7 +163,7 @@
 
 .lsx-hide-post-date .post-meta > .post-meta-time { display: none; }
 
-.lsx-hide-post-tags .post-tags-wrapper { display: none; }
+.lsx-hide-post-tags .post-tags-wrapper .post-tags { display: none; }
 
 .lsx-hide-post-author .post-meta > .post-meta-avatar, .lsx-hide-post-author .post-meta > .post-meta-author { display: none; }
 
@@ -251,13 +251,15 @@
 
 .lsx-layout-switcher .lsx-layout-switcher-option .fa { margin-right: 0px; }
 
-@media (min-width: 992px) { .archive.category .lsx-layout-switcher { right: 12vw; bottom: 100px; } }
-
 .lsx-layout-switcher-label { display: block; font-size: 13px; letter-spacing: 0.5px; line-height: 1.4; margin-bottom: 1rem; }
 
 .lsx-hide-posts-navigation .post-navigation { display: none; }
 
 .single-post .lsx-related-posts .lsx-related-posts-headline { margin-top: 8.5rem; margin-bottom: 0; text-align: center; }
+
+@media (min-width: 992px) { .footer-meta .post-tags-wrapper { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; } }
+
+@media (max-width: 991px) { .footer-meta .post-tags-wrapper .post-tags { text-align: center; } }
 
 @media (min-width: 768px) { .single-post .lsx-related-posts .lsx-related-posts-wrapper { -ms-flex-align: start; align-items: flex-start; display: -ms-flexbox; display: flex; -ms-flex-flow: row wrap; flex-flow: row wrap; -ms-flex-pack: start; justify-content: flex-start; margin-left: -15px; margin-right: -15px; } }
 
@@ -273,7 +275,7 @@
 
 .archive.category .content-area, .archive.tag .content-area { margin-bottom: 4.25rem; }
 
-.archive.category .archive-category-title, .archive.tag .archive-category-title { margin-bottom: 4.25rem; }
+.archive.category .archive-category-title, .archive.tag .archive-category-title { padding-top: 4.25rem; display: block; clear: both; }
 
 .archive.category .archive-category-title h2, .archive.tag .archive-category-title h2 { margin-top: 5px; }
 
