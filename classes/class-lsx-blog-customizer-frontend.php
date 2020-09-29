@@ -321,7 +321,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			}
 			$show_switcher = apply_filters( 'lsx_blog_customizer_show_switcher', $is_archive );
 
-			if ( true === $show_switcher ) {
+			if ( $is_archive && true === $show_switcher ) {
 				$page_key       = apply_filters( 'lsx_layout_switcher_page_key', 'blog' );
 				$archive_layout = $this->get_layout_value_from_cookie( $page_key );
 
