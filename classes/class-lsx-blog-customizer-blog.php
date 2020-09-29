@@ -159,10 +159,11 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 					$wp_customize,
 					'blog_customizer_posts_placeholder',
 					array(
-						'label'    => __( 'Upload a featured image placeholder', 'lsx-blog-customizer' ),
-						'section'  => 'lsx_blog_customizer_general',
-						'settings' => 'lsx_blog_customizer_general_placeholder',
-						'priority' => 40,
+						'label'       => __( 'Fallback Image', 'lsx-blog-customizer' ),
+						'section'     => 'lsx_blog_customizer_general',
+						'settings'    => 'lsx_blog_customizer_general_placeholder',
+						'priority'    => 40,
+						'description' => esc_html__( 'The selected image will be used when a post / page is missing a featured image. A default fallback image included in the theme will be used if no image is set.', 'lsx-blog-customizer' ),
 					)
 				)
 			);

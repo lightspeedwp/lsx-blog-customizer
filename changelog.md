@@ -9,6 +9,7 @@
 - Fixed spacing for the archive layouts.
 - Added in 2 filters to allow themes to change the action the blog description outputs as well as the css class.
 - Added a `lsx_blog_customizer_show_switcher` filter to allow 3rd party plugins to include the switcher on custom post types.
+- Extended the placeholder to the `page` post type as well.
 
 ### Deprecated
 
@@ -17,6 +18,7 @@
 ### Update
 
 - Updating language files.
+- Updated the placeholder text and description
 
 ### Security
 

@@ -645,7 +645,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		 * @return     boolean
 		 */
 		public function has_post_thumbnail_placeholder( $has_thumbnail, $post, $thumbnail_id ) {
-			if ( 'post' === get_post_type( $post ) && $this->get_placeholder() ) {
+			if ( in_array( get_post_type( $post ), array( 'post', 'page' ) ) && $this->get_placeholder() ) {
 				$has_thumbnail = true;
 			}
 			return $has_thumbnail;
@@ -658,7 +658,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		 * @return    boolean
 		 */
 		public function replace_post_thumbnail_id( $thumbnail_id, $post_id ) {
-			if ( 'post' === get_post_type( $post_id ) && $this->get_placeholder_id() ) {
+			if ( in_array( get_post_type( $post_id ), array( 'post', 'page' ) ) && $this->get_placeholder_id() ) {
 				$thumbnail_id = $this->get_placeholder_id();
 			}
 			return $thumbnail_id;
