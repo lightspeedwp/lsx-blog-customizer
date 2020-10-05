@@ -20,6 +20,33 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Admin' ) ) {
 		public function __construct() {
 			add_action( 'customize_preview_init', array( $this, 'assets' ), 9999 );
 			add_filter( 'type_url_form_media', array( $this, 'change_attachment_field_button' ), 20, 1 );
+			$this->load_vendors();
+		}
+
+		/**
+		 * Loads the plugin functions.
+		 */
+		private function load_vendors() {
+			// Configure custom fields.
+			if ( ! class_exists( 'CMB2' ) ) {
+				require_once LSX_BLOG_CUSTOMIZER_PATH . 'vendor/CMB2/init.php';
+			}
+		}
+
+		/**
+		 * Returns the post types currently active
+		 *
+		 * @return void
+		 */
+		public function get_post_types() {
+			$post_types = apply_filters( 'lsx_blog_customizer_post_types', isset( $this->post_types ) );
+			foreach ( $post_types as $index => $post_type ) {
+				$is_disabled = \cmb2_get_option( 'lsx_blog_customizer_options', $post_type . '_disabled', false );
+				if ( true === $is_disabled || 1 === $is_disabled || 'on' === $is_disabled ) {
+					unset( $post_types[ $index ] );
+				}
+			}
+			return $post_types;
 		}
 
 		/**
