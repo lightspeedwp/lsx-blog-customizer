@@ -50,7 +50,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Admin' ) ) {
 		}
 
 		/**
-		 * Enques the assets.
+		 * Enqueues the assets.
 		 *
 		 * @since 1.0.0
 		 */
