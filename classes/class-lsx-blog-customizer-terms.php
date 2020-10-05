@@ -42,54 +42,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Terms' ) ) {
 		 * @since 1.1.0
 		 */
 		public function __construct() {
-			add_action( 'cmb2_admin_init', array( $this, 'register_blog_taxonomy_fields' ), 5  );
 			add_filter( 'wp_kses_allowed_html', array( $this, 'allow_slick_data_params' ), 10, 2 );
-		}
-
-
-		/**
-		 * Hook in and add a metabox to add fields to the Categories.
-		 */
-		function register_blog_taxonomy_fields() { 
-			$prefix = 'lsx_customizer_post_term_'; 
-		 
-			/** 
-			 * Metabox to add fields to categories and tags 
-			 */ 
-			$cmb_term = new_cmb2_box( array( 
-				'id'           => $prefix . 'edit', 
-				'title'        => esc_html__( 'Additional Fields', 'lsx-blog-customizer' ),
-				'object_types' => array( 'term' ),
-				'taxonomies'   => array( 'category', 'post_tag' ),
-			) );
-		 
-			$cmb_term->add_field( array( 
-				'name'         => esc_html__( 'Featured Image ', 'lsx-blog-customizer' ), 
-				'id'           => $prefix . 'featured_image', 
-				'type'         => 'file',
-				'preview_size' => array( 50, 50 ),
-			) );
-
-			$cmb_term->add_field( array( 
-				'name'         => esc_html__( 'Icon Image ', 'lsx-blog-customizer' ), 
-				'id'           => $prefix . 'icon_image', 
-				'type'         => 'file',
-				'preview_size' => array( 25, 25 ),
-			) );
-		 
-			$cmb_term->add_field( array( 
-				'name' => esc_html__( 'Archive Tagline', 'lsx-blog-customizer' ), 
-				'id'   => $prefix . 'archive_tagline', 
-				'type' => 'text', 
-			) );
-
-			$cmb_term->add_field( array( 
-				'name'         => esc_html__( 'Banner Image ', 'lsx-blog-customizer' ), 
-				'id'           => $prefix . 'banner_image', 
-				'type'         => 'file',
-				'preview_size' => array( 100, 50 ),
-			) );
-		 
 		}
 
 		/**
