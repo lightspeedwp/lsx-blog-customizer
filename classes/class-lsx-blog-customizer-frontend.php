@@ -27,6 +27,8 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				add_filter( 'lsx_customizer_colour_selectors_banner', array( $this, 'customizer_banner_colours_handler' ), 15, 2 );
 			}
 
+			add_action( 'lsx_content_wrap_before', array( $this, 'terms_single_banner' ) );
+
 			remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 			add_filter( 'get_the_excerpt', array( $this, 'custom_wp_trim_excerpt' ) );
 
@@ -35,7 +37,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		}
 
 		/**
-		 * Enques the assets.
+		 * Enqueues the assets.
 		 *
 		 * @since 1.0.0
 		 */
@@ -86,6 +88,14 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				add_action( $top_of_blog_action, array( $this, 'main_blog_page_description' ), 120 );
 				add_action( $top_of_blog_action, array( $this, 'main_blog_page_carousel' ), 130 );
 				add_action( $top_of_blog_action, array( $this, 'category_blog_page_title' ), 130 );
+			}
+ 
+			$archive_custom_image    = get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_image', true );
+			$archive_custom_title    = get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_title', true );
+			$archive_custom_subtitle = get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_tagline', true );
+
+			if ( ( false !== $archive_custom_image && '' !== $archive_custom_image ) || ( false !== $archive_custom_title && '' !== $archive_custom_title ) || ( false !== $archive_custom_subtitle && '' !== $archive_custom_subtitle ) ) {
+				remove_action( 'lsx_content_wrap_before', 'lsx_global_header' );
 			}
 
 			add_action( 'lsx_content_after', array( $this, 'single_blog_page_related_posts' ), 20 );
@@ -330,6 +340,73 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				} else {
 					include locate_template( array( 'lsx-blog-customizer/partials/modules/archive-layout-switcher.php' ) );
 				}
+			}
+		}
+
+		/**
+		 * Outputs the single listing banner
+		 *
+		 * @return void
+		 */
+		public function terms_single_banner() {
+			if ( is_archive() && ( is_category() || is_tag() ) ) {
+				$args = array(
+					'image'    => get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_image', true ),
+					'title'    => get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_title', true ),
+					'subtitle' => get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_tagline', true ),
+				);
+				if ( $args['image'] || $args['title'] || $args['subtitle'] ) {
+					$this->blog_customizer_do_banner( $args );
+				}
+			}
+		}
+
+		/**
+		 * Outputs the banners based on the arguments.
+		 *
+		 * @param array $args The parameters for the banner
+		 * @return void
+		 */
+		public function blog_customizer_do_banner( $args = array() ) {
+			
+			$defaults = array(
+				'image'    => '',
+				'title'    => '',
+				'subtitle' => '',
+			);
+			$args     = wp_parse_args( $args, $defaults );
+			
+			$background_image = '';
+
+			// // Generate the background atts.
+			$background_image_attr = '';
+
+			$background_image_attr = $args['image'];
+			$title_attr            = apply_filters( 'lsx_global_header_title', get_the_archive_title() );
+			$subtitle_attr         = apply_filters( 'lsx_global_header_description', get_the_archive_description() );
+			
+			if ( '' !== $background_image_attr && false !== $background_image_attr ) {
+				$background_image = 'background-image:url(' . $background_image_attr . ')';
+			}
+			if ( $args['title'] ) {
+				$title_attr = $args['title'];
+			}
+			if ( $args['subtitle'] ) {
+				$subtitle_attr = '<p>' . $args['subtitle'] . '</p>';
+			}
+			if ( $args['image'] || $args['title'] || $args['subtitle'] ) {
+				?>
+				<div class="archive-header-wrapper custom-banner-archive banner-archive col-md-12">
+					<div class="archive-header" style="<?php echo esc_attr( $background_image ); ?>">
+						<?php if ( '' !== $title_attr && false !== $title_attr ) { ?>
+							<h1 class="archive-title"><?php echo wp_kses_post( $title_attr ); ?></h1>
+						<?php } ?>
+						<?php if ( '' !== $subtitle_attr && false !== $subtitle_attr ) { ?>
+							<?php echo wp_kses_post( $subtitle_attr ); ?>
+						<?php } ?>
+					</div>
+				</div>
+				<?php
 			}
 		}
 

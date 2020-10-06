@@ -94,29 +94,35 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Admin' ) ) {
 				'object_types' => array( 'term' ),
 				'taxonomies'   => array( 'category', 'post_tag' ),
 			) );
+
+			$cmb_term->add_field( array( 
+				'name' => esc_html__( 'Banner Title', 'lsx-blog-customizer' ), 
+				'id'   => $prefix . 'banner_title', 
+				'type' => 'text', 
+			) );
+
+			$cmb_term->add_field( array( 
+				'name' => esc_html__( 'Banner Tagline', 'lsx-blog-customizer' ), 
+				'id'   => $prefix . 'banner_tagline', 
+				'type' => 'textarea_small', 
+			) );
 		 
 			$cmb_term->add_field( array( 
-				'name'         => esc_html__( 'Featured Image ', 'lsx-blog-customizer' ), 
+				'name'         => esc_html__( 'Featured Image', 'lsx-blog-customizer' ), 
 				'id'           => $prefix . 'featured_image', 
 				'type'         => 'file',
 				'preview_size' => array( 50, 50 ),
 			) );
 
 			$cmb_term->add_field( array( 
-				'name'         => esc_html__( 'Icon Image ', 'lsx-blog-customizer' ), 
+				'name'         => esc_html__( 'Icon Image', 'lsx-blog-customizer' ), 
 				'id'           => $prefix . 'icon_image', 
 				'type'         => 'file',
 				'preview_size' => array( 25, 25 ),
 			) );
-		 
-			$cmb_term->add_field( array( 
-				'name' => esc_html__( 'Archive Tagline', 'lsx-blog-customizer' ), 
-				'id'   => $prefix . 'archive_tagline', 
-				'type' => 'text', 
-			) );
 
 			$cmb_term->add_field( array( 
-				'name'         => esc_html__( 'Banner Image ', 'lsx-blog-customizer' ), 
+				'name'         => esc_html__( 'Banner Image', 'lsx-blog-customizer' ), 
 				'id'           => $prefix . 'banner_image', 
 				'type'         => 'file',
 				'preview_size' => array( 100, 50 ),
