@@ -93,8 +93,9 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			$archive_custom_image    = get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_image', true );
 			$archive_custom_title    = get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_title', true );
 			$archive_custom_subtitle = get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_tagline', true );
+			$archive_custom_icon     = get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_icon_image', true );
 
-			if ( ( false !== $archive_custom_image && '' !== $archive_custom_image ) || ( false !== $archive_custom_title && '' !== $archive_custom_title ) || ( false !== $archive_custom_subtitle && '' !== $archive_custom_subtitle ) ) {
+			if ( ( false !== $archive_custom_image && '' !== $archive_custom_image ) || ( false !== $archive_custom_title && '' !== $archive_custom_title ) || ( false !== $archive_custom_subtitle && '' !== $archive_custom_subtitle ) || ( false !== $archive_custom_icon && '' !== $archive_custom_icon )) {
 				remove_action( 'lsx_content_wrap_before', 'lsx_global_header' );
 			}
 
@@ -354,8 +355,9 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 					'image'    => get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_image', true ),
 					'title'    => get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_title', true ),
 					'subtitle' => get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_banner_tagline', true ),
+					'icon'     => get_term_meta( get_queried_object_id(), 'lsx_customizer_post_term_icon_image', true ),
 				);
-				if ( $args['image'] || $args['title'] || $args['subtitle'] ) {
+				if ( $args['image'] || $args['title'] || $args['subtitle'] || $args['icon'] ) {
 					$this->blog_customizer_do_banner( $args );
 				}
 			}
@@ -373,20 +375,28 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				'image'    => '',
 				'title'    => '',
 				'subtitle' => '',
+				'icon'     => '',
 			);
 			$args     = wp_parse_args( $args, $defaults );
 			
 			$background_image = '';
+			$icon_image       = '';
 
-			// // Generate the background atts.
+			// Generate the background atts.
 			$background_image_attr = '';
 
+			$icon_image_attr = '';
+
 			$background_image_attr = $args['image'];
+			$icon_image_attr       = $args['icon'];
 			$title_attr            = apply_filters( 'lsx_global_header_title', get_the_archive_title() );
 			$subtitle_attr         = apply_filters( 'lsx_global_header_description', get_the_archive_description() );
 			
 			if ( '' !== $background_image_attr && false !== $background_image_attr ) {
 				$background_image = 'background-image:url(' . $background_image_attr . ')';
+			}
+			if ( '' !== $icon_image_attr && false !== $icon_image_attr ) {
+				$icon_image = '<img class="banner-icon" src="' . $icon_image_attr . '" alt="icon"/>';
 			}
 			if ( $args['title'] ) {
 				$title_attr = $args['title'];
@@ -394,10 +404,13 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			if ( $args['subtitle'] ) {
 				$subtitle_attr = '<p>' . $args['subtitle'] . '</p>';
 			}
-			if ( $args['image'] || $args['title'] || $args['subtitle'] ) {
+			if ( $args['image'] || $args['title'] || $args['subtitle'] || $args['icon'] ) {
 				?>
 				<div class="archive-header-wrapper custom-banner-archive banner-archive col-md-12">
 					<div class="archive-header" style="<?php echo esc_attr( $background_image ); ?>">
+						<?php if ( '' !== $icon_image && false !== $icon_image ) { 
+							echo $icon_image;
+						} ?>
 						<?php if ( '' !== $title_attr && false !== $title_attr ) { ?>
 							<h1 class="archive-title"><?php echo wp_kses_post( $title_attr ); ?></h1>
 						<?php } ?>
