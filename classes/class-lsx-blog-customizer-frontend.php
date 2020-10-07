@@ -81,6 +81,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			add_filter( 'post_class', array( $this, 'post_class' ), 10 );
 
 			add_action( 'lsx_banner_inner_bottom', array( $this, 'archive_layout_switcher' ), 90 );
+			add_action( 'lsx_blog_customizer_banner_top', array( $this, 'archive_layout_switcher' ), 90 );
 			add_action( 'lsx_global_header_inner_bottom', array( $this, 'archive_layout_switcher' ), 90 );
 
 			$top_of_blog_action = apply_filters( 'lsx_blog_customizer_top_of_blog_action', 'lsx_content_top' );
@@ -370,7 +371,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		 * @return void
 		 */
 		public function blog_customizer_do_banner( $args = array() ) {
-			
+
 			$defaults = array(
 				'image'    => '',
 				'title'    => '',
@@ -378,20 +379,18 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				'icon'     => '',
 			);
 			$args     = wp_parse_args( $args, $defaults );
-			
+
 			$background_image = '';
 			$icon_image       = '';
 
 			// Generate the background atts.
 			$background_image_attr = '';
-
-			$icon_image_attr = '';
-
+			$icon_image_attr       = '';
 			$background_image_attr = $args['image'];
 			$icon_image_attr       = $args['icon'];
 			$title_attr            = apply_filters( 'lsx_global_header_title', get_the_archive_title() );
 			$subtitle_attr         = apply_filters( 'lsx_global_header_description', get_the_archive_description() );
-			
+
 			if ( '' !== $background_image_attr && false !== $background_image_attr ) {
 				$background_image = 'background-image:url(' . $background_image_attr . ')';
 			}
@@ -407,6 +406,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			if ( $args['image'] || $args['title'] || $args['subtitle'] || $args['icon'] ) {
 				?>
 				<div class="archive-header-wrapper custom-banner-archive banner-archive col-md-12">
+					<?php do_action( 'lsx_blog_customizer_banner_top' ); ?>
 					<div class="archive-header" style="<?php echo esc_attr( $background_image ); ?>">
 						<?php if ( '' !== $icon_image && false !== $icon_image ) { 
 							echo $icon_image;
