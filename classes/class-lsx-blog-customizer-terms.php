@@ -1,6 +1,5 @@
 <?php
 if ( ! class_exists( 'LSX_Blog_Customizer_Terms' ) ) {
-
 	/**
 	 * LSX Blog Customizer Posts Class
 	 *
@@ -62,16 +61,16 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Terms' ) ) {
 		 */
 		public function output( $atts ) {
 			extract( shortcode_atts( array(
-				'taxonomy' => 'category',
-				'columns' => 3,
-				'orderby' => 'name',
-				'order' => 'ASC',
-				'limit' => '-1',
-				'include' => '',
-				'size' => 'lsx-thumbnail-single',
+				'taxonomy'   => 'category',
+				'columns'    => 3,
+				'orderby'    => 'name',
+				'order'      => 'ASC',
+				'limit'      => '-1',
+				'include'    => '',
+				'size'       => 'lsx-thumbnail-single',
 				'responsive' => 'true',
 				'show_image' => 'true',
-				'carousel' => 'true',
+				'carousel'   => 'true',
 			), $atts ) );
 
 			$output = '';
@@ -82,32 +81,32 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Terms' ) ) {
 				$responsive = '';
 			}
 
-			$this->columns = $columns;
+			$this->columns    = $columns;
 			$this->responsive = $responsive;
 
 			if ( ! empty( $include ) ) {
 				$include = explode( ',', $include );
 
 				$args = array(
-					'taxonomy' => $taxonomy,
-					'number' => $limit,
+					'taxonomy'   => $taxonomy,
+					'number'     => $limit,
 					'object_ids' => $include,
-					'orderby' => $orderby,
-					'order' => $order,
+					'orderby'    => $orderby,
+					'order'      => $order,
 				);
 			} else {
 				$args = array(
 					'taxonomy' => $taxonomy,
-					'number' => $limit,
-					'orderby' => $orderby,
-					'order' => $order,
+					'number'   => $limit,
+					'orderby'  => $orderby,
+					'order'    => $order,
 				);
 			}
 
 			$terms = get_terms( $args );
 
 			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-				$count = 0;
+				$count        = 0;
 				$count_global = 0;
 
 				if ( 'true' === $carousel || true === $carousel ) {
@@ -165,10 +164,10 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Terms' ) ) {
 								</div>
 							</div>';
 
-						if ( $count == $columns && count( $terms ) > $count_global ) {
+						if ( $count === $columns && count( $terms ) > $count_global ) {
 							$output .= '</div>';
 							$output .= '<div class="row">';
-							$count = 0;
+							$count   = 0;
 						}
 					} else {
 						$output .= '

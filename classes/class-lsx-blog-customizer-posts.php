@@ -63,17 +63,17 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 		 */
 		public function output( $atts ) {
 			extract( shortcode_atts( array(
-				'taxonomy' => 'category',
-				'columns' => 3,
-				'orderby' => 'name',
-				'order' => 'ASC',
-				'limit' => '-1',
-				'include' => '',
-				'display' => 'excerpt',
-				'size' => 'lsx-thumbnail-single',
+				'taxonomy'   => 'category',
+				'columns'    => 3,
+				'orderby'    => 'name',
+				'order'      => 'ASC',
+				'limit'      => '-1',
+				'include'    => '',
+				'display'    => 'excerpt',
+				'size'       => 'lsx-thumbnail-single',
 				'responsive' => 'true',
 				'show_image' => 'true',
-				'carousel' => 'true',
+				'carousel'   => 'true',
 			), $atts ) );
 
 			if ( 'true' === $responsive || true === $responsive ) {
@@ -89,17 +89,17 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				$include = explode( ',', $include );
 
 				$args = array(
-					'taxonomy' => 'category',
-					'post_type' => 'post',
+					'taxonomy'       => 'category',
+					'post_type'      => 'post',
 					'posts_per_page' => $limit,
-					'post__in' => $include,
-					'orderby' => 'post__in',
-					'order' => $order,
-					'tax_query' => array(
+					'post__in'       => $include,
+					'orderby'        => 'post__in',
+					'order'          => $order,
+					'tax_query'      => array(
 						array(
 							'taxonomy' => 'post_format',
-							'field' => 'slug',
-							'terms' => array(
+							'field'    => 'slug',
+							'terms'    => array(
 								'post-format-aside',
 								'post-format-audio',
 								'post-format-chat',
@@ -116,16 +116,16 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				);
 			} else {
 				$args = array(
-					'taxonomy' => 'category',
-					'post_type' => 'post',
+					'taxonomy'       => 'category',
+					'post_type'      => 'post',
 					'posts_per_page' => $limit,
-					'orderby' => $orderby,
-					'order' => $order,
-					'tax_query' => array(
+					'orderby'        => $orderby,
+					'order'          => $order,
+					'tax_query'      => array(
 						array(
 							'taxonomy' => 'post_format',
-							'field' => 'slug',
-							'terms' => array(
+							'field'    => 'slug',
+							'terms'    => array(
 								'post-format-aside',
 								'post-format-audio',
 								'post-format-chat',
@@ -150,7 +150,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 
 				$post_display = $display;
 
-				$count = 0;
+				$count        = 0;
 				$count_global = 0;
 
 				if ( ( 'true' === $carousel || true === $carousel ) && 1 < $posts->post_count ) : ?>
@@ -207,7 +207,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 						$this->content_part( 'widget', 'post' );
 						?></div><?php
 
-						if ( $count == $columns && $posts->post_count > $count_global ) {
+						if ( $count === $columns && $posts->post_count > $count_global ) {
 							?></div><div class="row"><?php
 							$count = 0;
 						}
@@ -264,7 +264,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 		}
 
 		/**
-		 * Redirect wordpress to the single template located in the plugin
+		 * Redirect WordPress to the single template located in the plugin.
 		 *
 		 * @since 1.1.0
 		 */
