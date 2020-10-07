@@ -132,6 +132,10 @@
 
 .archive-header-wrapper + .categories-slider-title { padding-top: 4.25rem; }
 
+.archive-header-wrapper.custom-banner-archive .archive-header { background-position: center; }
+
+.archive-header-wrapper.custom-banner-archive .banner-icon { margin-bottom: 1rem; max-width: 200px; height: auto; }
+
 .categories-slider-title { display: block; clear: both; margin-top: 4.25rem; text-transform: uppercase; font-weight: 300; font-size: 22px; font-family: 'Noto Sans', sans-serif; color: #9b9b9b; }
 
 #categories-slider { margin-bottom: 2.4rem; }

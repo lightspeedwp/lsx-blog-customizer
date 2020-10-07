@@ -435,6 +435,16 @@
 	+ .categories-slider-title {
 		padding-top: 4.25rem;
 	}
+	&.custom-banner-archive {
+		.archive-header {
+			background-position: center;
+		}
+		.banner-icon {
+			margin-bottom: 1rem;
+			max-width: 200px;
+			height: auto;
+		}
+	}
 }
 .categories-slider-title {
 	display: block;

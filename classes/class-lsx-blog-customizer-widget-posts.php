@@ -31,21 +31,21 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 			$this->args = $args;
 			extract( $args );
 
-			$taxonomy = $instance['taxonomy'];
-			$title = $instance['title'];
-			$title_link = $instance['title_link'];
-			$tagline = $instance['tagline'];
-			$columns = $instance['columns'];
-			$orderby = $instance['orderby'];
-			$order = $instance['order'];
-			$limit = $instance['limit'];
-			$include = $instance['include'];
-			$display = $instance['display'];
-			$size = $instance['size'];
+			$taxonomy    = $instance['taxonomy'];
+			$title       = $instance['title'];
+			$title_link  = $instance['title_link'];
+			$tagline     = $instance['tagline'];
+			$columns     = $instance['columns'];
+			$orderby     = $instance['orderby'];
+			$order       = $instance['order'];
+			$limit       = $instance['limit'];
+			$include     = $instance['include'];
+			$display     = $instance['display'];
+			$size        = $instance['size'];
 			$button_text = $instance['button_text'];
-			$responsive = $instance['responsive'];
-			$show_image = $instance['show_image'];
-			$carousel = $instance['carousel'];
+			$responsive  = $instance['responsive'];
+			$show_image  = $instance['show_image'];
+			$carousel    = $instance['carousel'];
 
 			// If limit not set, display 99 posts
 			if ( empty( $limit ) ) {
@@ -57,35 +57,33 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 				$limit = '99';
 			}
 
-			if ( '1' == $responsive ) {
+			if ( '1' === $responsive ) {
 				$responsive = 'true';
 			} else {
 				$responsive = 'false';
 			}
 
-			if ( '1' == $show_image ) {
+			if ( '1' === $show_image ) {
 				$show_image = 'true';
 			} else {
 				$show_image = 'false';
 			}
 
-			if ( '1' == $carousel ) {
+			if ( '1' === $carousel ) {
 				$carousel = 'true';
 			} else {
 				$carousel = 'false';
 			}
 
 			if ( $title_link ) {
-				//$link_open = '<a href="' . $title_link . '">';
-				$link_open = '';
-				$link_btn_open = '<a href="' . $title_link . '" class="btn border-btn">';
-				//$link_close = '</a>';
-				$link_close = '';
+				$link_open      = '';
+				$link_btn_open  = '<a href="' . $title_link . '" class="btn border-btn">';
+				$link_close     = '';
 				$link_btn_close = '</a>';
 			} else {
-				$link_open = '';
-				$link_btn_open = '';
-				$link_close = '';
+				$link_open      = '';
+				$link_btn_open  = '';
+				$link_close     = '';
 				$link_btn_close = '';
 			}
 
@@ -100,17 +98,17 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 			}
 
 			$shotcode_atts = array(
-				'taxonomy' => $taxonomy,
-				'columns' => $columns,
-				'orderby' => $orderby,
-				'order' => $order,
-				'limit' => $limit,
-				'include' => $include,
-				'display' => $display,
-				'size' => $size,
+				'taxonomy'   => $taxonomy,
+				'columns'    => $columns,
+				'orderby'    => $orderby,
+				'order'      => $order,
+				'limit'      => $limit,
+				'include'    => $include,
+				'display'    => $display,
+				'size'       => $size,
 				'responsive' => $responsive,
 				'show_image' => $show_image,
-				'carousel' => $carousel,
+				'carousel'   => $carousel,
 			);
 			if ( isset( $this->args ) && isset( $this->args['lsx_mm'] ) ) {
 				$shotcode_atts['lsx_mm'] = true;
@@ -126,61 +124,61 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 		function update( $new_instance, $old_instance ) {
 			$instance = $old_instance;
 
-			$instance['taxonomy'] = strip_tags( $new_instance['taxonomy'] );
-			$instance['title'] = wp_kses_post( force_balance_tags( $new_instance['title'] ) );
-			$instance['title_link'] = strip_tags( $new_instance['title_link'] );
-			$instance['tagline'] = wp_kses_post( force_balance_tags( $new_instance['tagline'] ) );
-			$instance['columns'] = strip_tags( $new_instance['columns'] );
-			$instance['orderby'] = strip_tags( $new_instance['orderby'] );
-			$instance['order'] = strip_tags( $new_instance['order'] );
-			$instance['limit'] = strip_tags( $new_instance['limit'] );
-			$instance['include'] = strip_tags( $new_instance['include'] );
-			$instance['display'] = strip_tags( $new_instance['display'] );
-			$instance['size'] = strip_tags( $new_instance['size'] );
-			$instance['button_text'] = strip_tags( $new_instance['button_text'] );
-			$instance['responsive'] = strip_tags( $new_instance['responsive'] );
-			$instance['show_image'] = strip_tags( $new_instance['show_image'] );
-			$instance['carousel'] = strip_tags( $new_instance['carousel'] );
+			$instance['taxonomy']    = wp_strip_all_tags( $new_instance['taxonomy'] );
+			$instance['title']       = wp_kses_post( force_balance_tags( $new_instance['title'] ) );
+			$instance['title_link']  = wp_strip_all_tags( $new_instance['title_link'] );
+			$instance['tagline']     = wp_kses_post( force_balance_tags( $new_instance['tagline'] ) );
+			$instance['columns']     = wp_strip_all_tags( $new_instance['columns'] );
+			$instance['orderby']     = wp_strip_all_tags( $new_instance['orderby'] );
+			$instance['order']       = wp_strip_all_tags( $new_instance['order'] );
+			$instance['limit']       = wp_strip_all_tags( $new_instance['limit'] );
+			$instance['include']     = wp_strip_all_tags( $new_instance['include'] );
+			$instance['display']     = wp_strip_all_tags( $new_instance['display'] );
+			$instance['size']        = wp_strip_all_tags( $new_instance['size'] );
+			$instance['button_text'] = wp_strip_all_tags( $new_instance['button_text'] );
+			$instance['responsive']  = wp_strip_all_tags( $new_instance['responsive'] );
+			$instance['show_image']  = wp_strip_all_tags( $new_instance['show_image'] );
+			$instance['carousel']    = wp_strip_all_tags( $new_instance['carousel'] );
 
 			return $instance;
 		}
 
 		function form( $instance ) {
 			$defaults = array(
-				'taxonomy' => 'category',
-				'title' => 'Posts',
-				'title_link' => '',
-				'tagline' => '',
-				'columns' => '3',
-				'orderby' => 'name',
-				'order' => 'ASC',
-				'limit' => '',
-				'include' => '',
-				'display' => 'excerpt',
-				'size' => 'lsx-thumbnail-single',
+				'taxonomy'    => 'category',
+				'title'       => 'Posts',
+				'title_link'  => '',
+				'tagline'     => '',
+				'columns'     => '3',
+				'orderby'     => 'name',
+				'order'       => 'ASC',
+				'limit'       => '',
+				'include'     => '',
+				'display'     => 'excerpt',
+				'size'        => 'lsx-thumbnail-single',
 				'button_text' => '',
-				'responsive' => 1,
-				'show_image' => 1,
-				'carousel' => 1,
+				'responsive'  => 1,
+				'show_image'  => 1,
+				'carousel'    => 1,
 			);
 
 			$instance = wp_parse_args( (array) $instance, $defaults );
 
-			$taxonomy       = esc_attr( $instance['taxonomy'] );
-			$title          = esc_attr( $instance['title'] );
-			$title_link     = esc_attr( $instance['title_link'] );
-			$tagline        = esc_attr( $instance['tagline'] );
-			$columns        = esc_attr( $instance['columns'] );
-			$orderby        = esc_attr( $instance['orderby'] );
-			$order          = esc_attr( $instance['order'] );
-			$limit          = esc_attr( $instance['limit'] );
-			$include        = esc_attr( $instance['include'] );
-			$display        = esc_attr( $instance['display'] );
-			$size           = esc_attr( $instance['size'] );
-			$button_text    = esc_attr( $instance['button_text'] );
-			$responsive     = esc_attr( $instance['responsive'] );
-			$show_image     = esc_attr( $instance['show_image'] );
-			$carousel       = esc_attr( $instance['carousel'] );
+			$taxonomy    = esc_attr( $instance['taxonomy'] );
+			$title       = esc_attr( $instance['title'] );
+			$title_link  = esc_attr( $instance['title_link'] );
+			$tagline     = esc_attr( $instance['tagline'] );
+			$columns     = esc_attr( $instance['columns'] );
+			$orderby     = esc_attr( $instance['orderby'] );
+			$order       = esc_attr( $instance['order'] );
+			$limit       = esc_attr( $instance['limit'] );
+			$include     = esc_attr( $instance['include'] );
+			$display     = esc_attr( $instance['display'] );
+			$size        = esc_attr( $instance['size'] );
+			$button_text = esc_attr( $instance['button_text'] );
+			$responsive  = esc_attr( $instance['responsive'] );
+			$show_image  = esc_attr( $instance['show_image'] );
+			$carousel    = esc_attr( $instance['carousel'] );
 			?>
 			<p>
 				<label>
@@ -216,7 +214,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 					$options = array( '1', '2', '3', '4' );
 
 					foreach ( $options as $option ) {
-						echo '<option value="' . esc_attr( lcfirst( $option ) ) . '" id="' . esc_attr( $option ) . '"', lcfirst( $option ) == $columns ? ' selected="selected"' : '', '>', esc_html( $option ), '</option>';
+						echo '<option value="' . esc_attr( lcfirst( $option ) ) . '" id="' . esc_attr( $option ) . '"', lcfirst( $option ) === $columns ? ' selected="selected"' : '', '>', esc_html( $option ), '</option>';
 					}
 				?>
 				</select>
@@ -236,7 +234,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 					);
 
 					foreach ( $options as $name => $value ) {
-						echo '<option value="' . esc_attr( $value ) . '" id="' . esc_attr( $value ) . '"', $orderby == $value ? ' selected="selected"' : '', '>', esc_html( $name ), '</option>';
+						echo '<option value="' . esc_attr( $value ) . '" id="' . esc_attr( $value ) . '"', $orderby === $value ? ' selected="selected"' : '', '>', esc_html( $name ), '</option>';
 					}
 				?>
 				</select>
@@ -251,7 +249,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 					);
 
 					foreach ( $options as $name => $value ) {
-						echo '<option value="' . esc_attr( $value ) . '" id="' . esc_attr( $value ) . '"', $order == $value ? ' selected="selected"' : '', '>', esc_html( $name ), '</option>';
+						echo '<option value="' . esc_attr( $value ) . '" id="' . esc_attr( $value ) . '"', $order === $value ? ' selected="selected"' : '', '>', esc_html( $name ), '</option>';
 					}
 				?>
 				</select>
@@ -276,7 +274,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Widget_Posts' ) ) {
 					);
 
 					foreach ( $options as $name => $value ) {
-						echo '<option value="' . esc_attr( $value ) . '" id="' . esc_attr( $value ) . '"', $display == $value ? ' selected="selected"' : '', '>', esc_html( $name ), '</option>';
+						echo '<option value="' . esc_attr( $value ) . '" id="' . esc_attr( $value ) . '"', $display === $value ? ' selected="selected"' : '', '>', esc_html( $name ), '</option>';
 					}
 				?>
 				</select>
