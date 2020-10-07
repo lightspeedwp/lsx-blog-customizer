@@ -408,9 +408,11 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				<div class="archive-header-wrapper custom-banner-archive banner-archive col-md-12">
 					<?php do_action( 'lsx_blog_customizer_banner_top' ); ?>
 					<div class="archive-header" style="<?php echo esc_attr( $background_image ); ?>">
-						<?php if ( '' !== $icon_image && false !== $icon_image ) { 
-							echo $icon_image;
-						} ?>
+						<?php
+						if ( '' !== $icon_image && false !== $icon_image ) { 
+							echo wp_kses_post( $icon_image );
+						}
+						?>
 						<?php if ( '' !== $title_attr && false !== $title_attr ) { ?>
 							<h1 class="archive-title"><?php echo wp_kses_post( $title_attr ); ?></h1>
 						<?php } ?>
