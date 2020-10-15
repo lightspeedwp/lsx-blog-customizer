@@ -35,7 +35,7 @@ var LSX_Blog_Customizer = {
 					settings: {
 						slidesToScroll: 1,
 						draggable: true,
-						arrows: false,
+						arrows: true,
 						swipe: true,
 					},
 				},
