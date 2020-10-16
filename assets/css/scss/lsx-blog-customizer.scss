@@ -96,6 +96,7 @@
 		padding-bottom: 2.4rem;
 		background-color: #fff;
 		box-shadow: 1px 1px 5px rgba(155, 155, 155, 0.7);
+		margin-bottom: 3px;
 		&.slick-slide {
 			margin-left: 15px;
 			margin-right: 15px;
@@ -630,6 +631,12 @@
 	display: block;
 	clear: both;
 	text-align: center;
+	@include media('<tablet') {
+		padding-top: 4.25rem;
+	}
+	@include media('<phone') {
+		padding-top: 0;
+	}
 }
 .blog .content-area {
 	margin-top: 4.25rem;
