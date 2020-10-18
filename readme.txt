@@ -9,7 +9,7 @@ Stable tag: 1.4.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-The LSX Blog Customizer extension allows you to customise the blog layouts or set a fallback image. 
+This plugin allows you to customise the blog layouts or set a fallback image. 
 
 == Description ==
 
