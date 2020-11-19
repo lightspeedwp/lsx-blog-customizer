@@ -1,11 +1,11 @@
 === LSX Blog Customizer ===
 Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, jacquesvdh, ignusvermaak
-Donate link: https://donate.lsdev.biz/
-Tags: lsx, Gutenberg, Blog Customizer, WordPress Customizer, WordPress Blog
-Requires at least: 5.3
-Tested up to: 5.5.1
-Requires PHP: 7.2
-Stable tag: 1.4.0
+Donate link: https://lsdev.biz/lsx/donate/
+Tags: lsx, Blog Customizer, Customizer, blog posts, related posts
+Requires at least: 5.0
+Tested up to: 5.5.3
+Requires PHP: 7.0
+Stable tag: 1.4.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -37,7 +37,7 @@ The combination of LSX Theme & LSX Blocks gives you a true page builder experien
 == Documentation ==
 We have extensive documentation on all our plugins and theme functionality. This allows you to take control of your website setup and design to your needs: 
 
-* [LSX Blog Customiser Documentation](https://lsx.lsdev.biz/documentation/blog-customiser/).
+* [LSX Blog Customiser Documentation](https://www.lsdev.biz/lsx/documentation/lsx-extensions/lsx-blog-customizer/).
 
 = Support =
 Contact the [LightSpeed](https://lsdev.biz/) for assistance via the [LSX support form](https://www.lsdev.biz/lsx/support/).
