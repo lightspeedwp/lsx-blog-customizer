@@ -49,7 +49,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 				wp_enqueue_script( 'slick', LSX_BLOG_CUSTOMIZER_URL . 'assets/js/vendor/slick.min.js', array( 'jquery' ), null, LSX_BLOG_CUSTOMIZER_VER, true );
 			}
 
-			if ( defined( 'SCRIPT_DEBUG' ) ) {
+			if ( defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ) {
 				$prefix = 'src/';
 				$suffix = '';
 			} else {
