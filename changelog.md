@@ -1,6 +1,14 @@
 # Change log
 
-## [[1.4.0]] - In development
+## [[1.4.1]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.0) - 2020-10-04
+
+### Updated
+- Documentation and support links.
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (5.6).
+
+## [[1.4.0]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.0) - 2020-10-04
 
 ### Added
 
