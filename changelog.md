@@ -11,20 +11,21 @@
 ## [[1.4.0]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.0) - 2020-10-04
 
 ### Added
-
-- Added default WP 5.5 lazyloading.
+- Added default WP 5.5 lazy loading.
 - Added a 2 columns layout option for the blog.
 - Fixed spacing for the archive layouts.
 - Added in 2 filters to allow themes to change the action the blog description outputs as well as the css class.
 - Added a `lsx_blog_customizer_show_switcher` filter to allow 3rd party plugins to include the switcher on custom post types.
+- Extended the placeholder to the page post type as well.
+- Aded CMB2 and included and enabled taxonomy custom fields (tagline, etc) + featured image + icon image + banner image on Blog Categories and Blog Tags.
 
 ### Deprecated
-
 - Removed the CMB and UIX vendors.
 
 ### Update
 
 - Updating language files.
+- Updated the placeholder text and description
 
 ### Security
 
@@ -32,6 +33,7 @@
 - Updating PHPCS options for better code.
 - General testing to ensure compatibility with latest WordPress version (5.5).
 - General testing to ensure compatibility with latest LSX Theme version (2.9).
+
 
 ## [[1.3.5]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.3.5) - 2020-03-30
 

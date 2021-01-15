@@ -95,7 +95,8 @@
 		margin-top: 4rem;
 		padding-bottom: 2.4rem;
 		background-color: #fff;
-
+		box-shadow: 1px 1px 5px rgba(155, 155, 155, 0.7);
+		margin-bottom: 3px;
 		&.slick-slide {
 			margin-left: 15px;
 			margin-right: 15px;
@@ -431,8 +432,25 @@
 		margin-right: 15px;
 	}
 }
-
-#main .categories-slider-title {
+.archive-header-wrapper {
+	+ .categories-slider-title {
+		padding-top: 4.25rem;
+	}
+	&.custom-banner-archive {
+		.archive-header {
+			background-position: center;
+		}
+		.banner-icon {
+			margin-bottom: 1rem;
+			max-width: 200px;
+			height: auto;
+		}
+	}
+}
+.categories-slider-title {
+	display: block;
+	clear: both;
+	margin-top: 4.25rem;
 	text-transform: uppercase;
 	font-weight: 300;
 	font-size: 22px;
@@ -440,7 +458,7 @@
 	color: #9b9b9b;
 }
 #categories-slider {
-	margin-bottom: 8.25rem;
+	margin-bottom: 2.4rem;
 
 	@include media('>=tablet') {
 		margin-left: auto;
@@ -459,7 +477,7 @@
 	}
 
 	.blog:not(.lsx-hide-post-author) & {
-		margin-bottom: 8.5rem;
+		margin-bottom: 2.4rem;
 	}
 
 	.item {
@@ -542,7 +560,9 @@
 
 .lsx-hide-post-tags {
 	.post-tags-wrapper {
-		display: none;
+		.post-tags {
+			display: none;
+		}
 	}
 }
 
@@ -604,6 +624,19 @@
 
 .content-area .blog-description {
 	margin-bottom: 4.25rem;
+}
+.blog-description.search-description {
+	margin-top: 4.25rem;
+	margin-bottom: 4.25rem;
+	display: block;
+	clear: both;
+	text-align: center;
+	@include media('<tablet') {
+		padding-top: 4.25rem;
+	}
+	@include media('<phone') {
+		padding-top: 0;
+	}
 }
 .blog .content-area {
 	margin-top: 4.25rem;
@@ -874,7 +907,6 @@
 		display: none;
 	}
 
-
 	.lsx-layout-switcher-option {
 		display: inline-block;
 		font-size: 28px;
@@ -884,15 +916,7 @@
 		white-space: nowrap;
 
 		.fa {
-			margin-right:0px;
-		}
-	}
-}
-.archive.category {
-	.lsx-layout-switcher {
-		@include media('>=tablet') {
-			right: 12vw;
-			bottom: 100px;
+			margin-right: 0px;
 		}
 	}
 }
@@ -915,6 +939,20 @@
 	margin-top: 8.5rem;
 	margin-bottom: 0;
 	text-align: center;
+}
+
+.footer-meta {
+	.post-tags-wrapper {
+		@include media('>=tablet') {
+			display: flex;
+			justify-content: space-between;
+		}
+		.post-tags {
+			@include media('<tablet') {
+				text-align: center;
+			}
+		}
+	}
 }
 
 .single-post .lsx-related-posts .lsx-related-posts-wrapper {
@@ -971,7 +1009,9 @@
 			margin-bottom: 4.25rem;
 		}
 		.archive-category-title {
-			margin-bottom: 4.25rem;
+			padding-top: 4.25rem;
+			display: block;
+			clear: both;
 			h2 {
 				margin-top: 5px;
 			}

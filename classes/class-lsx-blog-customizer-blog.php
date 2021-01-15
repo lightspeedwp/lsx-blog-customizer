@@ -32,51 +32,51 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			 * Add the blog panel
 			 */
 			$wp_customize->add_panel( 'lsx_blog_customizer_blog_panel', array(
-				'priority'       	=> 61,
-				'capability'     	=> 'edit_theme_options',
-				'theme_supports' 	=> '',
-				'title'				=> esc_html__( 'Blog', 'lsx-blog-customizer' ),
-				'description'    	=> esc_html__( 'Customise the appearance of your blog posts and archives.', 'lsx-blog-customizer' ),
+				'priority'       => 61,
+				'capability'     => 'edit_theme_options',
+				'theme_supports' => '',
+				'title'          => esc_html__( 'Blog', 'lsx-blog-customizer' ),
+				'description'    => esc_html__( 'Customize the appearance of your blog posts and archives.', 'lsx-blog-customizer' ),
 			) );
 
 			/**
 			 * General section
 			 */
 			$wp_customize->add_section( 'lsx_blog_customizer_general' , array(
-				'title'      	=> esc_html__( 'General', 'lsx-blog-customizer' ),
-				'priority'   	=> 10,
-				'description' 	=> esc_html__( 'Customise the look & feel of the blog archives and blog post pages:', 'lsx-blog-customizer' ),
-				'panel'			=> 'lsx_blog_customizer_blog_panel',
+				'title'       => esc_html__( 'General', 'lsx-blog-customizer' ),
+				'priority'    => 10,
+				'description' => esc_html__( 'Customize the look & feel of the blog archives and blog post pages:', 'lsx-blog-customizer' ),
+				'panel'       => 'lsx_blog_customizer_blog_panel',
 			) );
 
 			/**
 			 * Main blog page section
 			 */
 			$wp_customize->add_section( 'lsx_blog_customizer_main_blog_page' , array(
-				'title'      	=> esc_html__( 'Main blog page', 'lsx-blog-customizer' ),
-				'priority'   	=> 30,
-				'description' 	=> esc_html__( 'Customise the look & feel of the main blog page:', 'lsx-blog-customizer' ),
-				'panel'			=> 'lsx_blog_customizer_blog_panel',
+				'title'       => esc_html__( 'Main blog page', 'lsx-blog-customizer' ),
+				'priority'    => 30,
+				'description' => esc_html__( 'Customize the look & feel of the main blog page:', 'lsx-blog-customizer' ),
+				'panel'       => 'lsx_blog_customizer_blog_panel',
 			) );
 
 			/**
 			 * Blog archives section
 			 */
 			$wp_customize->add_section( 'lsx_blog_customizer_archive' , array(
-				'title'      	=> esc_html__( 'Archives', 'lsx-blog-customizer' ),
-				'priority'   	=> 40,
-				'description' 	=> esc_html__( 'Customise the look & feel of the blog archives:', 'lsx-blog-customizer' ),
-				'panel'			=> 'lsx_blog_customizer_blog_panel',
+				'title'       => esc_html__( 'Archives', 'lsx-blog-customizer' ),
+				'priority'    => 40,
+				'description' => esc_html__( 'Customize the look & feel of the blog archives:', 'lsx-blog-customizer' ),
+				'panel'       => 'lsx_blog_customizer_blog_panel',
 			) );
 
 			/**
 			 * Single blog post section
 			 */
 			$wp_customize->add_section( 'lsx_blog_customizer_single' , array(
-				'title'      	=> esc_html__( 'Single posts', 'lsx-blog-customizer' ),
-				'priority'   	=> 50,
-				'description' 	=> esc_html__( 'Customise the look & feel of the blog post pages:', 'lsx-blog-customizer' ),
-				'panel'			=> 'lsx_blog_customizer_blog_panel',
+				'title'       => esc_html__( 'Single posts', 'lsx-blog-customizer' ),
+				'priority'    => 50,
+				'description' => esc_html__( 'Customize the look & feel of the blog post pages:', 'lsx-blog-customizer' ),
+				'panel'       => 'lsx_blog_customizer_blog_panel',
 			) );
 
 			/**
@@ -88,12 +88,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_general_date', array(
-				'label'         => esc_html__( 'Display date', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display post date in blog archives and blog post pages.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_general',
-				'settings'      => 'lsx_blog_customizer_general_date',
-				'type'          => 'checkbox',
-				'priority'      => 10,
+				'label'       => esc_html__( 'Display date', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display post date in blog archives and blog post pages.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_general',
+				'settings'    => 'lsx_blog_customizer_general_date',
+				'type'        => 'checkbox',
+				'priority'    => 10,
 			) ) );
 
 			/**
@@ -105,12 +105,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_general_author', array(
-				'label'         => esc_html__( 'Display author', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display post author in blog archives and blog post pages.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_general',
-				'settings'      => 'lsx_blog_customizer_general_author',
-				'type'          => 'checkbox',
-				'priority'      => 20,
+				'label'       => esc_html__( 'Display author', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display post author in blog archives and blog post pages.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_general',
+				'settings'    => 'lsx_blog_customizer_general_author',
+				'type'        => 'checkbox',
+				'priority'    => 20,
 			) ) );
 
 			/**
@@ -122,12 +122,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_general_category', array(
-				'label'         => esc_html__( 'Display categories', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display post categories in blog archives and blog post pages.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_general',
-				'settings'      => 'lsx_blog_customizer_general_category',
-				'type'          => 'checkbox',
-				'priority'      => 30,
+				'label'       => esc_html__( 'Display categories', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display post categories in blog archives and blog post pages.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_general',
+				'settings'    => 'lsx_blog_customizer_general_category',
+				'type'        => 'checkbox',
+				'priority'    => 30,
 			) ) );
 
 			/**
@@ -139,12 +139,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_general_tags', array(
-				'label'         => esc_html__( 'Display tags', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display post tags in blog archives and blog post pages.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_general',
-				'settings'      => 'lsx_blog_customizer_general_tags',
-				'type'          => 'checkbox',
-				'priority'      => 30,
+				'label'       => esc_html__( 'Display tags', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display post tags in blog archives and blog post pages.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_general',
+				'settings'    => 'lsx_blog_customizer_general_tags',
+				'type'        => 'checkbox',
+				'priority'    => 30,
 			) ) );
 
 			$wp_customize->add_setting(
@@ -159,10 +159,11 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 					$wp_customize,
 					'blog_customizer_posts_placeholder',
 					array(
-						'label'    => __( 'Upload a featured image placeholder', 'lsx-blog-customizer' ),
-						'section'  => 'lsx_blog_customizer_general',
-						'settings' => 'lsx_blog_customizer_general_placeholder',
-						'priority' => 40,
+						'label'       => __( 'Fallback Image', 'lsx-blog-customizer' ),
+						'section'     => 'lsx_blog_customizer_general',
+						'settings'    => 'lsx_blog_customizer_general_placeholder',
+						'priority'    => 40,
+						'description' => esc_html__( 'The selected image will be used when a post / page is missing a featured image. A default fallback image included in the theme will be used if no image is set.', 'lsx-blog-customizer' ),
 					)
 				)
 			);
@@ -176,12 +177,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_main_blog_page_description', array(
-				'label'         => esc_html__( 'Description', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Description visible before posts list.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_main_blog_page',
-				'settings'      => 'lsx_blog_customizer_main_blog_page_description',
-				'type'          => 'textarea',
-				'priority'      => 10,
+				'label'       => esc_html__( 'Description', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Description visible before posts list.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_main_blog_page',
+				'settings'    => 'lsx_blog_customizer_main_blog_page_description',
+				'type'        => 'textarea',
+				'priority'    => 10,
 			) ) );
 
 			/**
@@ -196,11 +197,11 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 				) );
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_main_blog_page_carousel_' . $category->term_id, array(
-					'label'         => esc_html( $category->name ),
-					'section'       => 'lsx_blog_customizer_main_blog_page',
-					'settings'      => 'lsx_blog_customizer_main_blog_page_carousel_' . $category->term_id,
-					'type'          => 'checkbox',
-					'priority'      => ( ( $counter + 1 ) * 10 ),
+					'label'    => esc_html( $category->name ),
+					'section'  => 'lsx_blog_customizer_main_blog_page',
+					'settings' => 'lsx_blog_customizer_main_blog_page_carousel_' . $category->term_id,
+					'type'     => 'checkbox',
+					'priority' => ( ( $counter + 1 ) * 10 ),
 				) ) );
 			}
 
@@ -213,12 +214,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_archive_full_width', array(
-				'label'         => esc_html__( 'Full width', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display blog archives in a full width layout.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_archive',
-				'settings'      => 'lsx_blog_customizer_archive_full_width',
-				'type'          => 'checkbox',
-				'priority'      => 10,
+				'label'       => esc_html__( 'Full width', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display blog archives in a full width layout.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_archive',
+				'settings'    => 'lsx_blog_customizer_archive_full_width',
+				'type'        => 'checkbox',
+				'priority'    => 10,
 			) ) );
 
 			/**
@@ -230,12 +231,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_archive_text', array(
-				'label'         => esc_html__( 'Excerpt/content', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display excerpt/content on blog archives.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_archive',
-				'settings'      => 'lsx_blog_customizer_archive_text',
-				'type'          => 'checkbox',
-				'priority'      => 20,
+				'label'       => esc_html__( 'Excerpt/content', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display excerpt/content on blog archives.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_archive',
+				'settings'    => 'lsx_blog_customizer_archive_text',
+				'type'        => 'checkbox',
+				'priority'    => 20,
 			) ) );
 
 			/**
@@ -247,12 +248,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_archive_full_content', array(
-				'label'         => esc_html__( 'Full content', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display full content on blog archives.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_archive',
-				'settings'      => 'lsx_blog_customizer_archive_full_content',
-				'type'          => 'checkbox',
-				'priority'      => 30,
+				'label'       => esc_html__( 'Full content', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display full content on blog archives.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_archive',
+				'settings'    => 'lsx_blog_customizer_archive_full_content',
+				'type'        => 'checkbox',
+				'priority'    => 30,
 			) ) );
 
 			/**
@@ -264,12 +265,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_archive_layout_switcher', array(
-				'label'         => esc_html__( 'Front-end layout switcher', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display layout switcher (list X grid) on front-end.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_archive',
-				'settings'      => 'lsx_blog_customizer_archive_layout_switcher',
-				'type'          => 'checkbox',
-				'priority'      => 40,
+				'label'       => esc_html__( 'Front-end layout switcher', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display layout switcher (list X grid) on front-end.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_archive',
+				'settings'    => 'lsx_blog_customizer_archive_layout_switcher',
+				'type'        => 'checkbox',
+				'priority'    => 40,
 			) ) );
 
 			/**
@@ -281,13 +282,13 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_archive_layout', array(
-				'label'         => esc_html__( 'Layout', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Default layout on blog archives.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_archive',
-				'settings'      => 'lsx_blog_customizer_archive_layout',
-				'type'          => 'select',
-				'priority'      => 50,
-				'choices'       => array(
+				'label'       => esc_html__( 'Layout', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Default layout on blog archives.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_archive',
+				'settings'    => 'lsx_blog_customizer_archive_layout',
+				'type'        => 'select',
+				'priority'    => 50,
+				'choices'     => array(
 					'default'   => esc_html__( 'Default', 'lsx-blog-customizer' ),
 					'list'      => esc_html__( 'List', 'lsx-blog-customizer' ),
 					'grid'      => esc_html__( '3 Columns Grid', 'lsx-blog-customizer' ),
@@ -304,31 +305,13 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_single_full_width', array(
-				'label'         => esc_html__( 'Full width', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Give the single blog post pages a full width layout.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_single',
-				'settings'      => 'lsx_blog_customizer_single_full_width',
-				'type'          => 'checkbox',
-				'priority'      => 10,
+				'label'       => esc_html__( 'Full width', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Give the single blog post pages a full width layout.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_single',
+				'settings'    => 'lsx_blog_customizer_single_full_width',
+				'type'        => 'checkbox',
+				'priority'    => 10,
 			) ) );
-
-			/**
-			 * Single blog post section: display thumbnail
-			 */
-
-			/*$wp_customize->add_setting( 'lsx_blog_customizer_single_thumbnail', array(
-				'default'           => true,
-				'sanitize_callback' => array( $this, 'sanitize_checkbox' ),
-			) );
-
-			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_single_thumbnail', array(
-				'label'         => esc_html__( 'Display thumbnail', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display post thumbnail in blog post pages.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_single',
-				'settings'      => 'lsx_blog_customizer_single_thumbnail',
-				'type'          => 'checkbox',
-				'priority'      => 20,
-			) ) );*/
 
 			/**
 			 * Single blog post section: display related posts
@@ -339,12 +322,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_single_related_posts', array(
-				'label'         => esc_html__( 'Display related posts', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display related posts in blog post pages.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_single',
-				'settings'      => 'lsx_blog_customizer_single_related_posts',
-				'type'          => 'checkbox',
-				'priority'      => 30,
+				'label'       => esc_html__( 'Display related posts', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display related posts in blog post pages.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_single',
+				'settings'    => 'lsx_blog_customizer_single_related_posts',
+				'type'        => 'checkbox',
+				'priority'    => 30,
 			) ) );
 
 			/**
@@ -356,12 +339,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_single_posts_navigation', array(
-				'label'         => esc_html__( 'Display posts navigation', 'lsx-blog-customizer' ),
-				'description'   => esc_html__( 'Display posts navigation in blog post pages.', 'lsx-blog-customizer' ),
-				'section'       => 'lsx_blog_customizer_single',
-				'settings'      => 'lsx_blog_customizer_single_posts_navigation',
-				'type'          => 'checkbox',
-				'priority'      => 40,
+				'label'       => esc_html__( 'Display posts navigation', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display posts navigation in blog post pages.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_single',
+				'settings'    => 'lsx_blog_customizer_single_posts_navigation',
+				'type'        => 'checkbox',
+				'priority'    => 40,
 			) ) );
 		}
 

@@ -26,15 +26,15 @@ if ( ! class_exists( 'LSX_Blog_Customizer' ) ) {
 		 * @since 1.0.0
 		 */
 		public function __construct() {
-			require_once( LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-admin.php' );
-			require_once( LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-frontend.php' );
-			require_once( LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-blog.php' );
+			require_once LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-admin.php';
+			require_once LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-frontend.php';
+			require_once LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-blog.php';
 
-			require_once( LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-posts.php' );
-			require_once( LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-widget-posts.php' );
+			require_once LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-posts.php';
+			require_once LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-widget-posts.php';
 
-			require_once( LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-terms.php' );
-			require_once( LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-widget-terms.php' );
+			require_once LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-terms.php';
+			require_once LSX_BLOG_CUSTOMIZER_PATH . 'classes/class-lsx-blog-customizer-widget-terms.php';
 		}
 
 		/**
