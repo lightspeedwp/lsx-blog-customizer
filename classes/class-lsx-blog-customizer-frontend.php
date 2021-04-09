@@ -257,7 +257,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			$is_single_post            = is_singular( 'post' );
 			$is_archive_or_single_post = $is_archive || $is_single_post;
 
-			$general_tags = get_theme_mod( 'lsx_blog_customizer_general_tags', true );
+			$general_tags = (bool) get_theme_mod( 'lsx_blog_customizer_general_tags', true );
 
 			if ( $is_single_post && false === $general_tags ) {
 				if ( ! class_exists( 'LSX_Sharing' ) && ! function_exists( 'sharing_display' ) && ! class_exists( 'Jetpack_Likes' ) ) {
@@ -312,7 +312,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		public function archive_layout_switcher() {
 			$body_classes            = get_body_class();
 			$is_archive              = in_array( 'blog', $body_classes ) || is_post_type_archive( 'post' ) || is_category() || is_tag() || is_date();
-			$archive_layout_switcher = get_theme_mod( 'lsx_blog_customizer_archive_layout_switcher', false );
+			$archive_layout_switcher = (bool) get_theme_mod( 'lsx_blog_customizer_archive_layout_switcher', false );
 
 			$show_switcher           = false;
 			if ( $is_archive && true === $archive_layout_switcher ) {
@@ -459,7 +459,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		 */
 		public function single_blog_page_related_posts() {
 			$is_single_post       = is_singular( 'post' );
-			$single_related_posts = get_theme_mod( 'lsx_blog_customizer_single_related_posts', true );
+			$single_related_posts = (bool) get_theme_mod( 'lsx_blog_customizer_single_related_posts', true );
 
 			if ( $is_single_post && true === $single_related_posts ) {
 				$post_id        = get_the_ID();
