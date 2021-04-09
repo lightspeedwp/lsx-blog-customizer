@@ -1,6 +1,13 @@
 # Change log
 
-## [[1.4.1]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.0) - 2020-10-04
+## [[1.4.2]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.2) - 2021-04-09
+
+### Fixed
+- The triggering of the customizer options
+- Default blog spacing above the content, when LSX search is disabled.
+- The correct variable is now being sent to the `lsx_blog_customizer_show_switcher` filter.
+
+## [[1.4.1]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.1) - 2020-10-04
 
 ### Updated
 - Documentation and support links.

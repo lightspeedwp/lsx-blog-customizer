@@ -191,14 +191,14 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			$is_author                 = in_array( 'author', $body_classes );
 			$is_single_post            = is_singular( 'post' );
 			$is_archive_or_single_post = $is_archive || $is_single_post;
-			$general_date              = get_theme_mod( 'lsx_blog_customizer_general_date', true );
-			$general_author            = get_theme_mod( 'lsx_blog_customizer_general_author', true );
-			$general_category          = get_theme_mod( 'lsx_blog_customizer_general_category', true );
-			$general_tags          	   = get_theme_mod( 'lsx_blog_customizer_general_tags', true );
-			$archive_full_width        = get_theme_mod( 'lsx_blog_customizer_archive_full_width', false );
+			$general_date              = (bool) get_theme_mod( 'lsx_blog_customizer_general_date', true );
+			$general_author            = (bool) get_theme_mod( 'lsx_blog_customizer_general_author', true );
+			$general_category          = (bool) get_theme_mod( 'lsx_blog_customizer_general_category', true );
+			$general_tags              = (bool) get_theme_mod( 'lsx_blog_customizer_general_tags', true );
+			$archive_full_width        = (bool) get_theme_mod( 'lsx_blog_customizer_archive_full_width', false );
 			$archive_layout            = $this->get_layout_value_from_cookie();
-			$single_full_width         = get_theme_mod( 'lsx_blog_customizer_single_full_width', false );
-			$single_posts_navigation   = get_theme_mod( 'lsx_blog_customizer_single_posts_navigation', true );
+			$single_full_width         = (bool) get_theme_mod( 'lsx_blog_customizer_single_full_width', false );
+			$single_posts_navigation   = (bool) get_theme_mod( 'lsx_blog_customizer_single_posts_navigation', true );
 
 			if ( $is_archive_or_single_post && false === $general_date ) {
 				$body_classes[] = 'lsx-hide-post-date';
@@ -313,11 +313,12 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 			$body_classes            = get_body_class();
 			$is_archive              = in_array( 'blog', $body_classes ) || is_post_type_archive( 'post' ) || is_category() || is_tag() || is_date();
 			$archive_layout_switcher = get_theme_mod( 'lsx_blog_customizer_archive_layout_switcher', false );
+
 			$show_switcher           = false;
 			if ( $is_archive && true === $archive_layout_switcher ) {
 				$show_switcher = true;
 			}
-			$show_switcher = apply_filters( 'lsx_blog_customizer_show_switcher', $is_archive );
+			$show_switcher = apply_filters( 'lsx_blog_customizer_show_switcher', $show_switcher );
 
 			if ( $is_archive && true === $show_switcher ) {
 				$page_key       = apply_filters( 'lsx_layout_switcher_page_key', 'blog' );
