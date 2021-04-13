@@ -1,6 +1,6 @@
 # Change log
 
-## [[1.4.2]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.2) - 2021-04-09
+## [[1.4.2]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.2) - 2021-04-13
 
 ### Fixed
 - The triggering of the customizer options
