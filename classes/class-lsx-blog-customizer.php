@@ -67,6 +67,25 @@ if ( ! class_exists( 'LSX_Blog_Customizer' ) ) {
 		}
 
 		/**
+		 * Sanitize select (layout switcher).
+		 *
+		 * @since 1.0.0
+		 */
+		public function sanitize_select_posts_relation( $input ) {
+			$valid = array(
+				'both'   => esc_html__( 'Both', 'lsx-blog-customizer' ),
+				'post_tag'      => esc_html__( 'Tag', 'lsx-blog-customizer' ),
+				'category'      => esc_html__( 'Category', 'lsx-blog-customizer' ),
+			);
+
+			if ( array_key_exists( $input, $valid ) ) {
+				return $input;
+			} else {
+				return '';
+			}
+		}
+
+		/**
 		 * Sanitize textarea.
 		 *
 		 * @since 1.0.1
