@@ -1,5 +1,14 @@
 # Change log
 
+## [[1.4.3]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.2) - 2021-04-22
+
+### Added
+- The ability to select the tag or category or both, in used of the post relation query.
+- A filter `lsx_blog_customizer_related_posts_taxonomies` to allow you to add any custom taxonomies to the relation array.
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (5.7).
+
 ## [[1.4.2]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.2) - 2021-04-13
 
 ### Fixed
