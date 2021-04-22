@@ -460,68 +460,50 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 		public function single_blog_page_related_posts() {
 			$is_single_post       = is_singular( 'post' );
 			$single_related_posts = (bool) get_theme_mod( 'lsx_blog_customizer_single_related_posts', true );
+			$post_relation        = get_theme_mod( 'lsx_blog_customizer_single_posts_relation', 'both' );
 
 			if ( $is_single_post && true === $single_related_posts ) {
 				$post_id        = get_the_ID();
 				$post_ids       = array();
 				$posts_per_page = 3;
 				$post__not_in   = array( $post_id );
-				$related_query  = get_transient( 'lsx_related_query_WP_Query_' . $post_id );
+				//$related_query  = get_transient( 'lsx_related_query_WP_Query_' . $post_id );
+				$tags           = array();
+				$categories     = array();
 
 				if ( ! is_object( $related_query ) || ! is_a( $related_query, 'WP_Query' ) ) {
-					$tags = wp_get_object_terms( $post_id, 'post_tag' );
 
-					if ( ! empty( $tags ) ) {
-						$tag_ids = wp_list_pluck( $tags, 'term_id' );
+					$related_taxonomies = array(
+						'post_tag',
+						'category',
+					);
 
-						$args = array(
-							'fields'                 => 'ids',
-							'post__not_in'           => $post__not_in,
-							'tag__in'                => $tag_ids,
-							'posts_per_page'         => $posts_per_page,
-							'orderby'                => 'rand',
-							'order'                  => 'DESC',
-							'no_found_rows'          => true,
-							'ignore_sticky_posts'    => 1,
-							'update_post_meta_cache' => false,
-							'update_post_meta_cache' => false,
-						);
+					foreach ( $related_taxonomies as $related_taxonomy ) {
+						if ( in_array( $post_relation, array( $related_taxonomy, 'both' ) ) ) {
+							$tags = wp_get_object_terms( $post_id, $related_taxonomy );
+							if ( ! empty( $tags ) ) {
+								$tag_ids = wp_list_pluck( $tags, 'term_id' );
 
-						$related_query_1 = new \WP_Query( $args );
+								$args = array(
+									'fields'                 => 'ids',
+									'post__not_in'           => $post__not_in,
+									'tag__in'                => $tag_ids,
+									'posts_per_page'         => $posts_per_page,
+									'orderby'                => 'rand',
+									'order'                  => 'DESC',
+									'no_found_rows'          => true,
+									'ignore_sticky_posts'    => 1,
+									'update_post_meta_cache' => false,
+									'update_post_meta_cache' => false,
+								);
 
-						if ( isset( $related_query_1->posts ) ) {
-							$post_ids = array_merge( $post_ids, $related_query_1->posts );
-						}
-					}
+								$related_query_1 = new \WP_Query( $args );
 
-					if ( empty( $tags ) || empty( $related_query_1 ) || $related_query_1->post_count < 3 ) {
-						$categories = wp_get_object_terms( $post_id, 'category' );
+								var_dump($related_taxonomy);
 
-						if ( ! empty( $related_query_1 ) ) {
-							$posts_per_page -= $related_query_1->post_count;
-							$post__not_in    = array_merge( $post__not_in, $related_query_1->posts );
-						}
-
-						if ( ! empty( $categories ) ) {
-							$category_ids = wp_list_pluck( $categories, 'term_id' );
-
-							$args = array(
-								'fields'                 => 'ids',
-								'post__not_in'           => $post__not_in,
-								'posts_per_page'         => $posts_per_page,
-								'category__in'           => $category_ids,
-								'orderby'                => 'rand',
-								'order'                  => 'DESC',
-								'no_found_rows'          => true,
-								'ignore_sticky_posts'    => 1,
-								'update_post_meta_cache' => false,
-								'update_post_meta_cache' => false,
-							);
-
-							$related_query_2 = new \WP_Query( $args );
-
-							if ( isset( $related_query_2->posts ) ) {
-								$post_ids = array_merge( $post_ids, $related_query_2->posts );
+								if ( isset( $related_query_1->posts ) ) {
+									$post_ids = array_merge( $post_ids, $related_query_1->posts );
+								}
 							}
 						}
 					}
