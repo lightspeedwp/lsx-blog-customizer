@@ -1,6 +1,6 @@
 # Change log
 
-## [[1.4.3]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.2) - 2021-04-22
+## [[1.4.3]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.3) - 2021-04-22
 
 ### Added
 - The ability to select the tag or category or both, in used of the post relation query.
