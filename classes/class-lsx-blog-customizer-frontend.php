@@ -473,10 +473,7 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 
 				if ( ! is_object( $related_query ) || ! is_a( $related_query, 'WP_Query' ) ) {
 
-					$related_taxonomies = array(
-						'post_tag',
-						'category',
-					);
+					$related_taxonomies = apply_filters( 'lsx_blog_customizer_related_posts_taxonomies', array( 'post_tag', 'category' ) );
 
 					foreach ( $related_taxonomies as $related_taxonomy ) {
 						if ( in_array( $post_relation, array( $related_taxonomy, 'both' ) ) ) {
@@ -484,10 +481,16 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 							if ( ! empty( $tags ) ) {
 								$tag_ids = wp_list_pluck( $tags, 'term_id' );
 
+								if ( 'category' === $related_taxonomy ) {
+									$primary_id = get_post_meta( $post_id, '_yoast_wpseo_primary_category', true );
+									if ( false !== $primary_id && '' !== $primary_id ) {
+										$tag_ids = array( $primary_id );
+									}
+								}
+
 								$args = array(
 									'fields'                 => 'ids',
 									'post__not_in'           => $post__not_in,
-									'tag__in'                => $tag_ids,
 									'posts_per_page'         => $posts_per_page,
 									'orderby'                => 'rand',
 									'order'                  => 'DESC',
@@ -497,9 +500,13 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Frontend' ) ) {
 									'update_post_meta_cache' => false,
 								);
 
-								$related_query_1 = new \WP_Query( $args );
+								if ( 'post_tag' ===$related_taxonomy ) {
+									$args['tag__in'] = $tag_ids;
+								} else if ( 'category' ===$related_taxonomy ) {
+									$args['category__in'] = $tag_ids;
+								}
 
-								var_dump($related_taxonomy);
+								$related_query_1 = new \WP_Query( $args );
 
 								if ( isset( $related_query_1->posts ) ) {
 									$post_ids = array_merge( $post_ids, $related_query_1->posts );
