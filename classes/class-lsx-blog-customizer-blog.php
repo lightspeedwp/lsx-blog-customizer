@@ -314,37 +314,6 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 			) ) );
 
 			/**
-			 * Single blog post section: display related posts
-			 */
-			$wp_customize->add_setting( 'lsx_blog_customizer_single_related_posts', array(
-				'default'           => true,
-				'sanitize_callback' => array( $this, 'sanitize_checkbox' ),
-			) );
-
-			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_single_related_posts', array(
-				'label'       => esc_html__( 'Display related posts', 'lsx-blog-customizer' ),
-				'description' => esc_html__( 'Display related posts in blog post pages.', 'lsx-blog-customizer' ),
-				'section'     => 'lsx_blog_customizer_single',
-				'settings'    => 'lsx_blog_customizer_single_related_posts',
-				'type'        => 'checkbox',
-				'priority'    => 30,
-			) ) );
-
-			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_single_posts_relation', array(
-				'label'       => esc_html__( 'Releation', 'lsx-blog-customizer' ),
-				'description' => esc_html__( 'Select the taxonomy to use for the related posts.', 'lsx-blog-customizer' ),
-				'section'     => 'lsx_blog_customizer_single',
-				'settings'    => 'lsx_blog_customizer_single_posts_relation',
-				'type'        => 'select',
-				'priority'    => 50,
-				'choices'     => array(
-					'both'   => esc_html__( 'Both', 'lsx-blog-customizer' ),
-					'post_tag'  => esc_html__( 'Tag', 'lsx-blog-customizer' ),
-					'category'  => esc_html__( 'Category', 'lsx-blog-customizer' ),
-				),
-			) ) );
-
-			/**
 			 * Single blog post section: display posts navigation
 			 */
 			$wp_customize->add_setting( 'lsx_blog_customizer_single_posts_navigation', array(
@@ -358,8 +327,47 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Blog' ) ) {
 				'section'     => 'lsx_blog_customizer_single',
 				'settings'    => 'lsx_blog_customizer_single_posts_navigation',
 				'type'        => 'checkbox',
+				'priority'    => 30,
+			) ) );
+
+			/**
+			 * Single blog post section: display related posts
+			 */
+			$wp_customize->add_setting( 'lsx_blog_customizer_single_related_posts', array(
+				'default'           => true,
+				'sanitize_callback' => array( $this, 'sanitize_checkbox' ),
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_single_related_posts', array(
+				'label'       => esc_html__( 'Display related posts', 'lsx-blog-customizer' ),
+				'description' => esc_html__( 'Display related posts in blog post pages.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_single',
+				'settings'    => 'lsx_blog_customizer_single_related_posts',
+				'type'        => 'checkbox',
 				'priority'    => 40,
 			) ) );
+
+			/**
+			 * Single Blog Post: Posts Relation
+			 */
+			$wp_customize->add_setting( 'lsx_blog_customizer_single_posts_relation', array(
+				'default'           => 'both',
+				'sanitize_callback' => array( $this, 'sanitize_select_posts_relation' ),
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lsx_blog_customizer_single_posts_relation', array(
+				'description' => esc_html__( 'Select the taxonomy to use for the related posts.', 'lsx-blog-customizer' ),
+				'section'     => 'lsx_blog_customizer_single',
+				'settings'    => 'lsx_blog_customizer_single_posts_relation',
+				'type'        => 'select',
+				'priority'    => 50,
+				'choices'     => array(
+					'both'   => esc_html__( 'Both', 'lsx-blog-customizer' ),
+					'post_tag'  => esc_html__( 'Tag', 'lsx-blog-customizer' ),
+					'category'  => esc_html__( 'Category', 'lsx-blog-customizer' ),
+				),
+			) ) );
+
 		}
 
 	}
