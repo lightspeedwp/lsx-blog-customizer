@@ -142,7 +142,10 @@ if ( ! class_exists( 'LSX_Blog_Customizer_Posts' ) ) {
 				);
 			}
 
-			$cat   = 'cat=' . $taxonomy;
+			// Use the category attribute properly.
+			if ( 'category' !== $taxonomy && ! empty( $taxonomy ) && false !== $taxonomy ) {
+				$args['cat'] = $taxonomy;
+			}
 			$posts = new WP_Query( $args );
 
 			if ( $posts->have_posts() ) {
