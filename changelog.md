@@ -1,12 +1,13 @@
 # Change log
 
-## [[1.4.4]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.4) - ???????
+## [[1.4.4]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.4) - 2022-05-25
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (6.0).
 
 ### Fixed
 - The category selection for the LSX Blog Posts widget
 
-### Security
-- General testing to ensure compatibility with latest WordPress version (5.8).
 
 ## [[1.4.3]](https://github.com/lightspeeddevelopment/lsx-blog-customizer/releases/tag/1.4.3) - 2021-04-22
 
