@@ -3,9 +3,9 @@ Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, jacquesvdh, ignusver
 Donate link: https://lsdev.biz/lsx/donate/
 Tags: lsx, Blog Customizer, Customizer, blog posts, related posts
 Requires at least: 5.0
-Tested up to: 6.2
-Requires PHP: 8.0
-Stable tag: 1.4.6
+Tested up to: 6.3
+Requires PHP: 7.4
+Stable tag: 1.4.7
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
