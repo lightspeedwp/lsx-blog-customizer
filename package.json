@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.20",
-    "minimatch": "^9.0.0",
+    "minimatch": "^10.0.1",
     "minimist": "^1.2.5"
   }
 }
